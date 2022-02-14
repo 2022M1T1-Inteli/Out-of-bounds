@@ -21,7 +21,7 @@
 
 ## Descrição
 
-📜Nosso projeto consiste em uma forma divertida sobre ensinar diversidade e inclusão aos funcionarios da <a href="https://www.ambev.com.br/">AMBEV</a>.
+📜Nosso projeto consiste em uma forma divertida de ensinar diversidade e inclusão aos funcionários da <a href="https://www.ambev.com.br/">AMBEV</a>.
 <p align="center">
 <img src="https://adalove.inteli.edu.br/newada-img/groups/040872f7-cb97-4430-b1a0-da80f9311131.png" alt="NOME DO JOGO AQUI" border="0"></p>
  
@@ -29,14 +29,6 @@
 </p>
 
 <br><br>
-
-## Clipe do Game
-<p align="center">
-
- 
-https://user-images.githubusercontent.com/99296562/153513304-4cd84684-fea4-43fd-a3ee-4ed79a7d04d6.mp4
-
-</p>
 
 
 💡 
