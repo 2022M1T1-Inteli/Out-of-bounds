@@ -30,13 +30,6 @@
 
 <br><br>
 
-
-💡 
-<br><br>
-💡
-<br><br>
-
-
 ## 🛠 Estrutura de pastas
 
 -Raiz<br>
