@@ -6,7 +6,7 @@
 
 # Nome do Projeto
 
-## Dive INC
+## Rainbow Dev
 
 ## Integrantes: 
 
