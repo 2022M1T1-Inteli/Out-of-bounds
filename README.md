@@ -23,7 +23,7 @@
 
 📜Nosso projeto consiste em uma forma divertida sobre ensinar diversidade e inclusão aos funcionarios da <a href="https://www.ambev.com.br/">AMBEV</a>.
 <p align="center">
-<img src="https://adalove.inteli.edu.br/newada-img/groups/fc232015-a2d2-4aa8-8491-0dc98cd4419f.jpeg" alt="NOME DO JOGO AQUI" border="0"></p>
+<img src="https://adalove.inteli.edu.br/newada-img/groups/040872f7-cb97-4430-b1a0-da80f9311131.png" alt="NOME DO JOGO AQUI" border="0"></p>
  
 <p align="center">Imagem by <a href="google.com">Rainbow Dev</a> Under <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
 </p>
