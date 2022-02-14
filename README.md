@@ -70,7 +70,7 @@ Faça o Download do JOGO.apk no seu celular.
 Execute o APK e siga as instruções de seu telefone.
 
 ```sh
-Coloque código do prompt de ando se for necessário
+Coloque código do prompt de comando se for necessário
 ```
 
 <b>Windows:</b>
