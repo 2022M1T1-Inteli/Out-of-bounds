@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-const ACCELERATION = 2000
-const FRICTION = 2000
+const ACCELERATION = 150
+const FRICTION = 100
 const MAX_SPEED = 100
 var velocity = Vector2.ZERO
 
@@ -38,3 +38,10 @@ func _physics_process(delta):
 		elif Input.is_action_just_released("ui_down"):
 			animationPlayer.play("IdleDown")
 	velocity = move_and_slide(velocity)
+
+
+func _on_VoltarBtn_pressed() -> void:
+	get_tree().change_scene("res://Tela inicial Do Rpg2/Tela Inicial 1.tscn")
+	
+	
+	

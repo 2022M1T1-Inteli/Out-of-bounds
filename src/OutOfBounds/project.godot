@@ -10,9 +10,13 @@ config_version=4
 
 [application]
 
-config/name="primeiro rpg"
-run/main_scene="res://world.tscn"
+config/name="Segundo rpg"
+run/main_scene="res://Tela inicial Do Rpg2/Tela Inicial 1.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+MenuDePausa="*res://Tela inicial Do Rpg2/Menu de pausa.tscn"
 
 [display]
 
