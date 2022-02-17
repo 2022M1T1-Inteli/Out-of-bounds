@@ -7,7 +7,6 @@ var velocity = Vector2.ZERO
 
 
 func _on_ice_entered(body):
-	print('oi')
 	ACCELERATION = 100
 	FRICTION = 100
 	MAX_SPEED = 100
@@ -24,7 +23,6 @@ func _ready():
 	animationPlayer = $AnimationPlayer
 
 func _physics_process(delta):
-	print(ACCELERATION)
 	var input_Vector = Vector2.ZERO
 	input_Vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	input_Vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
