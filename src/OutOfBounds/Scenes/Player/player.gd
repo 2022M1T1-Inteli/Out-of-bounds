@@ -5,6 +5,19 @@ var FRICTION = 2000
 var MAX_SPEED = 100
 var velocity = Vector2.ZERO
 
+
+func _on_ice_entered(body):
+	print('oi')
+	ACCELERATION = 100
+	FRICTION = 100
+	MAX_SPEED = 100
+
+func _on_ice_exit(body):
+	ACCELERATION = 2000
+	FRICTION = 2000
+	MAX_SPEED = 100
+
+
 var animationPlayer = null
 
 func _ready():
@@ -47,9 +60,3 @@ func _on_VoltarBtn_pressed() -> void:
 	
 	
 
-
-func _entrou_no_gelo():
-	print('oi')
-	var ACCELERATION = 100
-	var FRICTION = 100
-	var MAX_SPEED = 100
