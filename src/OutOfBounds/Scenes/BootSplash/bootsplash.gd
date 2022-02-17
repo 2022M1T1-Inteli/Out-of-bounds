@@ -1,6 +1,6 @@
-extends Node2D
+extends TextureRect
 
-
+var next_level = preload("res://scenes/TelaInicial/TelaInicial.tscn")
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -15,7 +15,5 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
-func _on_VoltarBtn_pressed() -> void:
-	get_tree().change_scene("res://Scenes/TelaInicial/TelaInicial.tscn")
-	
+func _on_Timer_timeout():
+	get_tree().change_scene_to(next_level)

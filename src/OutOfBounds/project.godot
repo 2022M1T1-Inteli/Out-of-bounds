@@ -11,12 +11,8 @@ config_version=4
 [application]
 
 config/name="OutOfBounds"
-run/main_scene="res://Scenes/TelaInicial/TelaInicial.tscn"
-config/icon="res://icon.png"
-
-[autoload]
-
-MenuDePausa="*res://Tela inicial Do Rpg2/Menu de pausa.tscn"
+run/main_scene="res://Scenes/BootSplash/bootsplash.tscn"
+config/icon="res://Assets/UI/HeartUIFull.png"
 
 [display]
 
@@ -53,3 +49,7 @@ texture={
 [physics]
 
 common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/logo.png-4ec0938a7494cd85e3c6b7de83fd6bd0.stex"
+path="res://.import/logoOutOfBounds.png-485d7d5dba902b15e6aee300246efdf5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TelaInicial/logo.png"
-dest_files=[ "res://.import/logo.png-4ec0938a7494cd85e3c6b7de83fd6bd0.stex" ]
+source_file="res://Assets/TelaInicial/logoOutOfBounds.png"
+dest_files=[ "res://.import/logoOutOfBounds.png-485d7d5dba902b15e6aee300246efdf5.stex" ]
 
 [params]
 

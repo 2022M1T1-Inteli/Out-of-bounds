@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
-const ACCELERATION = 2000
-const FRICTION = 2000
-const MAX_SPEED = 100
+var ACCELERATION = 2000
+var FRICTION = 2000
+var MAX_SPEED = 100
 var velocity = Vector2.ZERO
 
 var animationPlayer = null
@@ -11,6 +11,7 @@ func _ready():
 	animationPlayer = $AnimationPlayer
 
 func _physics_process(delta):
+	print(ACCELERATION)
 	var input_Vector = Vector2.ZERO
 	input_Vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	input_Vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
@@ -45,3 +46,10 @@ func _on_VoltarBtn_pressed() -> void:
 	
 	
 	
+
+
+func _entrou_no_gelo():
+	print('oi')
+	var ACCELERATION = 100
+	var FRICTION = 100
+	var MAX_SPEED = 100
