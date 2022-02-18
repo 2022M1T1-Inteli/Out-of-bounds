@@ -116,6 +116,23 @@ Coloque código do prompt de comando se for necessário
 ```
 
 ## 🗃 Histórico de lançamentos
+* 0.3 - 17/02/2022
+  * Primeiro executável
+  * Finalização do sprint 1
+    * Mapa criado
+    * Texturas refeitas
+    * Otimização de movimentação e câmera
+    
+* 0.2 - 16/02/2022
+  * Melhorias no jogo
+    * Câmera melhorada
+    * Menu, créditos e menu de pausa
+    * Bootsplash
+
+* 0.1 - 15/02/2022
+  * Upload primeira versão do jogo
+    * Movimentação finalizada, texturas básicas
+
 * 0.0.2 - 10/02/2022
   * Edições no GitHub
   * Explicação sobre o projeto
