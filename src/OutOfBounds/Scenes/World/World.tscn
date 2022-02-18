@@ -1093,13 +1093,14 @@ position = Vector2( 176, 80 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/player"]
 current = true
+zoom = Vector2( 0.8, 0.8 )
 limit_left = -32
 limit_top = -32
 limit_right = 600
 limit_bottom = 380
 limit_smoothed = true
 smoothing_enabled = true
-smoothing_speed = 2.0
+smoothing_speed = 3.0
 
 [node name="bush" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 56, 40 )
