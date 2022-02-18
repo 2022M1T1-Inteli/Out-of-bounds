@@ -1,6 +1,6 @@
 extends TextureRect
 
-var next_level = preload("res://scenes/TelaInicial/TelaInicial.tscn")
+var next_level = preload("res://Scenes/TelaInicial/TelaInicial.tscn")
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
