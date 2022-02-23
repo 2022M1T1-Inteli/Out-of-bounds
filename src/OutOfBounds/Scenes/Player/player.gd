@@ -24,8 +24,8 @@ func _ready():
 
 func _physics_process(delta):
 	var input_Vector = Vector2.ZERO
-	input_Vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	input_Vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
+	input_Vector.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+	input_Vector.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 	input_Vector = input_Vector.normalized()
 	
 	if input_Vector != Vector2.ZERO:
@@ -41,20 +41,26 @@ func _physics_process(delta):
 		velocity = velocity.move_toward(input_Vector * MAX_SPEED, ACCELERATION * delta)
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
-		if Input.is_action_just_released("ui_right"):
+		if Input.is_action_just_released("move_right"):
 			animationPlayer.play("IdleRight")
-		elif Input.is_action_just_released("ui_left"):
+		elif Input.is_action_just_released("move_left"):
 			animationPlayer.play("IdleLeft")
-		elif Input.is_action_just_released("ui_up"):
+		elif Input.is_action_just_released("move_up"):
 			animationPlayer.play("IdleUp")
-		elif Input.is_action_just_released("ui_down"):
+		elif Input.is_action_just_released("move_down"):
 			animationPlayer.play("IdleDown")
+		elif Input.is_action_just_pressed("attack"):
+			animationPlayer.play("AttackRight")
 	velocity = move_and_slide(velocity)
-
+	
+	
+	if Input.is_action_just_released("attack"):
+		animationPlayer.play("AttackRight")
 
 func _on_VoltarBtn_pressed() -> void:
 	get_tree().change_scene("res://Scenes/TelaInicial/TelaInicial.tscn")
 	
-	
-	
 
+func _on_SwordAttackRight_area_entered(area):
+	if area.is_in_group("hurtbox"):
+		area.take_damage()
