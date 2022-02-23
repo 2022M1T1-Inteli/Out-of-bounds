@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=2]
+[gd_scene load_steps=117 format=2]
 
 [ext_resource path="res://Scenes/World/World.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player/player.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Assets/World/MoonTileset.png" type="Texture" id=10]
 [ext_resource path="res://Assets/World/Bush.png" type="Texture" id=11]
 [ext_resource path="res://Assets/World/Tree.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/PauseMenu/PauseMenu.tscn" type="PackedScene" id=13]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -1207,6 +1208,11 @@ texture = ExtResource( 12 )
 [node name="Tree5" type="Sprite" parent="."]
 position = Vector2( 80, 328 )
 texture = ExtResource( 12 )
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="GUI" instance=ExtResource( 13 )]
+visible = false
 
 [connection signal="body_entered" from="Gelo" to="YSort/player" method="_on_ice_entered"]
 [connection signal="body_exited" from="Gelo" to="YSort/player" method="_on_ice_exit"]
