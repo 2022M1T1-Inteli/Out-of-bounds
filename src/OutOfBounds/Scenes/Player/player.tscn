@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/Player/player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Player/Player.png" type="Texture" id=2]
@@ -6,34 +6,6 @@
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 4.0
 height = 4.00001
-
-[sub_resource type="Animation" id=12]
-resource_name = "AttackRight"
-length = 0.4
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 24, 25, 26, 27 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Area2D/CollisionShapeAttackRight:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 1,
-"values": [ true, false, false, true ]
-}
 
 [sub_resource type="Animation" id=2]
 resource_name = "IdleDown"
@@ -112,18 +84,6 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Area2D/CollisionShapeAttackRight:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ true ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -210,94 +170,12 @@ tracks/0/keys = {
 "values": [ 1, 2, 3, 4, 5, 0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 10.5, 3.75 )
-
-[sub_resource type="AnimationNodeAnimation" id=18]
-animation = "AttackRight"
-
-[sub_resource type="AnimationNodeAnimation" id=14]
-animation = "IdleDown"
-
-[sub_resource type="AnimationNodeAnimation" id=19]
-animation = "IdleLeft"
-
-[sub_resource type="AnimationNodeAnimation" id=20]
-animation = "IdleRight"
-
-[sub_resource type="AnimationNodeAnimation" id=15]
-animation = "IdleUp"
-
-[sub_resource type="AnimationNodeAnimation" id=21]
-animation = "RunDown"
-
-[sub_resource type="AnimationNodeAnimation" id=22]
-animation = "RunLeft"
-
-[sub_resource type="AnimationNodeAnimation" id=23]
-animation = "RunRight"
-
-[sub_resource type="AnimationNodeAnimation" id=24]
-animation = "RunUp"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=25]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=26]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=27]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=28]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=29]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=30]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=31]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=32]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=33]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=34]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachine" id=16]
-states/AttackRight/node = SubResource( 18 )
-states/AttackRight/position = Vector2( 888, 155 )
-states/IdleDown/node = SubResource( 14 )
-states/IdleDown/position = Vector2( 579, 175 )
-states/IdleLeft/node = SubResource( 19 )
-states/IdleLeft/position = Vector2( 504, 127 )
-states/IdleRight/node = SubResource( 20 )
-states/IdleRight/position = Vector2( 637, 127 )
-states/IdleUp/node = SubResource( 15 )
-states/IdleUp/position = Vector2( 574, 84 )
-states/RunDown/node = SubResource( 21 )
-states/RunDown/position = Vector2( 518, 273.332 )
-states/RunLeft/node = SubResource( 22 )
-states/RunLeft/position = Vector2( 332, 84 )
-states/RunRight/node = SubResource( 23 )
-states/RunRight/position = Vector2( 888, 84 )
-states/RunUp/node = SubResource( 24 )
-states/RunUp/position = Vector2( 504, -23.6676 )
-transitions = [ "IdleRight", "AttackRight", SubResource( 25 ), "AttackRight", "IdleRight", SubResource( 26 ), "IdleDown", "RunDown", SubResource( 27 ), "RunDown", "IdleDown", SubResource( 28 ), "RunUp", "IdleUp", SubResource( 29 ), "IdleUp", "RunUp", SubResource( 30 ), "IdleLeft", "RunLeft", SubResource( 31 ), "RunLeft", "IdleLeft", SubResource( 32 ), "IdleRight", "RunRight", SubResource( 33 ), "RunRight", "IdleRight", SubResource( 34 ) ]
-graph_offset = Vector2( 0, -85.6676 )
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=17]
-
 [node name="player" type="KinematicBody2D"]
 position = Vector2( 251, 90 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -9 )
@@ -310,7 +188,6 @@ rotation = -1.5708
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/AttackRight = SubResource( 12 )
 anims/IdleDown = SubResource( 2 )
 anims/IdleLeft = SubResource( 3 )
 anims/IdleRight = SubResource( 4 )
@@ -321,18 +198,3 @@ anims/RunLeft = SubResource( 8 )
 anims/RunRight = SubResource( 9 )
 anims/RunUp = SubResource( 10 )
 anims/asrtdfdlblwv = SubResource( 11 )
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShapeAttackRight" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 17.5, -5 )
-shape = SubResource( 13 )
-disabled = true
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 16 )
-anim_player = NodePath("../AnimationPlayer")
-active = true
-parameters/playback = SubResource( 17 )
-
-[connection signal="area_entered" from="Area2D" to="." method="_on_SwordAttackRight_area_entered"]
