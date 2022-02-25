@@ -1,60 +1,73 @@
 extends KinematicBody2D
 
 var ACCELERATION = 2000
-var FRICTION = 2000
+var FRICTION = 2000       #variaveis em maiúsculo para explicitar que são variáveis de física
 var MAX_SPEED = 100
+
+
+enum{
+	MOVE,
+	ATTACK       #enumera as possíveis ações do personagem. Útil mais pra frente no desenvolvimento.
+}
+
+var state = MOVE  # define o estado inicial do personagem como MOVE e velocidade inicial como 0.
 var velocity = Vector2.ZERO
 
-
 func _on_ice_entered(body):
+	var _teste1 = body
 	ACCELERATION = 100
 	FRICTION = 100
 	MAX_SPEED = 100
-
+				  #funções para mecanica do gelo
 func _on_ice_exit(body):
+	var _teste2 = body
 	ACCELERATION = 2000
 	FRICTION = 2000
 	MAX_SPEED = 100
 
-
-var animationPlayer = null
-
-func _ready():
-	animationPlayer = $AnimationPlayer
-
-func _physics_process(delta):
+func move_state(delta):    #---função que executa tudo relacionado a movimento e ativa ataques.
 	var input_Vector = Vector2.ZERO
-	input_Vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	input_Vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-	input_Vector = input_Vector.normalized()
+	input_Vector.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+	input_Vector.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")   #capta os inputs para movimento
+	input_Vector = input_Vector.normalized()  #normaliza a resultante, ou seja, subtrai 1 caso a resultante seja maior que 1.
 	
-	if input_Vector != Vector2.ZERO:
-		if input_Vector.x > 0:
-			animationPlayer.play("RunRight")
+	if input_Vector != Vector2.ZERO: #toda vez que a input for diferente de 0:
+		animationTree.set('parameters/Idle/blend_position', input_Vector)
+		animationTree.set('parameters/Run/blend_position', input_Vector)  #O mecanismo de animação checa qual a atual direção do personagem
+		animationTree.set('parameters/Attack/blend_position', input_Vector)
+		animationState.travel("Run") #define o nodo de animação "Run" como o atual
+		velocity = velocity.move_toward(input_Vector * MAX_SPEED, ACCELERATION * delta) #faz um cálculo com o tempo de frame do jogador para que o o jogo não fique em camera lenta em framerates menores.
+	else: #quando a input é igual a 0:
+		animationState.travel("Idle") #define o nodo de animação "Idle" como o atual
+		velocity = Vector2.move_toward(Vector2.ZERO, FRICTION * delta) #zera o vetor velocidade
+		
+	velocity = move_and_slide(velocity) #arruma colisões bugadas com as paredes
+	if Input.is_action_just_pressed("attack"): #caso o botão de ataque esteja pressionado, define o estado como ATTACK
+		state = ATTACK
+		
+func attack_state(delta):  #função chamada para ativar a anmiação de ataque
+	animationState.travel("Attack")
+	
+func attack_animation_finished(): #função ativada quando a animação de ataque termina. ativada pelo nodo "AnimationPlayer"
+	state = MOVE
+	
+onready var animationPlayer = $AnimationPlayer
+onready var animationTree = $AnimationTree    #variaveis que chamam os nodos responsáveis pela animação
+onready var animationState = animationTree.get("parameters/playback")
+
+func _on_SwordAttackRight_area_entered(area):  #define o que fazer quando a hitbox da espada do personagem for atingida. ainda não utlizada.
+	if area.is_in_group("hurtbox"):
+		area.take_damage()
+
+
+func _ready(): #ativa o nodo de animações apenas quando o jogo começa
+	animationTree.active = true
+	
+func _physics_process(delta): #função principal do jogo. roda 60 vezes por segundo.
+	match state:              #executa a função correta para o momento, MOVE ou ATTACK
+		MOVE:
+			move_state(delta)
 			
-		elif input_Vector.x < 0:
-			animationPlayer.play("RunLeft")
-		elif input_Vector.y > 0:
-			animationPlayer.play("RunDown")
-		else:
-			animationPlayer.play("RunUp")
-		velocity = velocity.move_toward(input_Vector * MAX_SPEED, ACCELERATION * delta)
-	else:
-		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
-		if Input.is_action_just_released("ui_right"):
-			animationPlayer.play("IdleRight")
-		elif Input.is_action_just_released("ui_left"):
-			animationPlayer.play("IdleLeft")
-		elif Input.is_action_just_released("ui_up"):
-			animationPlayer.play("IdleUp")
-		elif Input.is_action_just_released("ui_down"):
-			animationPlayer.play("IdleDown")
-	velocity = move_and_slide(velocity)
-
-
-func _on_VoltarBtn_pressed() -> void:
-	get_tree().change_scene("res://Scenes/TelaInicial/TelaInicial.tscn")
-	
-	
-	
+		ATTACK:
+			attack_state(delta)
 
