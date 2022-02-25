@@ -14,6 +14,10 @@ config/name="OutOfBounds"
 run/main_scene="res://Scenes/BootSplash/bootsplash.tscn"
 config/icon="res://Assets/UI/HeartUIFull.png"
 
+[autoload]
+
+PauseMenu="*res://Scenes/PauseMenu/PauseMenu.tscn"
+
 [display]
 
 window/size/width=320
