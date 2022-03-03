@@ -17,5 +17,5 @@ func _ready():
 
 
 func _on_VoltarBtn_pressed() -> void:
-	get_tree().change_scene("res://Scenes/TelaInicial/TelaInicial.tscn")
+	get_tree().change_scene("res://Scenes/HomeScreen/HomeScreen.tscn")
 	
