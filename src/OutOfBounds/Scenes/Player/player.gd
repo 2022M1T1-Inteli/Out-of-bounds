@@ -39,7 +39,7 @@ func move_state(delta):    #---função que executa tudo relacionado a movimento
 		velocity = velocity.move_toward(input_Vector * MAX_SPEED, ACCELERATION * delta) #faz um cálculo com o tempo de frame do jogador para que o o jogo não fique em camera lenta em framerates menores.
 	else: #quando a input é igual a 0:
 		animationState.travel("Idle") #define o nodo de animação "Idle" como o atual
-		velocity = Vector2.move_toward(Vector2.ZERO, FRICTION * delta) #zera o vetor velocidade
+		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta) #zera o vetor velocidade
 		
 	velocity = move_and_slide(velocity) #arruma colisões bugadas com as paredes
 	if Input.is_action_just_pressed("attack"): #caso o botão de ataque esteja pressionado, define o estado como ATTACK
