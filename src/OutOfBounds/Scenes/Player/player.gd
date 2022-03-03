@@ -55,6 +55,11 @@ onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree    #variaveis que chamam os nodos responsáveis pela animação
 onready var animationState = animationTree.get("parameters/playback")
 
+func _on_SwordAttackRight_area_entered(area):  #define o que fazer quando a hitbox da espada do personagem for atingida. ainda não utlizada.
+	if area.is_in_group("hurtbox"):
+		area.take_damage()
+
+
 func _ready(): #ativa o nodo de animações apenas quando o jogo começa
 	animationTree.active = true
 	
