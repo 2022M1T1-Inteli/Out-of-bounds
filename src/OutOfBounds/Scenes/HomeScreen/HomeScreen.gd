@@ -17,10 +17,10 @@ func _ready():
 
 
 func _on_StartBtn_pressed() -> void:
-	get_tree().change_scene("res://Scenes/World/world.tscn")
+	get_tree().change_scene("res://Scenes/World/World.tscn")
 	
 func _on_Credito_pressed() -> void:
-	get_tree().change_scene("res://Scenes/About/about.tscn")
+	get_tree().change_scene("res://Scenes/About/About.tscn")
 	
 func _on_QuitBtn_pressed():
 	get_tree().quit()

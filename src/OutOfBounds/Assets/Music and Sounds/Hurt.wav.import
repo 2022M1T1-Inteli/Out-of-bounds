@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Hurt.wav-4dce1063b87b85990d12cfd07a9ec583.sample"
+path="res://.import/Hurt.wav-42a40c6128afeb8392e443a1e6a0e439.sample"
 
 [deps]
 
-source_file="res://Assets/MusicAndSounds/Hurt.wav"
-dest_files=[ "res://.import/Hurt.wav-4dce1063b87b85990d12cfd07a9ec583.sample" ]
+source_file="res://Assets/Music and Sounds/Hurt.wav"
+dest_files=[ "res://.import/Hurt.wav-42a40c6128afeb8392e443a1e6a0e439.sample" ]
 
 [params]
 
