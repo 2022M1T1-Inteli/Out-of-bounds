@@ -16,7 +16,6 @@ func _ready():
 #	pass
 
 
-func _on_VoltarBtn_pressed() -> void:
+func _on_TextureButton_pressed():
 	if get_tree().change_scene("res://Scenes/HomeScreen/homeScreen.tscn") != OK:
 		print("erro mudando de cena")
-	
