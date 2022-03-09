@@ -19,6 +19,6 @@ func _on_ResumeBtn_pressed():
 
 
 func _on_QuitBtn_pressed():
-	get_tree().change_scene("res://Scenes/HomeScreen/HomeScreen.tscn")
+	get_tree().change_scene("res://Scenes/HomeScreen/homeScreen.tscn")
 	showPauseMenu(false)
 	get_tree().paused = false 
