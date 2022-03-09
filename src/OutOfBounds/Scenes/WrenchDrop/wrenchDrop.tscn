@@ -216,5 +216,4 @@ position = Vector2( 6.50849, 8.54716 )
 rotation = 1.5708
 shape = SubResource( 9 )
 
-[connection signal="tree_exited" from="AnimationTree" to="." method="_on_AnimationTree_tree_exited"]
 [connection signal="area_entered" from="ColectDetector" to="." method="_on_ColectDetector_area_entered"]

@@ -16,9 +16,9 @@ func drop_wrench():
 	world.add_child(Dropping)
 	Dropping.global_position = global_position
 	
-func _on_hurtbox_area_entered(area):
+func _on_hurtbox_area_entered(_area):
 	create_grass_effect()
 	var num_drop = randi()%10
 	if num_drop == 4:
-		drop_wrench()
+		call_deferred("drop_wrench")
 	queue_free()

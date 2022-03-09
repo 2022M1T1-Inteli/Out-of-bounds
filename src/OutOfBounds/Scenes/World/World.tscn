@@ -1,6 +1,6 @@
 [gd_scene load_steps=114 format=2]
 
-[ext_resource path="res://Scenes/World/World.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/World/world.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/World/IceTileset.png" type="Texture" id=3]
 [ext_resource path="res://Assets/World/DirtTileset2.png" type="Texture" id=4]
@@ -1094,7 +1094,7 @@ tile_data = PoolIntArray( -65539, 1, 196608, -65538, 1, 6, -65537, 1, 1, -131072
 position = Vector2( 56, 40 )
 
 [node name="bush2" parent="YSort/bushes" instance=ExtResource( 9 )]
-position = Vector2( 16, 24 )
+position = Vector2( 15, 24 )
 
 [node name="bush3" parent="YSort/bushes" instance=ExtResource( 9 )]
 position = Vector2( 88, 192 )
@@ -1288,7 +1288,7 @@ position = Vector2( 15, 32 )
 position = Vector2( 39, 40 )
 
 [node name="grass55" parent="YSort/grass" instance=ExtResource( 8 )]
-position = Vector2( -1, 0 )
+position = Vector2( 7, 64 )
 
 [node name="grass56" parent="YSort/grass" instance=ExtResource( 8 )]
 position = Vector2( -1, 32 )

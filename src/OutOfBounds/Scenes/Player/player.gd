@@ -13,14 +13,12 @@ enum{
 var state = MOVE  # define o estado inicial do personagem como MOVE e velocidade inicial como 0.
 var velocity = Vector2.ZERO
 
-func _on_ice_entered(body):
-	var _teste1 = body
+func _on_ice_entered(_body):
 	ACCELERATION = 100
 	FRICTION = 100
 	MAX_SPEED = 100
 				  #funções para mecanica do gelo
-func _on_ice_exit(body):
-	var _teste2 = body
+func _on_ice_exit(_body):
 	ACCELERATION = 2000
 	FRICTION = 2000
 	MAX_SPEED = 100
@@ -45,7 +43,7 @@ func move_state(delta):    #---função que executa tudo relacionado a movimento
 	if Input.is_action_just_pressed("attack"): #caso o botão de ataque esteja pressionado, define o estado como ATTACK
 		state = ATTACK
 		
-func attack_state(delta):  #função chamada para ativar a anmiação de ataque
+func attack_state(_delta):  #função chamada para ativar a anmiação de ataque
 	animationState.travel("Attack")
 	
 func attack_animation_finished(): #função ativada quando a animação de ataque termina. ativada pelo nodo "AnimationPlayer"

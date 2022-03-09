@@ -16,7 +16,7 @@ config/icon="res://Assets/UI/HeartUIFull.png"
 
 [autoload]
 
-PauseMenu="*res://Scenes/PauseMenu/PauseMenu.tscn"
+PauseMenu="*res://Scenes/PauseMenu/pauseMenu.tscn"
 
 [display]
 

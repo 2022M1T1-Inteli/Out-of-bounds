@@ -10,13 +10,9 @@ onready var animationState = animationTree.get("parameters/playback")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var animationPlayer = $AnimationPlayer
-	var animationTree = $AnimationTree
-	var animationState = animationTree.get("parameters/playback")
 	animationTree.active = true
 	animationState.travel("Drop")
 
 
-func _on_ColectDetector_area_entered(area):
+func _on_ColectDetector_area_entered(_area):
 	animationState.travel("Colect")
-	 # Replace with function body.
