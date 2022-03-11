@@ -1,4 +1,4 @@
-[gd_scene load_steps=214 format=2]
+[gd_scene load_steps=213 format=2]
 
 [ext_resource path="res://Assets/TelaInicial/Space Background (5).png" type="Texture" id=2]
 [ext_resource path="res://Assets/TelaInicial/logoOutOfBounds.png" type="Texture" id=3]
@@ -10,7 +10,6 @@
 [ext_resource path="res://Assets/UI/saiba-mais-button.png" type="Texture" id=9]
 [ext_resource path="res://Assets/UI/saiba-mais-button-hover.png" type="Texture" id=10]
 [ext_resource path="res://Assets/UI/sair-button.png" type="Texture" id=11]
-[ext_resource path="res://Assets/TelaInicial/planet.png" type="Texture" id=12]
 [ext_resource path="res://Assets/TelaInicial/766363039.png" type="Texture" id=13]
 
 [sub_resource type="AtlasTexture" id=1]
@@ -830,13 +829,14 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 160, 90 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 320, 180 )
 
 [node name="Logo" type="Sprite" parent="."]
-position = Vector2( 166, 34 )
-scale = Vector2( 0.250789, 0.346591 )
+position = Vector2( 163, 23 )
+scale = Vector2( 0.250789, 0.188447 )
 texture = ExtResource( 3 )
 
 [node name="StartBtn" type="TextureButton" parent="."]
@@ -852,10 +852,10 @@ __meta__ = {
 }
 
 [node name="QuitBtn" type="TextureButton" parent="."]
-margin_left = -10.0
-margin_top = 94.0
-margin_right = 67.0
-margin_bottom = 114.0
+margin_left = 3.0
+margin_top = 91.0
+margin_right = 80.0
+margin_bottom = 111.0
 texture_normal = ExtResource( 11 )
 texture_hover = ExtResource( 8 )
 expand = true
@@ -864,9 +864,9 @@ __meta__ = {
 }
 
 [node name="Credito" type="TextureButton" parent="."]
-margin_left = 259.0
-margin_top = 149.0
-margin_right = 311.0
+margin_left = 257.0
+margin_top = 152.0
+margin_right = 309.0
 margin_bottom = 172.0
 texture_normal = ExtResource( 9 )
 texture_hover = ExtResource( 10 )
@@ -879,17 +879,12 @@ __meta__ = {
 position = Vector2( 161, 198 )
 scale = Vector2( 1.17208, 1.15806 )
 frames = SubResource( 201 )
-frame = 116
+frame = 62
 playing = true
 
-[node name="Planet" type="Sprite" parent="."]
-position = Vector2( 567.145, 563.264 )
-scale = Vector2( 0.335742, 0.463995 )
-texture = ExtResource( 12 )
-
 [node name="SemTítulo" type="Sprite" parent="."]
-position = Vector2( 160, 169 )
-scale = Vector2( 0.221774, 0.306583 )
+position = Vector2( 282, 137 )
+scale = Vector2( 0.264113, 0.306583 )
 texture = ExtResource( 6 )
 
 [connection signal="pressed" from="StartBtn" to="." method="_on_StartBtn_pressed"]

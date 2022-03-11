@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=2]
+[gd_scene load_steps=115 format=2]
 
 [ext_resource path="res://Scenes/World/world.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player/player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scenes/Grass/grass.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Bush/bush.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/World/MoonTileset.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/DialogBox/dialogBox.tscn" type="PackedScene" id=11]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -1394,6 +1395,12 @@ limit_smoothed = true
 smoothing_enabled = true
 smoothing_speed = 3.0
 
+[node name="DialogBox" parent="YSort/player/Camera2D" instance=ExtResource( 11 )]
+position = Vector2( -55, 9 )
+
+[node name="DialogBox" parent="YSort/player/Camera2D/DialogBox" index="0"]
+dialogPath = "res://Scenes/DialogBox/dialogChapter1.json"
+
 [node name="Gelo" type="Area2D" parent="."]
 position = Vector2( 480, 256 )
 __meta__ = {
@@ -1405,3 +1412,5 @@ shape = SubResource( 50 )
 
 [connection signal="body_entered" from="Gelo" to="YSort/player" method="_on_ice_entered"]
 [connection signal="body_exited" from="Gelo" to="YSort/player" method="_on_ice_exit"]
+
+[editable path="YSort/player/Camera2D/DialogBox"]

@@ -3,6 +3,8 @@
 [ext_resource path="res://Scenes/DialogBox/dialogBox.gd" type="Script" id=1]
 
 [node name="DialogBox" type="Node2D"]
+scale = Vector2( 0.5, 0.5 )
+z_index = 10
 
 [node name="DialogBox" type="ColorRect" parent="."]
 anchor_left = 0.5
@@ -21,22 +23,20 @@ __meta__ = {
 }
 
 [node name="Name" type="RichTextLabel" parent="DialogBox"]
-margin_left = 4.0
-margin_top = 1.98993
-margin_right = 241.0
+margin_right = 120.0
 margin_bottom = 15.0
-rect_scale = Vector2( 0.248864, 0.611803 )
+rect_clip_content = false
 custom_colors/default_color = Color( 0, 0, 0, 1 )
+visible_characters = 0
 fit_content_height = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Text" type="RichTextLabel" parent="DialogBox"]
-margin_left = 1.0
-margin_top = 13.0
-margin_right = 1577.0
-margin_bottom = 86.0
+margin_top = 12.0
+margin_right = 1596.0
+margin_bottom = 85.0
 rect_scale = Vector2( 0.20045, 0.230098 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 fit_content_height = true
@@ -46,6 +46,7 @@ __meta__ = {
 }
 
 [node name="Indicator" type="CollisionPolygon2D" parent="DialogBox"]
+visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="DialogBox/Indicator"]
 
