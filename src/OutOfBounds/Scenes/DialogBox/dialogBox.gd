@@ -5,14 +5,14 @@ export(float) var textSpeed = 0.05 # Velocidade do texto
 
 var dialog
 
-var phraseNum = 0
-var finished = false
+var phraseNum = 0 # Número da fala que está sendo apresentada
+var finished = false # Variável que mostra o status da fala sendo apresentada
 
 func _ready():
 	$Timer.wait_time = textSpeed
-	dialog = getDialog() 
+	dialog = getDialog() # Pegar os diálogos em formato de Array
 	assert(dialog, "Dialog not found")
-	nextPhrase() 
+	nextPhrase() # Começar a primeira fala
 
 func _process(delta): # Função em Loop
 	if Input.is_action_just_pressed("ui_accept"): # Checar se o botão espaço foi apertado
@@ -47,12 +47,12 @@ func nextPhrase() -> void: # Função para avançar para próxima fala
 	
 	$Text.visible_characters = 0
 	
-	while $Text.visible_characters < len($Text.text): # 
+	while $Text.visible_characters < len($Text.text): # Loop para ir mostrando os caracteres da fala
 		$Text.visible_characters += 1
 		
-		$Timer.start()
-		yield($Timer, "timeout")
+		$Timer.start() # Iniciar o Timer
+		yield($Timer, "timeout") # Sair do Loop se o timer acabar
 	
-	finished = true
-	phraseNum += 1
+	finished = true # Setar variável para mostrar que fala terminou
+	phraseNum += 1 # Passar para próxima fala
 	return

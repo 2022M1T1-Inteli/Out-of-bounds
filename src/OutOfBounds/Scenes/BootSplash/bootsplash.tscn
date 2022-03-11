@@ -4,8 +4,7 @@
 [ext_resource path="res://Scenes/BootSplash/bootsplash.gd" type="Script" id=2]
 
 [node name="TextureRect" type="TextureRect"]
-margin_left = -1.0
-margin_right = 319.0
+margin_right = 320.0
 margin_bottom = 180.0
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
