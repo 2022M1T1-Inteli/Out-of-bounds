@@ -5,7 +5,7 @@ var FRICTION = 2000       #variaveis em maiúsculo para explicitar que são vari
 var MAX_SPEED = 100
 
 
-enum{
+enum {
 	MOVE,
 	ATTACK       #enumera as possíveis ações do personagem. Útil mais pra frente no desenvolvimento.
 }
