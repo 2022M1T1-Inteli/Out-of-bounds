@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/console_w.png-16efb363eaaae395eff1c42d4bce12be.stex"
+path="res://.import/Button.png-276b4dab9eae18c2e248d37453760b3c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SpaceShip/console_w.png"
-dest_files=[ "res://.import/console_w.png-16efb363eaaae395eff1c42d4bce12be.stex" ]
+source_file="res://Assets/SpaceShip/Button.png"
+dest_files=[ "res://.import/Button.png-276b4dab9eae18c2e248d37453760b3c.stex" ]
 
 [params]
 

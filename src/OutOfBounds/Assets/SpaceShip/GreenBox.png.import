@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/console_s.png-3b57e77c3e3f7cb20c3ec60cb80a3817.stex"
+path="res://.import/GreenBox.png-8df26f91c9b1f2f86fb80714753f3ade.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SpaceShip/console_s.png"
-dest_files=[ "res://.import/console_s.png-3b57e77c3e3f7cb20c3ec60cb80a3817.stex" ]
+source_file="res://Assets/SpaceShip/GreenBox.png"
+dest_files=[ "res://.import/GreenBox.png-8df26f91c9b1f2f86fb80714753f3ade.stex" ]
 
 [params]
 
