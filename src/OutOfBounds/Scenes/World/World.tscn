@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=2]
+[gd_scene load_steps=115 format=2]
 
 [ext_resource path="res://Scenes/World/world.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player/player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scenes/Grass/grass.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Bush/bush.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/World/MoonTileset.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/World/Bock1Oficial.png" type="Texture" id=11]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -1402,6 +1403,11 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gelo"]
 shape = SubResource( 50 )
+
+[node name="Bock1Oficial" type="Sprite" parent="."]
+position = Vector2( 109, 86 )
+scale = Vector2( 0.760417, 0.708333 )
+texture = ExtResource( 11 )
 
 [connection signal="body_entered" from="Gelo" to="YSort/player" method="_on_ice_entered"]
 [connection signal="body_exited" from="Gelo" to="YSort/player" method="_on_ice_exit"]
