@@ -1,0 +1,20 @@
+[
+    {"Name": "Astronauta", "Text": "Olá, não sou daqui, vi que você está um pouco espantado."},
+    {"Name": "Ser Desconhecido", "Text": "......."},
+    {"Name": "Astronauta", "Text": "Não precisa ficar com medo, sou de outro planeta e a minha nave acabou caindo aqui, pode me dizer ao menos onde estou?"},
+    {"Name": "Ser Desconhecido", "Text": "Por favor me poupe, sou muito novo para morrer!"},
+    {"Name": "Astronauta", "Text": "Calmaa, eu venho em paz. Na verdade eu estou tão assustado quanto você. Minha nave deu problema e eu acabei caindo aqui por engano."},
+    {"Name": "Ser Desconhecido", "Text": "...."},
+    {"Name": "Ser Desconhecido", "Text": "Quem é você?"},
+    {"Name": "Astronauta", "Text": " Sou conhecido como “Astronauta” e vim do planeta Terra."},
+    {"Name": "Ser Desconhecido", "Text": "Hm..."},
+    {"Name": "Ser Desconhecido", "Text": "Entendi. Sou o Stuart... chamamos nosso planeta de Brahen."},
+    {"Name": "Astronauta", "Text": "Prazer Stuart. Parece que minha nave precisa de um conserto, consegue me ajudar? Meu planeta depende muito de mim."},
+    {"Name": "Stuart", "Text": "Hm... mas quais peças você precisa?"},
+    {"Name": "Astronauta", "Text": "Então, preciso verificar. Me dê um instante."},
+    {"Name": "Astronauta", "Text": "..."},
+    {"Name": "Astronauta", "Text": "..."},
+    {"Name": "Astronauta", "Text": "Estou precisando de um motor de combustão interna, um MGU-K, um MGU-H e uma bateria."},
+    {"Name": "Stuart", "Text": "Uau! Por sorte essas peças são muito comuns aqui no planeta... estou muito curioso para saber sobre a sua história... já estou me enrolando todo, perdão. Vou te ajudar sim, pelo jeito uma civilização inteira depende de você. Vamos logo!"},
+    {"Name": "Astronauta", "Text": "Muito obrigado!"}
+]
