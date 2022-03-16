@@ -5,6 +5,7 @@ var FRICTION = 2000       #variaveis em maiúsculo para explicitar que são vari
 var MAX_SPEED = 100
 
 
+
 enum {
 	MOVE,
 	ATTACK       #enumera as possíveis ações do personagem. Útil mais pra frente no desenvolvimento.
@@ -17,7 +18,7 @@ func _on_ice_entered(_body):
 	ACCELERATION = 100
 	FRICTION = 100
 	MAX_SPEED = 100
-				  #funções para mecanica do gelo
+				  #funções para mecânica do gelo
 func _on_ice_exit(_body):
 	ACCELERATION = 2000
 	FRICTION = 2000
@@ -55,6 +56,12 @@ onready var animationState = animationTree.get("parameters/playback")
 
 func _ready(): #ativa o nodo de animações apenas quando o jogo começa
 	animationTree.active = true
+	print(get_tree().get_root().find_node("Npc",true,false))
+	
+	var npcNode = get_tree().get_root().find_node("Npc",true,false) 
+	npcNode.connect("onDialogStart",self,"onDialogStart") # Conectar Signal com função para tirar a movimentação do jogador
+	
+	npcNode.connect("onDialogExited",self,"onDialogExited") # Conectar Signal com função para tirar a movimentação do jogador
 	
 func _physics_process(delta): #função principal do jogo. roda 60 vezes por segundo.
 	match state:              #executa a função correta para o momento, MOVE ou ATTACK
@@ -63,4 +70,16 @@ func _physics_process(delta): #função principal do jogo. roda 60 vezes por seg
 			
 		ATTACK:
 			attack_state(delta)
+			
+
+func onDialogStart():
+	MAX_SPEED = 0
+	animationTree.active = false
+	
+func onDialogExited():
+	MAX_SPEED = 100
+	animationTree.active = true
+
+
+
 

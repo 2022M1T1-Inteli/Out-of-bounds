@@ -1,4 +1,4 @@
-extends ColorRect
+extends Control
 
 export var dialogPath = "" # Variável de caminho até arquivo JSON onde as falas se encontram
 export(float) var textSpeed = 0.05 # Velocidade do texto
@@ -8,8 +8,10 @@ var dialog
 var phraseNum = 0 # Número da fala que está sendo apresentada
 var finished = false # Variável que mostra o status da fala sendo apresentada
 
+signal onDialogFinish
+
 func _ready():
-	$Timer.wait_time = textSpeed
+	$TextureRect/Timer.wait_time = textSpeed
 	dialog = getDialog() # Pegar os diálogos em formato de Array
 	assert(dialog, "Dialog not found")
 	nextPhrase() # Começar a primeira fala
@@ -19,7 +21,7 @@ func _process(delta): # Função em Loop
 		if finished:
 			nextPhrase() # Avançar para próxima fala
 		else:
-			$Text.visible_characters = len($Text.text) # Mostrar todo o texto da fala
+			$TextureRect/Text.visible_characters = len($TextureRect/Text.text) # Mostrar todo o texto da fala
 	
 func getDialog() -> Array:
 	var f = File.new() # Criar instancia de File
@@ -37,22 +39,29 @@ func getDialog() -> Array:
 
 func nextPhrase() -> void: # Função para avançar para próxima fala
 	if phraseNum >= len(dialog): # Fechar cena se todos os caracteres do diálogo já estiverem na tela
+		emit_signal("onDialogFinish")
 		queue_free()
 		return
 		
 	finished = false
 	
-	$Name.bbcode_text = dialog[phraseNum]["Name"] # Setar nome com o nome que está no Array
-	$Text.bbcode_text = dialog[phraseNum]["Text"] # Setar texto com a fala que está no Array
+	$TextureRect/Name.bbcode_text = dialog[phraseNum]["Name"] # Setar nome com o nome que está no Array
+	$TextureRect/Text.bbcode_text = dialog[phraseNum]["Text"] # Setar texto com a fala que está no Array
 	
-	$Text.visible_characters = 0
+	$TextureRect/Text.visible_characters = 0
 	
-	while $Text.visible_characters < len($Text.text): # Loop para ir mostrando os caracteres da fala
-		$Text.visible_characters += 1
+	while $TextureRect/Text.visible_characters < len($TextureRect/Text.text): # Loop para ir mostrando os caracteres da fala
+		$TextureRect/Text.visible_characters += 1
 		
-		$Timer.start() # Iniciar o Timer
-		yield($Timer, "timeout") # Sair do Loop se o timer acabar
+		$TextureRect/Timer.start() # Iniciar o Timer
+		yield($TextureRect/Timer, "timeout") # Sair do Loop se o timer acabar
 	
 	finished = true # Setar variável para mostrar que fala terminou
 	phraseNum += 1 # Passar para próxima fala
 	return
+
+
+func _on_DialogBox_tree_exited():
+	pass
+#	var npcNode = get_tree().get_root().find_node("Npc",true,false) 
+#	npcNode.connect("onDialogFinish",self,"onDialogStart") # Conectar Signal com função para retornar a movimentação do jogador

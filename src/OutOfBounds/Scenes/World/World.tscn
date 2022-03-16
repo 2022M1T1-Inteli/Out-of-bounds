@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=2]
+[gd_scene load_steps=115 format=2]
 
 [ext_resource path="res://Scenes/World/world.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player/player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scenes/Grass/grass.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Bush/bush.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/World/MoonTileset.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Npc/Npc.tscn" type="PackedScene" id=11]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -1088,6 +1089,25 @@ tile_data = PoolIntArray( -65539, 1, 196608, -65538, 1, 6, -65537, 1, 1, -131072
 
 [node name="YSort" type="YSort" parent="."]
 
+[node name="Npc" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( 102, 130 )
+
+[node name="Player" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 176, 80 )
+
+[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
+current = true
+zoom = Vector2( 0.8, 0.8 )
+limit_left = -32
+limit_top = -32
+limit_right = 600
+limit_bottom = 380
+limit_smoothed = true
+smoothing_enabled = true
+smoothing_speed = 3.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="YSort/Player"]
+
 [node name="bushes" type="YSort" parent="YSort"]
 
 [node name="bush" parent="YSort/bushes" instance=ExtResource( 9 )]
@@ -1380,20 +1400,6 @@ position = Vector2( 223, 16 )
 [node name="grass85" parent="YSort/grass" instance=ExtResource( 8 )]
 position = Vector2( 239, 16 )
 
-[node name="player" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 176, 80 )
-
-[node name="Camera2D" type="Camera2D" parent="YSort/player"]
-current = true
-zoom = Vector2( 0.8, 0.8 )
-limit_left = -32
-limit_top = -32
-limit_right = 600
-limit_bottom = 380
-limit_smoothed = true
-smoothing_enabled = true
-smoothing_speed = 3.0
-
 [node name="Gelo" type="Area2D" parent="."]
 position = Vector2( 480, 256 )
 __meta__ = {
@@ -1403,5 +1409,5 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gelo"]
 shape = SubResource( 50 )
 
-[connection signal="body_entered" from="Gelo" to="YSort/player" method="_on_ice_entered"]
-[connection signal="body_exited" from="Gelo" to="YSort/player" method="_on_ice_exit"]
+[connection signal="body_entered" from="Gelo" to="YSort/Player" method="_on_ice_entered"]
+[connection signal="body_exited" from="Gelo" to="YSort/Player" method="_on_ice_exit"]
