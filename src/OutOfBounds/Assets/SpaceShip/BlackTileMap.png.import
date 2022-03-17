@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/computer.png-91bb59b7488594017258f7650506659f.stex"
+path="res://.import/BlackTileMap.png-8b7aa031a59a2e37914a992c2885e5a3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SpaceShip/computer.png"
-dest_files=[ "res://.import/computer.png-91bb59b7488594017258f7650506659f.stex" ]
+source_file="res://Assets/SpaceShip/BlackTileMap.png"
+dest_files=[ "res://.import/BlackTileMap.png-8b7aa031a59a2e37914a992c2885e5a3.stex" ]
 
 [params]
 

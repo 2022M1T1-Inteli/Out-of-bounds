@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=2]
+[gd_scene load_steps=115 format=2]
 
 [ext_resource path="res://Assets/World/CliffTileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/World/GrassBackground2.png" type="Texture" id=2]
@@ -10,7 +10,6 @@
 [ext_resource path="res://Scenes/Bush/bush.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Grass/grass.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/World/world.gd" type="Script" id=10]
-[ext_resource path="res://Scenes/Npcs/Stuart/stuart.tscn" type="PackedScene" id=11]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -1105,9 +1104,6 @@ limit_bottom = 380
 limit_smoothed = true
 smoothing_enabled = true
 smoothing_speed = 3.0
-
-[node name="Stuart" parent="YSort" instance=ExtResource( 11 )]
-position = Vector2( 258, 137 )
 
 [node name="bushes" type="YSort" parent="YSort"]
 

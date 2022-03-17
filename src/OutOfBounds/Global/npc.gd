@@ -17,16 +17,16 @@ func onNpcBodyEntered(body):
 				if dialog.path == dialogPath:
 					if dialog.active == false && dialog.completed == false:
 						canInteract = true
-						$Label.visible = true
+						$Key.visible = true
 
 func onNpcBodyExited(body):
 	if body.name == "Player":
-		$Label.visible = false
+		$Key.visible = false
 		isNear = false
 
 func _input(event):
 	if Input.is_action_pressed("interact") and isNear == true and canInteract == true:
-		$Label.visible = false
+		$Key.visible = false
 		
 		for phase in Global.phases:
 			for dialog in phase:

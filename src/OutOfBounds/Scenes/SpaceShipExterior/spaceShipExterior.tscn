@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/SpaceShip/SpaceShipExterior.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/SpaceShipExterior/spaceShipExterior.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 15.0
+height = 9.99999
+
+[node name="SpaceShipExterior" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_right = 220.0
+margin_bottom = 94.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 90.4282, 40.4316, 139.281, 61.088 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 77, 81 )
+rotation = -1.5708
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_SpaceShipExterior_body_entered"]

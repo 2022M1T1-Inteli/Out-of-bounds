@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Engine.png-bcb6c8fdbbc670862a825a3860a64f3c.stex"
+path="res://.import/GuideOficial7.png-618267de57cd3c95249b680ee45da5e8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SpaceShip/Engine.png"
-dest_files=[ "res://.import/Engine.png-bcb6c8fdbbc670862a825a3860a64f3c.stex" ]
+source_file="res://Assets/Guide/GuideOficial7.png"
+dest_files=[ "res://.import/GuideOficial7.png-618267de57cd3c95249b680ee45da5e8.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/computer.png-91bb59b7488594017258f7650506659f.stex"
+path="res://.import/Cadeira.png-a028e41f505749f27554a8703c2e3f2f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SpaceShip/computer.png"
-dest_files=[ "res://.import/computer.png-91bb59b7488594017258f7650506659f.stex" ]
+source_file="res://Assets/SpaceShip/Cadeira.png"
+dest_files=[ "res://.import/Cadeira.png-a028e41f505749f27554a8703c2e3f2f.stex" ]
 
 [params]
 

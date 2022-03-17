@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/computer.png-91bb59b7488594017258f7650506659f.stex"
+path="res://.import/Bock1Oficial.png-b064a8fbdac08c00c5dadcf3d8361344.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SpaceShip/computer.png"
-dest_files=[ "res://.import/computer.png-91bb59b7488594017258f7650506659f.stex" ]
+source_file="res://Assets/Boss/Bock1Oficial.png"
+dest_files=[ "res://.import/Bock1Oficial.png-b064a8fbdac08c00c5dadcf3d8361344.stex" ]
 
 [params]
 
