@@ -8,6 +8,28 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Reference",
+"class": "Dialog",
+"language": "GDScript",
+"path": "res://Global/dialog.gd"
+}, {
+"base": "Reference",
+"class": "Phase",
+"language": "GDScript",
+"path": "res://Global/phase.gd"
+}, {
+"base": "Reference",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Global/player.gd"
+} ]
+_global_script_class_icons={
+"Dialog": "",
+"Phase": "",
+"Player": ""
+}
+
 [application]
 
 config/name="OutOfBounds"
@@ -16,6 +38,7 @@ config/icon="res://Assets/UI/HeartUIFull.png"
 
 [autoload]
 
+Global="*res://Global/global.gd"
 PauseMenu="*res://Scenes/PauseMenu/pauseMenu.tscn"
 
 [display]

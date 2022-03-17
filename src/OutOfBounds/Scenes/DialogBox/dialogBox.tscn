@@ -1,9 +1,43 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/DialogBox/dialogBox.gd" type="Script" id=1]
 [ext_resource path="res://Assets/DialogBox/dialogBox.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Keys/spacebar.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 181, 9 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "SpacebarAnimation"
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.35 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 181, 9 ), Vector2( 181, 8 ) ]
+}
 
 [node name="DialogBox" type="Control"]
+pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( 160, 90 )
@@ -55,12 +89,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Indicator" type="CollisionPolygon2D" parent="TextureRect"]
-visible = false
+[node name="Sprite" type="Sprite" parent="TextureRect"]
+position = Vector2( 181, 9 )
+scale = Vector2( 0.0611277, 0.0544643 )
+texture = ExtResource( 3 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect/Indicator"]
-
-[node name="Sprite" type="Sprite" parent="TextureRect/Indicator"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
+autoplay = "SpacebarAnimation"
+anims/RESET = SubResource( 1 )
+anims/SpacebarAnimation = SubResource( 2 )
 
 [node name="Timer" type="Timer" parent="TextureRect"]
 

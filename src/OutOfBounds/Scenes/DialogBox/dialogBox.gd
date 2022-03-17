@@ -8,13 +8,17 @@ var dialog
 var phraseNum = 0 # Número da fala que está sendo apresentada
 var finished = false # Variável que mostra o status da fala sendo apresentada
 
-signal onDialogFinish
 
 func _ready():
 	$TextureRect/Timer.wait_time = textSpeed
 	dialog = getDialog() # Pegar os diálogos em formato de Array
 	assert(dialog, "Dialog not found")
 	nextPhrase() # Começar a primeira fala
+	
+	
+				
+				
+#	print(Global.phases[0])
 
 func _process(delta): # Função em Loop
 	if Input.is_action_just_pressed("ui_accept"): # Checar se o botão espaço foi apertado
@@ -24,7 +28,7 @@ func _process(delta): # Função em Loop
 			$TextureRect/Text.visible_characters = len($TextureRect/Text.text) # Mostrar todo o texto da fala
 	
 func getDialog() -> Array:
-	var f = File.new() # Criar instancia de File
+	var f = File.new() # Criar instância de File
 	assert(f.file_exists(dialogPath), "File doesn`t exist") # Checar se arquivo de fala existe
 	
 	f.open(dialogPath, File.READ)
@@ -39,8 +43,7 @@ func getDialog() -> Array:
 
 func nextPhrase() -> void: # Função para avançar para próxima fala
 	if phraseNum >= len(dialog): # Fechar cena se todos os caracteres do diálogo já estiverem na tela
-		emit_signal("onDialogFinish")
-		queue_free()
+		onDialogFinish()
 		return
 		
 	finished = false
@@ -60,6 +63,15 @@ func nextPhrase() -> void: # Função para avançar para próxima fala
 	phraseNum += 1 # Passar para próxima fala
 	return
 
+func onDialogFinish():
+	for phase in Global.phases:
+		for dialog in phase:
+			if dialog.path == dialogPath:
+				dialog.active = false
+				dialog.completed = true
+				
+	get_tree().paused = false
+	queue_free()
 
 func _on_DialogBox_tree_exited():
 	pass

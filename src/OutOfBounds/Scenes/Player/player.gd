@@ -56,12 +56,6 @@ onready var animationState = animationTree.get("parameters/playback")
 
 func _ready(): #ativa o nodo de animações apenas quando o jogo começa
 	animationTree.active = true
-	print(get_tree().get_root().find_node("Npc",true,false))
-	
-	var npcNode = get_tree().get_root().find_node("Npc",true,false) 
-	npcNode.connect("onDialogStart",self,"onDialogStart") # Conectar Signal com função para tirar a movimentação do jogador
-	
-	npcNode.connect("onDialogExited",self,"onDialogExited") # Conectar Signal com função para tirar a movimentação do jogador
 	
 func _physics_process(delta): #função principal do jogo. roda 60 vezes por segundo.
 	match state:              #executa a função correta para o momento, MOVE ou ATTACK
