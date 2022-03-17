@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Computer.png-7b54252d14be41f5a6e215d6d53818cd.stex"
+path="res://.import/Bed.png-9a40a719ba44490f32660fcbd34bac19.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SpaceShip/Computer.png"
-dest_files=[ "res://.import/Computer.png-7b54252d14be41f5a6e215d6d53818cd.stex" ]
+source_file="res://Assets/SpaceShip/Bed.png"
+dest_files=[ "res://.import/Bed.png-9a40a719ba44490f32660fcbd34bac19.stex" ]
 
 [params]
 

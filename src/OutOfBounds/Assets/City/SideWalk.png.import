@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Computer.png-7b54252d14be41f5a6e215d6d53818cd.stex"
+path="res://.import/SideWalk.png-18bc16eb58eb3440ad12c38ad9068ef5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SpaceShip/Computer.png"
-dest_files=[ "res://.import/Computer.png-7b54252d14be41f5a6e215d6d53818cd.stex" ]
+source_file="res://Assets/City/SideWalk.png"
+dest_files=[ "res://.import/SideWalk.png-18bc16eb58eb3440ad12c38ad9068ef5.stex" ]
 
 [params]
 

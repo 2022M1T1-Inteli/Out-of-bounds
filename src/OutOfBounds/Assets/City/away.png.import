@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Computer.png-7b54252d14be41f5a6e215d6d53818cd.stex"
+path="res://.import/away.png-ccbb6be7e6782082a4c555d27d033685.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SpaceShip/Computer.png"
-dest_files=[ "res://.import/Computer.png-7b54252d14be41f5a6e215d6d53818cd.stex" ]
+source_file="res://Assets/City/away.png"
+dest_files=[ "res://.import/away.png-ccbb6be7e6782082a4c555d27d033685.stex" ]
 
 [params]
 
