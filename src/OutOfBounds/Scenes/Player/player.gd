@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var ACCELERATION = 2000
 var FRICTION = 2000       #variaveis em maiúsculo para explicitar que são variáveis de física
-var MAX_SPEED = 85
+var MAX_SPEED = 100
 
 
 
