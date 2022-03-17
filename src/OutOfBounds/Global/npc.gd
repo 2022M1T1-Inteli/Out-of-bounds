@@ -35,7 +35,12 @@ func _input(event):
 					var dialogScene = dialogPreload.instance()
 					dialogScene.set("dialogPath", dialogPath)
 					dialogScene.set("textSpeed", textSpeed)
-					get_parent().get_node("/root/world/CanvasLayer").add_child(dialogScene)
+					
+					var canvasLayer = CanvasLayer.new()
+					canvasLayer.name = "CanvasLayer"
+					
+					get_parent().get_node("/root").add_child(canvasLayer)
+					get_parent().get_node("/root/CanvasLayer").add_child(dialogScene)
 					get_tree().paused = true
 					canInteract = false
 		

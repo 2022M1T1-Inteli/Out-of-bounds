@@ -74,6 +74,8 @@ func onDialogExited():
 	MAX_SPEED = 100
 	animationTree.active = true
 
+func _on_DesertDoor_body_entered(body):
+	get_tree().change_scene("res://Scenes/Desert/desert.tscn")
 
-
-
+func _on_WorldDoor_body_entered(body):
+	get_tree().change_scene("res://Scenes/World/world.tscn")
