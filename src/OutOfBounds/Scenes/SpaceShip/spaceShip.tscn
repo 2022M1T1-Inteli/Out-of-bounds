@@ -63,7 +63,7 @@
 0/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 10, 28 )
+extents = Vector2( 2.5, 28 )
 
 [node name="SpaceShip" type="Node2D"]
 script = ExtResource( 8 )
@@ -84,7 +84,7 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 1, 2, 0, 1, 3, 0, 1, 4, 0, 1, 5, 0, 1, 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( 0, -1, 31, 64, 63, 64, 63, 48, 128, 49, 127, 32, 223, 31, 223, 64, 240, 64, 240, 113, 223, 112, 224, 161, 127, 161, 127, 143, 62, 144, 63, 128, 31, 128, 32, 67, 0, 181, 321, 180, 321, 0 )
+polygon = PoolVector2Array( 0, -1, 31, 64, 63, 64, 63, 48, 128, 49, 127, 32, 223, 31, 223, 64, 219, 69, 218, 89, 220, 107, 223, 112, 224, 161, 127, 161, 127, 143, 62, 144, 63, 128, 31, 128, 32, 67, 0, 181, 321, 180, 321, 0 )
 
 [node name="YSort" type="YSort" parent="."]
 
@@ -130,7 +130,7 @@ texture = ExtResource( 10 )
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceShipDoor"]
-position = Vector2( 45, 96 )
+position = Vector2( 37.5, 96 )
 shape = SubResource( 2 )
 
 [connection signal="body_entered" from="SpaceShipDoor" to="." method="_on_SpaceShipDoor_body_entered"]

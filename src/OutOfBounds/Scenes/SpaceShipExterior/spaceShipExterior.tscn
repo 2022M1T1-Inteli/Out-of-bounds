@@ -4,10 +4,11 @@
 [ext_resource path="res://Scenes/SpaceShipExterior/spaceShipExterior.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 15.0
-height = 9.99999
+radius = 9.00002
+height = 12.0
 
 [node name="SpaceShipExterior" type="Area2D"]
+collision_mask = 0
 script = ExtResource( 2 )
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
@@ -19,9 +20,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 77, 81 )
-rotation = -1.5708
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 78, 81 )
 shape = SubResource( 1 )
 
-[connection signal="body_entered" from="." to="." method="_on_SpaceShipExterior_body_entered"]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 0, 0, 5, 3, 179, 4, 190, 7, 206, 16, 212, 23, 215, 32, 216, 64, 214, 69, 198, 87, 181, 92, 89, 92, 89, 65, 65, 64, 65, 77, 65, 91, 4, 92, 4, 8 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_SpaceShipExterior_body_entered"]
