@@ -1,9 +1,23 @@
+# Arquivo com as variáveis globais
 extends Node2D
 
-var dialogRootPath = "res://Dialogs/Phase1/"
+# Caminho para diálogos da fase 1
+var phase1DialogsRootPath = "res://Dialogs/Phase1/" 
+
+# Variável com as fases do jogo e seus diálogos (cada elemento do Array é outro Array de diálogos)
 var phases = [
-	[Dialog.new(dialogRootPath + "Chapter2/1firstContact.json", false, false), Dialog.new("Chapter3/2mechanicOutSide", false, false), Dialog.new("Chapter3/3firstBockEncounter", false, false), Dialog.new("Chapter3/4secondBockEncounter", false, false), Dialog.new("Chapter3/5secretaryBockArguing", false, false), Dialog.new("Chapter4/6firstComputerEncounter", false, false)],
+	[
+		Dialog.new(phase1DialogsRootPath + "Chapter2/1firstContact.json", false, false),
+		Dialog.new(phase1DialogsRootPath + "Chapter3/2mechanicOutSide", false, false),
+		Dialog.new(phase1DialogsRootPath + "Chapter3/3firstBockEncounter", false, false),
+		Dialog.new(phase1DialogsRootPath + "Chapter3/4secondBockEncounter", false, false),
+		Dialog.new(phase1DialogsRootPath + "Chapter3/5secretaryBockArguing", false, false),
+		Dialog.new(phase1DialogsRootPath + "Chapter4/6firstComputerEncounter", false, false)
+	]
 ]
+
+# Instância da Primeira fase
 var phase1 = Phase.new("Fase 1", false, false, phases[0])
 
+# Instancia do Player
 var player = Player.new("Astronauta", "", 0.00, 0.00)

@@ -1480,4 +1480,4 @@ anims/RESET = SubResource( 106 )
 [node name="Stuart" parent="." instance=ExtResource( 21 )]
 position = Vector2( 465, 60 )
 
-[connection signal="body_entered" from="WorldDoor" to="YSort/Player" method="_on_WorldDoor_body_entered"]
+[connection signal="body_entered" from="WorldDoor" to="." method="_on_WorldDoor_body_entered"]

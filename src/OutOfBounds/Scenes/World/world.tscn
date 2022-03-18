@@ -1416,4 +1416,4 @@ shape = SubResource( 104 )
 
 [connection signal="body_entered" from="Gelo" to="YSort/Player" method="_on_ice_entered"]
 [connection signal="body_exited" from="Gelo" to="YSort/Player" method="_on_ice_exit"]
-[connection signal="body_entered" from="DesertDoor" to="YSort/Player" method="_on_DesertDoor_body_entered"]
+[connection signal="body_entered" from="DesertDoor" to="." method="_on_DesertDoor_body_entered"]

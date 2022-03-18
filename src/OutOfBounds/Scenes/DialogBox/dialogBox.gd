@@ -1,79 +1,100 @@
 extends Control
 
-export var dialogPath = "" # Variável de caminho até arquivo JSON onde as falas se encontram
-export(float) var textSpeed = 0.05 # Velocidade do texto
+# Variável de caminho até arquivo JSON onde as falas se encontram
+export var dialogPath = "" 
+
+# Variável de velocidade do texto
+export(float) var textSpeed = 0.05 
 
 var dialog
 
-var phraseNum = 0 # Número da fala que está sendo apresentada
-var finished = false # Variável que mostra o status da fala sendo apresentada
+# Número da fala que está sendo apresentada
+var phraseNum = 0 
 
+# Variável que mostra o status da fala sendo apresentada
+var finished = false 
 
 func _ready():
+	# Setar a propriedade wait_time do Timer com o valor da variável textSpeed
 	$TextureRect/Timer.wait_time = textSpeed
-	dialog = getDialog() # Pegar os diálogos em formato de Array
+	
+	# Pegar os diálogos em formato de Array
+	dialog = getDialog() 
 	assert(dialog, "Dialog not found")
-	nextPhrase() # Começar a primeira fala
 	
-	
-				
-				
-#	print(Global.phases[0])
+	# Começar a primeira fala
+	nextPhrase() 
 
-func _process(delta): # Função em Loop
-	if Input.is_action_just_pressed("ui_accept"): # Checar se o botão espaço foi apertado
+func _process(_delta): 
+
+	# Checar se o botão espaço foi apertado
+	if Input.is_action_just_pressed("ui_accept"): 
 		if finished:
-			nextPhrase() # Avançar para próxima fala
+			
+			# Avançar para próxima fala
+			nextPhrase() 
 		else:
-			$TextureRect/Text.visible_characters = len($TextureRect/Text.text) # Mostrar todo o texto da fala
+			
+			# Mostrar todo o texto da fala
+			$TextureRect/Text.visible_characters = len($TextureRect/Text.text) 
 	
 func getDialog() -> Array:
-	var f = File.new() # Criar instância de File
-	assert(f.file_exists(dialogPath), "File doesn`t exist") # Checar se arquivo de fala existe
+	# Criar instância de File
+	var f = File.new() 
+
+	# Checar se arquivo de fala existe
+	assert(f.file_exists(dialogPath), "File doesn`t exist") 
 	
+	# Ler o arquivo e transformar as falas em Array
 	f.open(dialogPath, File.READ)
 	var json = f.get_as_text()
+	var output = parse_json(json) 
 	
-	var output = parse_json(json) # Transformar falas de arquivo JSON em Array
-	
-	if typeof(output) == TYPE_ARRAY: # Checar se o formato de arquivo foi convertido à Array 
+	# Checar se o formato de arquivo foi convertido à Array 
+	if typeof(output) == TYPE_ARRAY: 
 		return output
 	else:
 		return [] 
 
-func nextPhrase() -> void: # Função para avançar para próxima fala
-	if phraseNum >= len(dialog): # Fechar cena se todos os caracteres do diálogo já estiverem na tela
+# Função para avançar para próxima fala
+func nextPhrase() -> void:
+	
+	# Fechar cena se todos os caracteres do diálogo já estiverem na tela
+	if phraseNum >= len(dialog): 
 		onDialogFinish()
 		return
-		
+	
 	finished = false
 	
-	$TextureRect/Name.bbcode_text = dialog[phraseNum]["Name"] # Setar nome com o nome que está no Array
-	$TextureRect/Text.bbcode_text = dialog[phraseNum]["Text"] # Setar texto com a fala que está no Array
+	# Setar nome e fala que está no Array
+	$TextureRect/Name.bbcode_text = dialog[phraseNum]["Name"] 
+	$TextureRect/Text.bbcode_text = dialog[phraseNum]["Text"] 
 	
 	$TextureRect/Text.visible_characters = 0
 	
-	while $TextureRect/Text.visible_characters < len($TextureRect/Text.text): # Loop para ir mostrando os caracteres da fala
+	# Loop para ir mostrando os caracteres da fala
+	while $TextureRect/Text.visible_characters < len($TextureRect/Text.text): 
 		$TextureRect/Text.visible_characters += 1
-		
-		$TextureRect/Timer.start() # Iniciar o Timer
-		yield($TextureRect/Timer, "timeout") # Sair do Loop se o timer acabar
+		$TextureRect/Timer.start()
+		yield($TextureRect/Timer, "timeout") 
 	
-	finished = true # Setar variável para mostrar que fala terminou
-	phraseNum += 1 # Passar para próxima fala
+	# Setar variável para mostrar que fala terminou
+	finished = true 
+
+	# Passar para próxima fala
+	phraseNum += 1 
 	return
 
+# Função executada quando diálogo acaba
 func onDialogFinish():
+
+	# Loop em estado global do jogo para setar algumas propriedades do diálogo
 	for phase in Global.phases:
-		for dialog in phase:
-			if dialog.path == dialogPath:
-				dialog.active = false
-				dialog.completed = true
-				
+		for dialogArray in phase:
+			if dialogArray.path == dialogPath:
+				dialogArray.active = false
+				dialogArray.completed = true
+	
+	# Despausar o jogo e fechar a cena do diálogo
 	get_tree().paused = false
 	queue_free()
-
-func _on_DialogBox_tree_exited():
-	pass
-#	var npcNode = get_tree().get_root().find_node("Npc",true,false) 
-#	npcNode.connect("onDialogFinish",self,"onDialogStart") # Conectar Signal com função para retornar a movimentação do jogador

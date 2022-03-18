@@ -1,24 +1,26 @@
 extends KinematicBody2D
 
+# Variáveis em maiúsculo para explicitar que são variáveis de física
 var ACCELERATION = 2000
-var FRICTION = 2000       #variaveis em maiúsculo para explicitar que são variáveis de física
+var FRICTION = 2000       
 var MAX_SPEED = 100
 
 
-
+# Enumera as possíveis ações do personagem. Útil mais pra frente no desenvolvimento.
 enum {
 	MOVE,
-	ATTACK       #enumera as possíveis ações do personagem. Útil mais pra frente no desenvolvimento.
+	ATTACK       
 }
 
 var state = MOVE  # define o estado inicial do personagem como MOVE e velocidade inicial como 0.
 var velocity = Vector2.ZERO
 
+# Funções para mecânica do gelo
 func _on_ice_entered(_body):
 	ACCELERATION = 100
 	FRICTION = 100
 	MAX_SPEED = 100
-				  #funções para mecânica do gelo
+	
 func _on_ice_exit(_body):
 	ACCELERATION = 2000
 	FRICTION = 2000
@@ -64,18 +66,4 @@ func _physics_process(delta): #função principal do jogo. roda 60 vezes por seg
 			
 		ATTACK:
 			attack_state(delta)
-			
 
-func onDialogStart():
-	MAX_SPEED = 0
-	animationTree.active = false
-	
-func onDialogExited():
-	MAX_SPEED = 100
-	animationTree.active = true
-
-func _on_DesertDoor_body_entered(body):
-	get_tree().change_scene("res://Scenes/Desert/desert.tscn")
-
-func _on_WorldDoor_body_entered(body):
-	get_tree().change_scene("res://Scenes/World/world.tscn")
