@@ -46,6 +46,8 @@ func move_state(delta):    #---função que executa tudo relacionado a movimento
 	if Input.is_action_just_pressed("attack"): #caso o botão de ataque esteja pressionado, define o estado como ATTACK
 		state = ATTACK
 		
+	Global.player.position = get_tree().get_current_scene().get_node("YSort/Player").get_position()
+		
 func attack_state(_delta):  #função chamada para ativar a anmiação de ataque
 	animationState.travel("Attack")
 	

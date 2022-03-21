@@ -90,10 +90,15 @@ func onDialogFinish():
 
 	# Loop em estado global do jogo para setar algumas propriedades do diálogo
 	for phase in Global.phases:
-		for dialogArray in phase:
-			if dialogArray.path == dialogPath:
-				dialogArray.active = false
-				dialogArray.completed = true
+		for dialogArrayIndex in len(phase.dialogs):
+			if phase.dialogs[dialogArrayIndex].path == dialogPath:
+				phase.dialogs[dialogArrayIndex].active = false
+				phase.dialogs[dialogArrayIndex].completed = true
+				
+				if len(phase.dialogs) == dialogArrayIndex:
+					phase.completed = true
+					phase.active = false
+				
 	
 	# Despausar o jogo e fechar a cena do diálogo
 	get_tree().paused = false

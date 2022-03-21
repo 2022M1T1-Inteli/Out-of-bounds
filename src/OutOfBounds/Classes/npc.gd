@@ -21,7 +21,7 @@ func onNpcBodyEntered(body):
 		
 		# Loop no estado do progresso para checar se aquele diálogo já foi completado ou não
 		for phase in Global.phases:
-			for dialog in phase:
+			for dialog in phase.dialogs:
 				if dialog.path == dialogPath:
 					if dialog.active == false && dialog.completed == false:
 						
@@ -47,8 +47,12 @@ func _input(_event):
 		
 		# Checar em qual diálogo o usuário está
 		for phase in Global.phases:
-			for dialog in phase:
+			for dialog in phase.dialogs:
 				if dialog.path == dialogPath:
+					
+					# Setar a fase como ativa
+					phase.active = true
+					
 					# Setar o diálogo como ativo
 					dialog.active = true 
 					
