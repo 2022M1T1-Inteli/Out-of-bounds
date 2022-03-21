@@ -20,4 +20,14 @@ var phases = [
 var phase1 = Phase.new("Fase 1", false, false, phases[0])
 
 # Instancia do Player
-var player = Player.new("Astronauta", "", 0.00, 0.00)
+var player = Player.new("Astronauta", "", null)
+
+#onready var playerPath = "res://Scenes/Player/player.tscn"
+
+# Função para a troca de cena
+#func change_scene(new_scene, player_pos):
+#	get_tree().change_scene(new_scene)
+#	print(player_pos)
+##	playerPath.set_position(player_pos)
+#
+#	$YSortPlayer.set_position(player_pos)

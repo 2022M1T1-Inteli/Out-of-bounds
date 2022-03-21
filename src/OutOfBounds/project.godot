@@ -12,17 +12,17 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "Dialog",
 "language": "GDScript",
-"path": "res://Global/dialog.gd"
+"path": "res://Classes/dialog.gd"
 }, {
 "base": "Reference",
 "class": "Phase",
 "language": "GDScript",
-"path": "res://Global/phase.gd"
+"path": "res://Classes/phase.gd"
 }, {
 "base": "Reference",
 "class": "Player",
 "language": "GDScript",
-"path": "res://Global/player.gd"
+"path": "res://Classes/player.gd"
 } ]
 _global_script_class_icons={
 "Dialog": "",

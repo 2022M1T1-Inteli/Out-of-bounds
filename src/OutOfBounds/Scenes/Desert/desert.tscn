@@ -1128,6 +1128,8 @@ tracks/0/keys = {
 [node name="Desert" type="Node2D"]
 position = Vector2( 1, 0 )
 script = ExtResource( 1 )
+worldScenePath = "res://Scenes/World/world.tscn"
+worldSpawnPosition = Vector2( 335, 9 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = -46.0
@@ -1442,7 +1444,7 @@ scale = Vector2( 0.15625, 0.15625 )
 texture = ExtResource( 15 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 418, 75 )
+position = Vector2( 352, 68 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 current = true
