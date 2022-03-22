@@ -8,4 +8,5 @@ export_presets.cfg
 .mono/
 .DS_Store
 
-
+# Exclusive Assets ignores
+src/OutOfBounds/ExclusiveAssets
