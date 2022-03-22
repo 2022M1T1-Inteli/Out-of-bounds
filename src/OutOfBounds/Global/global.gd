@@ -1,24 +1,30 @@
-# Arquivo com as variáveis globais
+# Arquivo com as vari�veis globais
 extends Node2D
 
-# Caminho para diálogos da fase 1
+# Sinais utilizados no jogo inteiro
+signal phaseChange
+signal dialogChange
+
+# Caminho para di�logos da fase 1
 var phase1DialogsRootPath = "res://Dialogs/Phase1/"
 
-# Diálogos da primeira fase
+# Di�logos da primeira fase
 var phase1Dialogs = [
-	Dialog.new(phase1DialogsRootPath + "Chapter2/1firstContact.json", false, false),
-	Dialog.new(phase1DialogsRootPath + "Chapter3/2mechanicOutSide", false, false),
-	Dialog.new(phase1DialogsRootPath + "Chapter3/3firstBockEncounter", false, false),
-	Dialog.new(phase1DialogsRootPath + "Chapter3/4secondBockEncounter", false, false),
-	Dialog.new(phase1DialogsRootPath + "Chapter3/5secretaryBockArguing", false, false),
-	Dialog.new(phase1DialogsRootPath + "Chapter4/6firstComputerEncounter", false, false)
+	Dialog.new(
+		phase1DialogsRootPath + "Chapter2/1firstContact.json",
+		false,
+		false,
+		"Encontre o mecânico na cidade"
+	),
+	Dialog.new(phase1DialogsRootPath + "Chapter3/2mechanicOutSide", false, false, ""),
+	Dialog.new(phase1DialogsRootPath + "Chapter3/3firstBockEncounter", false, false, ""),
+	Dialog.new(phase1DialogsRootPath + "Chapter3/4secondBockEncounter", false, false, ""),
+	Dialog.new(phase1DialogsRootPath + "Chapter3/5secretaryBockArguing", false, false, ""),
+	Dialog.new(phase1DialogsRootPath + "Chapter4/6firstComputerEncounter", false, false, "")
 ]
 
-# Variável com as fases do jogo e seus diálogos
-var phases = [
-	Phase.new("Fase 1", false, false, phase1Dialogs)
-]
+# Vari�vel com as fases do jogo e seus di�logos
+var phases = [Phase.new("Fase 1", false, false, phase1Dialogs)]
 
 # Instancia do Player
 var player = Player.new("Astronauta", "", null, null)
-
