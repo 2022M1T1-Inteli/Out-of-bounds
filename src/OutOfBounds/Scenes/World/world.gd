@@ -14,6 +14,6 @@ export (Vector2) var desertSpawnPosition
 func _on_DesertDoor_body_entered(body): 
 	if desertScenePath and desertSpawnPosition:
 		Global.player.startPosition = desertSpawnPosition
-		Global.player.scene = "res://Scenes/Desert/desert.tscn"
+		Global.player.scene = desertScenePath
 		get_tree().change_scene(desertScenePath)
 
