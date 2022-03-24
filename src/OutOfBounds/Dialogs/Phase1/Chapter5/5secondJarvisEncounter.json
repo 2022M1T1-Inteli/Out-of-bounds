@@ -1,0 +1,19 @@
+[
+    {
+        "Name": "Astronauta",
+        "Text": "Olá Jarvis, acho que encontrei uma solução para sua mecânica não falir."
+    },
+    {
+        "Name": "Jarvis",
+        "Text": "Acho que você não entendeu muito bem… Se eu não consigo elaborar nenhuma solução, você então nem chegará perto."
+    },
+    {
+        "Name": "Astronauta",
+        "Text": "Vamos fazer o seguinte, você escolhe um desafio para nos confrontarmos. Se eu ganhar, eu lidero um novo time na sua mecânica."
+    },
+    {
+        "Name": "Jarvis",
+        "Text": "Já estou perdido mesmo, então, cá seu desafio: você deverá empilhar da melhor maneira essas caixas de mudança, só tem uma possibilidade. Se você não fizer do jeito correto, você perde."
+    },
+    { "Name": "Astronauta", "Text": "Feito!" }
+]

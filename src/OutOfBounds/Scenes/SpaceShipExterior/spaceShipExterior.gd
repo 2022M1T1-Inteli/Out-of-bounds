@@ -8,5 +8,5 @@ export (Vector2) var spaceShipSpawnPosition
 func _on_SpaceShipDoor_body_entered(body): 
 	if spaceShipScenePath and spaceShipSpawnPosition:
 		Global.player.startPosition = spaceShipSpawnPosition
-		Global.player.scene = "res://Scenes/SpaceShip/spaceShip.tscn"
+		Global.player.scene = spaceShipScenePath
 		get_tree().change_scene(spaceShipScenePath)

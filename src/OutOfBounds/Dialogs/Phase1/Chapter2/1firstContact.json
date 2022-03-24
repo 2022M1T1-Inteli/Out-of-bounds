@@ -19,6 +19,10 @@
     },
     {
         "Name": "Stuart",
-        "Text": "Sem problemas! Primeiro lhe darei um mapa, siga o caminho sinalizado até a mecânica. Lá você irá encontrar o Bock, mas já aviso, ele é extremamente preconceituoso, te aconselho a fazer um bom acordo com ele. Te desejo boa sorte na sua aventura, a minha ajuda, por enquanto, para aqui."
+        "Text": "Sem problemas! Primeiro lhe darei um mapa, siga o caminho sinalizado até a mecânica. Lá você irá encontrar o Jarvis, mas já aviso, ele é extremamente preconceituoso, te aconselho a fazer um bom acordo com ele. Te desejo boa sorte na sua aventura, a minha ajuda, por enquanto, para aqui."
+    },
+    {
+        "Name": "Astronauta",
+        "Text": "Muito obrigado!"
     }
 ]
