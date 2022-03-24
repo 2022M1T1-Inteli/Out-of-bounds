@@ -14,6 +14,6 @@ export (Vector2) var worldSpawnPosition
 func _on_WorldDoor_body_entered(_body):
 	if worldScenePath and worldSpawnPosition:
 		Global.player.startPosition = worldSpawnPosition
-		Global.player.scene = worldScenePath
+		Global.player.scene = "res://Scenes/World/world.tscn"
 		get_tree().change_scene(worldScenePath)
 		
