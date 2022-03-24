@@ -1065,7 +1065,7 @@ extents = Vector2( 57.125, 22.75 )
 position = Vector2( 1, 0 )
 script = ExtResource( 10 )
 desertScenePath = "res://Scenes/Desert/desert.tscn"
-desertSpawnPosition = Vector2( 273, 516 )
+desertSpawnPosition = Vector2( 447, 733 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = -180.0
