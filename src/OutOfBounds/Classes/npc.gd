@@ -1,5 +1,5 @@
 # Arquivo para a classe Npc
-extends Area2D
+extends StaticBody2D
 
 # Variáveis de validação
 var canInteract = false
