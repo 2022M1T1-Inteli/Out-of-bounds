@@ -19,6 +19,15 @@ func onNpcBodyEntered(body):
 	if body.name == "Player":
 		isNear = true
 		
+		# Checar se o jogador está no tutorial
+		if dialogPath == Global.tutorialDialogPath:
+			# Permitir a interação com o Npc
+			canInteract = true 
+			
+			# Mostrar icone do botão "E" em cima do Npc
+			$Key.visible = true 
+			return
+			
 		# Loop no estado do progresso para checar se aquele diálogo já foi completado ou não
 		for phase in Global.phases:
 			for dialog in phase.dialogs:
@@ -45,6 +54,11 @@ func _input(_event):
 		# Esconder icone "E"
 		$Key.visible = false 
 		
+		# Checar se o jogador está no tutorial
+		if dialogPath == Global.tutorialDialogPath:
+			startDialog()
+			return
+		
 		# Checar em qual diálogo o usuário está
 		for phase in Global.phases:
 			for dialog in phase.dialogs:
@@ -56,23 +70,27 @@ func _input(_event):
 					# Setar o diálogo como ativo
 					dialog.active = true 
 					
-					# Instanciar Node CanvasLayer
-					var canvasLayer = CanvasLayer.new() 
-					canvasLayer.name = "CanvasLayer"
-					
-					# Instanciar cena de diálogo
-					var dialogScene = dialogPreload.instance() 
-					dialogScene.set("dialogPath", dialogPath)
-					dialogScene.set("textSpeed", textSpeed)
-					
-					# Adicionar o node CanvasLayer
-					get_parent().get_node("/root").add_child(canvasLayer) 
+					startDialog()
 
-					# Adicionar cena do diálogo dentro do CanvasLayer
-					get_parent().get_node("/root/CanvasLayer").add_child(dialogScene) 
-					
-					# Pausar a cena
-					get_tree().paused = true 
+# Função para instanciar a cena do diálogo, pausar a cena e desabilitar a interação com o NPC
+func startDialog():
+	# Instanciar Node CanvasLayer
+	var canvasLayer = CanvasLayer.new() 
+	canvasLayer.name = "CanvasLayer"
+	
+	# Instanciar cena de diálogo
+	var dialogScene = dialogPreload.instance() 
+	dialogScene.set("dialogPath", dialogPath)
+	dialogScene.set("textSpeed", textSpeed)
+	
+	# Adicionar o node CanvasLayer
+	get_parent().get_node("/root").add_child(canvasLayer) 
 
-					# Desabilitar interação com o Npc
-					canInteract = false
+	# Adicionar cena do diálogo dentro do CanvasLayer
+	get_parent().get_node("/root/CanvasLayer").add_child(dialogScene) 
+	
+	# Pausar a cena
+	get_tree().paused = true 
+
+	# Desabilitar interação com o Npc
+	canInteract = false

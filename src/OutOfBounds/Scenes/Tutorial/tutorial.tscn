@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Assets/World/DirtTileset2.png" type="Texture" id=1]
 [ext_resource path="res://Assets/World/MoonTileset.png" type="Texture" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://Assets/Buttons/leftClick.png" type="Texture" id=10]
 [ext_resource path="res://Scenes/Grass/grass.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Tutorial/tutorial.gd" type="Script" id=12]
+[ext_resource path="res://Scenes/TutorialNpc/tutorialNpc.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Tutorial/ArrowRight.png" type="Texture" id=14]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -236,7 +238,62 @@ tracks/3/keys = {
 "values": [ Vector2( 568, 49 ), Vector2( 568, 53 ) ]
 }
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="Animation" id=5]
+resource_name = "ArrowRight"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Arrow:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Arrow:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 286, 153 ), Vector2( 289, 153 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Arrow:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.0772496, 0.0751014 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Arrow:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 286, 153 ) ]
+}
+
+[node name="Tutorial" type="Node2D"]
 script = ExtResource( 12 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -268,7 +325,7 @@ scale = Vector2( 0.485248, 0.451923 )
 texture = ExtResource( 8 )
 
 [node name="E" type="Sprite" parent="."]
-position = Vector2( 360, 48 )
+position = Vector2( 359, 54 )
 scale = Vector2( 0.66, 0.66 )
 texture = ExtResource( 9 )
 
@@ -303,21 +360,23 @@ __meta__ = {
 }
 
 [node name="Label5" type="Label" parent="."]
-margin_left = 320.0
-margin_top = 72.0
-margin_right = 404.0
-margin_bottom = 86.0
+margin_left = 319.0
+margin_top = 74.0
+margin_right = 403.0
+margin_bottom = 88.0
 text = "para interagir"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label4" type="Label" parent="."]
-margin_left = 328.0
-margin_top = 8.0
-margin_right = 391.0
-margin_bottom = 22.0
-text = "Pressione"
+margin_left = 308.0
+margin_top = 2.0
+margin_right = 410.0
+margin_bottom = 33.0
+text = "Chegue perto e pressione"
+align = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -358,7 +417,7 @@ __meta__ = {
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 14, 122 )
+position = Vector2( 19, 117 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 current = true
@@ -428,6 +487,9 @@ position = Vector2( 560, 128 )
 [node name="grass19" parent="YSort/YSort" instance=ExtResource( 11 )]
 position = Vector2( 576, 128 )
 
+[node name="TutorialNpc" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 361, 114 )
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
@@ -447,5 +509,17 @@ shape = SubResource( 2 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 3 )
 anims/wasd = SubResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Arrow" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 286, 153 )
+scale = Vector2( 0.0772496, 0.0751014 )
+texture = ExtResource( 14 )
+
+[node name="AnimationArrow" type="AnimationPlayer" parent="CanvasLayer"]
+autoplay = "ArrowRight"
+anims/ArrowRight = SubResource( 5 )
+anims/RESET = SubResource( 6 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

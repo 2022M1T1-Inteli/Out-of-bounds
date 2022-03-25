@@ -5,6 +5,8 @@ extends Node2D
 signal phaseChange
 signal dialogChange
 
+var tutorialDialogPath = "res://Dialogs/Tutorial/tutorial.json"
+
 # Caminho para di�logos da fase 1
 var phase1DialogsRootPath = "res://Dialogs/Phase1/"
 
