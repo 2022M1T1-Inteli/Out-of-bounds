@@ -1,0 +1,451 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Assets/World/DirtTileset2.png" type="Texture" id=1]
+[ext_resource path="res://Assets/World/MoonTileset.png" type="Texture" id=2]
+[ext_resource path="res://Assets/World/DirtTileset.png" type="Texture" id=3]
+[ext_resource path="res://Assets/World/IceTileset.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Player/player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/World/GrassBackground.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Buttons/arrowKeys.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Buttons/wasd.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Buttons/e.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Buttons/leftClick.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Grass/grass.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Tutorial/tutorial.gd" type="Script" id=12]
+
+[sub_resource type="TileSet" id=1]
+0/name = "DirtTileset.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 192, 96 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 1
+0/autotile/bitmask_flags = [ Vector2( 0, 0 ), 432, Vector2( 0, 1 ), 438, Vector2( 0, 2 ), 54, Vector2( 0, 3 ), 48, Vector2( 1, 0 ), 504, Vector2( 1, 1 ), 511, Vector2( 1, 2 ), 63, Vector2( 1, 3 ), 56, Vector2( 2, 0 ), 216, Vector2( 2, 1 ), 219, Vector2( 2, 2 ), 27, Vector2( 2, 3 ), 24, Vector2( 3, 0 ), 144, Vector2( 3, 1 ), 146, Vector2( 3, 2 ), 18, Vector2( 3, 3 ), 16, Vector2( 4, 0 ), 176, Vector2( 4, 1 ), 182, Vector2( 4, 2 ), 434, Vector2( 4, 3 ), 50, Vector2( 4, 4 ), 178, Vector2( 5, 0 ), 248, Vector2( 5, 1 ), 255, Vector2( 5, 2 ), 507, Vector2( 5, 3 ), 59, Vector2( 5, 4 ), 251, Vector2( 6, 0 ), 440, Vector2( 6, 1 ), 447, Vector2( 6, 2 ), 510, Vector2( 6, 3 ), 62, Vector2( 6, 4 ), 446, Vector2( 7, 0 ), 152, Vector2( 7, 1 ), 155, Vector2( 7, 2 ), 218, Vector2( 7, 3 ), 26, Vector2( 7, 4 ), 154, Vector2( 8, 0 ), 184, Vector2( 8, 1 ), 191, Vector2( 8, 2 ), 506, Vector2( 8, 3 ), 58, Vector2( 8, 4 ), 186, Vector2( 9, 0 ), 443, Vector2( 9, 1 ), 254, Vector2( 9, 2 ), 442, Vector2( 9, 3 ), 190, Vector2( 10, 2 ), 250, Vector2( 10, 3 ), 187 ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 16, 16 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "IceTileset.png 1"
+1/texture = ExtResource( 4 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 1, 1, 0, 0 )
+1/tile_mode = 1
+1/autotile/bitmask_mode = 1
+1/autotile/bitmask_flags = [  ]
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 16, 16 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "IceTileset.png 2"
+2/texture = ExtResource( 4 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 192, 96 )
+2/tile_mode = 1
+2/autotile/bitmask_mode = 1
+2/autotile/bitmask_flags = [ Vector2( 0, 0 ), 432, Vector2( 0, 1 ), 438, Vector2( 0, 2 ), 54, Vector2( 0, 3 ), 48, Vector2( 1, 0 ), 504, Vector2( 1, 1 ), 511, Vector2( 1, 2 ), 63, Vector2( 1, 3 ), 56, Vector2( 2, 0 ), 216, Vector2( 2, 1 ), 219, Vector2( 2, 2 ), 27, Vector2( 2, 3 ), 24, Vector2( 3, 0 ), 144, Vector2( 3, 1 ), 146, Vector2( 3, 2 ), 18, Vector2( 3, 3 ), 16, Vector2( 4, 0 ), 176, Vector2( 4, 1 ), 182, Vector2( 4, 2 ), 434, Vector2( 4, 3 ), 50, Vector2( 4, 4 ), 178, Vector2( 5, 0 ), 248, Vector2( 5, 1 ), 255, Vector2( 5, 2 ), 507, Vector2( 5, 3 ), 59, Vector2( 5, 4 ), 251, Vector2( 6, 0 ), 440, Vector2( 6, 1 ), 447, Vector2( 6, 2 ), 510, Vector2( 6, 3 ), 62, Vector2( 6, 4 ), 446, Vector2( 7, 0 ), 152, Vector2( 7, 1 ), 155, Vector2( 7, 2 ), 218, Vector2( 7, 3 ), 26, Vector2( 7, 4 ), 154, Vector2( 8, 0 ), 184, Vector2( 8, 1 ), 191, Vector2( 8, 2 ), 506, Vector2( 8, 3 ), 58, Vector2( 8, 4 ), 186, Vector2( 9, 0 ), 443, Vector2( 9, 1 ), 254, Vector2( 9, 2 ), 442, Vector2( 9, 3 ), 190, Vector2( 10, 2 ), 250, Vector2( 10, 3 ), 187 ]
+2/autotile/icon_coordinate = Vector2( 0, 0 )
+2/autotile/tile_size = Vector2( 16, 16 )
+2/autotile/spacing = 0
+2/autotile/occluder_map = [  ]
+2/autotile/navpoly_map = [  ]
+2/autotile/priority_map = [  ]
+2/autotile/z_index_map = [  ]
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "MoonTileset.png 3"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 176, 80 )
+3/tile_mode = 1
+3/autotile/bitmask_mode = 1
+3/autotile/bitmask_flags = [ Vector2( 0, 0 ), 432, Vector2( 0, 1 ), 438, Vector2( 0, 2 ), 54, Vector2( 0, 3 ), 48, Vector2( 1, 0 ), 504, Vector2( 1, 1 ), 511, Vector2( 1, 2 ), 63, Vector2( 1, 3 ), 56, Vector2( 2, 0 ), 216, Vector2( 2, 1 ), 219, Vector2( 2, 2 ), 27, Vector2( 2, 3 ), 24, Vector2( 3, 0 ), 144, Vector2( 3, 1 ), 146, Vector2( 3, 2 ), 18, Vector2( 3, 3 ), 16, Vector2( 4, 0 ), 176, Vector2( 4, 1 ), 182, Vector2( 4, 2 ), 434, Vector2( 4, 3 ), 50, Vector2( 4, 4 ), 178, Vector2( 5, 0 ), 248, Vector2( 5, 1 ), 255, Vector2( 5, 2 ), 507, Vector2( 5, 3 ), 59, Vector2( 5, 4 ), 251, Vector2( 6, 0 ), 440, Vector2( 6, 1 ), 447, Vector2( 6, 2 ), 510, Vector2( 6, 3 ), 62, Vector2( 6, 4 ), 446, Vector2( 7, 0 ), 152, Vector2( 7, 1 ), 155, Vector2( 7, 2 ), 218, Vector2( 7, 3 ), 26, Vector2( 7, 4 ), 154, Vector2( 8, 0 ), 184, Vector2( 8, 1 ), 191, Vector2( 8, 2 ), 506, Vector2( 8, 3 ), 58, Vector2( 8, 4 ), 186, Vector2( 9, 0 ), 443, Vector2( 9, 1 ), 254, Vector2( 9, 2 ), 442, Vector2( 9, 3 ), 190, Vector2( 10, 2 ), 250, Vector2( 10, 3 ), 187 ]
+3/autotile/icon_coordinate = Vector2( 0, 0 )
+3/autotile/tile_size = Vector2( 16, 16 )
+3/autotile/spacing = 0
+3/autotile/occluder_map = [  ]
+3/autotile/navpoly_map = [  ]
+3/autotile/priority_map = [  ]
+3/autotile/z_index_map = [  ]
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "DirtTileset.png 4"
+4/texture = ExtResource( 3 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 176, 80 )
+4/tile_mode = 1
+4/autotile/bitmask_mode = 1
+4/autotile/bitmask_flags = [ Vector2( 0, 0 ), 432, Vector2( 0, 1 ), 438, Vector2( 0, 2 ), 54, Vector2( 0, 3 ), 48, Vector2( 1, 0 ), 504, Vector2( 1, 1 ), 511, Vector2( 1, 2 ), 63, Vector2( 1, 3 ), 56, Vector2( 2, 0 ), 216, Vector2( 2, 1 ), 219, Vector2( 2, 2 ), 27, Vector2( 2, 3 ), 24, Vector2( 3, 0 ), 144, Vector2( 3, 1 ), 146, Vector2( 3, 2 ), 18, Vector2( 3, 3 ), 16, Vector2( 4, 0 ), 176, Vector2( 4, 1 ), 182, Vector2( 4, 2 ), 434, Vector2( 4, 3 ), 50, Vector2( 4, 4 ), 178, Vector2( 5, 0 ), 248, Vector2( 5, 1 ), 255, Vector2( 5, 2 ), 507, Vector2( 5, 3 ), 59, Vector2( 5, 4 ), 251, Vector2( 6, 0 ), 440, Vector2( 6, 1 ), 447, Vector2( 6, 2 ), 510, Vector2( 6, 3 ), 62, Vector2( 6, 4 ), 446, Vector2( 7, 0 ), 152, Vector2( 7, 1 ), 155, Vector2( 7, 2 ), 218, Vector2( 7, 3 ), 26, Vector2( 7, 4 ), 154, Vector2( 8, 0 ), 184, Vector2( 8, 1 ), 191, Vector2( 8, 2 ), 506, Vector2( 8, 3 ), 58, Vector2( 8, 4 ), 186, Vector2( 9, 0 ), 443, Vector2( 9, 1 ), 254, Vector2( 9, 2 ), 442, Vector2( 9, 3 ), 190, Vector2( 10, 2 ), 250, Vector2( 10, 3 ), 187 ]
+4/autotile/icon_coordinate = Vector2( 0, 0 )
+4/autotile/tile_size = Vector2( 16, 16 )
+4/autotile/spacing = 0
+4/autotile/occluder_map = [  ]
+4/autotile/navpoly_map = [  ]
+4/autotile/priority_map = [  ]
+4/autotile/z_index_map = [  ]
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 86.5 )
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Wasd:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.485248, 0.451923 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ArrowKeys:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.47, 0.47 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("E:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.66, 0.66 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("LeftClick:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 568, 53 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "wasd"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Wasd:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.47, 0.47 ), Vector2( 0.49, 0.49 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ArrowKeys:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.47, 0.47 ), Vector2( 0.49, 0.49 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("E:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.66, 0.66 ), Vector2( 0.8, 0.8 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("LeftClick:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 568, 49 ), Vector2( 568, 53 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 12 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -24.0
+margin_right = 1079.0
+margin_bottom = 181.0
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DirtTileset2" type="Sprite" parent="."]
+position = Vector2( 1040, 115.337 )
+rotation = -1.5708
+scale = Vector2( 2.95071, 4.09475 )
+texture = ExtResource( 1 )
+
+[node name="DirtPathTileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 54, 0, 196611, 65589, 0, 196611, 131124, 0, 196611, 131126, 0, 196611, 262197, 0, 196611, 262198, 4, 3, 262202, 4, 196611, 262207, 4, 196611, 262209, 4, 196611, 327728, 4, 196611, 327730, 4, 196611, 327732, 4, 196611, 327734, 4, 131075, 327736, 4, 196611, 327739, 4, 196611, 327741, 4, 196611, 458751, 4, 0, 393216, 4, 1, 393217, 4, 1, 393218, 4, 1, 393219, 4, 1, 393220, 4, 1, 393221, 4, 1, 393222, 4, 1, 393223, 4, 1, 393224, 4, 1, 393225, 4, 1, 393226, 4, 1, 393227, 4, 1, 393228, 4, 1, 393229, 4, 1, 393230, 4, 1, 393231, 4, 1, 393232, 4, 1, 393233, 4, 1, 393234, 4, 1, 393235, 4, 1, 393236, 4, 1, 393237, 4, 1, 393238, 4, 1, 393239, 4, 1, 393240, 4, 1, 393241, 4, 1, 393242, 4, 1, 393243, 4, 1, 393244, 4, 1, 393245, 4, 1, 393246, 4, 1, 393247, 4, 1, 393248, 4, 1, 393249, 4, 1, 393250, 4, 1, 393251, 4, 1, 393252, 4, 1, 393253, 4, 1, 393254, 4, 1, 393255, 4, 1, 393256, 4, 1, 393257, 4, 1, 393258, 4, 1, 393259, 4, 1, 393260, 4, 5, 393261, 4, 196609, 393262, 4, 196610, 393265, 4, 196611, 393269, 4, 196611, 393270, 0, 196611, 393271, 4, 196611, 393274, 4, 196611, 393276, 4, 196611, 393278, 4, 196611, 524287, 4, 131072, 458752, 4, 131073, 458753, 4, 131073, 458754, 4, 131073, 458755, 4, 131073, 458756, 4, 131073, 458757, 4, 131073, 458758, 4, 131073, 458759, 4, 131073, 458760, 4, 131073, 458761, 4, 131073, 458762, 4, 131073, 458763, 4, 131073, 458764, 4, 131073, 458765, 4, 131073, 458766, 4, 131073, 458767, 4, 131073, 458768, 4, 131073, 458769, 4, 131073, 458770, 4, 131073, 458771, 4, 131073, 458772, 4, 131073, 458773, 4, 131073, 458774, 4, 131073, 458775, 4, 131073, 458776, 4, 131073, 458777, 4, 131073, 458778, 4, 131073, 458779, 4, 131073, 458780, 4, 131073, 458781, 4, 131073, 458782, 4, 131073, 458783, 4, 131073, 458784, 4, 131073, 458785, 4, 131073, 458786, 4, 131073, 458787, 4, 131073, 458788, 4, 131073, 458789, 4, 131073, 458790, 4, 131073, 458791, 4, 131073, 458792, 4, 131073, 458793, 4, 131073, 458794, 4, 131073, 458795, 4, 131073, 458796, 4, 131074, 458799, 4, 196608, 458800, 4, 196610, 458803, 4, 196611, 458806, 4, 196611, 458809, 4, 196611, 458813, 4, 196611, 458817, 4, 196611, 524337, 4, 196611, 524340, 0, 196608, 524341, 0, 7, 589877, 0, 131075, 655414, 0, 196611, 720949, 0, 196611 )
+
+[node name="Wasd" type="Sprite" parent="."]
+position = Vector2( 159, 48 )
+scale = Vector2( 0.485248, 0.451923 )
+texture = ExtResource( 8 )
+
+[node name="E" type="Sprite" parent="."]
+position = Vector2( 360, 48 )
+scale = Vector2( 0.66, 0.66 )
+texture = ExtResource( 9 )
+
+[node name="ArrowKeys" type="Sprite" parent="."]
+position = Vector2( 63, 48 )
+scale = Vector2( 0.47, 0.47 )
+texture = ExtResource( 7 )
+
+[node name="LeftClick" type="Sprite" parent="."]
+position = Vector2( 568, 53 )
+scale = Vector2( 0.7, 0.913793 )
+texture = ExtResource( 10 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 102.0
+margin_top = 35.0
+margin_right = 144.0
+margin_bottom = 49.0
+text = "ou"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 90.0
+margin_top = 10.0
+margin_right = 132.0
+margin_bottom = 24.0
+text = "Utilize"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 320.0
+margin_top = 72.0
+margin_right = 404.0
+margin_bottom = 86.0
+text = "para interagir"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 328.0
+margin_top = 8.0
+margin_right = 391.0
+margin_bottom = 22.0
+text = "Pressione"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 66.0
+margin_top = 73.0
+margin_right = 157.0
+margin_bottom = 104.0
+text = "Para se mover
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 528.0
+margin_top = 80.0
+margin_right = 612.0
+margin_bottom = 94.0
+text = "para atacar"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="."]
+margin_left = 528.0
+margin_top = 8.0
+margin_right = 612.0
+margin_bottom = 22.0
+text = "Pressione"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 14, 122 )
+
+[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 1056
+limit_bottom = 180
+smoothing_enabled = true
+smoothing_speed = 8.0
+
+[node name="YSort" type="YSort" parent="YSort"]
+
+[node name="grass" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 560, 144 )
+
+[node name="grass2" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 592, 144 )
+
+[node name="grass3" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 608, 144 )
+
+[node name="grass4" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 544, 144 )
+
+[node name="grass5" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 528, 144 )
+
+[node name="grass6" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 512, 144 )
+
+[node name="grass7" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 512, 160 )
+
+[node name="grass8" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 528, 160 )
+
+[node name="grass9" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 544, 160 )
+
+[node name="grass10" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 560, 160 )
+
+[node name="grass11" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 576, 160 )
+
+[node name="grass12" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 592, 160 )
+
+[node name="grass13" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 608, 160 )
+
+[node name="grass14" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 496, 160 )
+
+[node name="grass15" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 624, 160 )
+
+[node name="grass16" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 576, 144 )
+
+[node name="grass17" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 544, 128 )
+
+[node name="grass18" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 560, 128 )
+
+[node name="grass19" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 576, 128 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 2, 95, 352, 95, 742, 95, 853, 0, 1132, -1, 1132, 178, 1055, 184, 850, 182, 0, 181, 0, 101, -11, 114, -11, 188, 1145, 198, 1145, -15, 841, -15, 736, 84, 1, 92 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 1083, 13 )
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -2, 79.5 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 3 )
+anims/wasd = SubResource( 4 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

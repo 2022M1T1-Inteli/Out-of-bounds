@@ -2,7 +2,7 @@ extends Control
 
 # Botão de Start
 func _on_StartBtn_pressed() -> void: 
-	if get_tree().change_scene("res://Scenes/Desert/desert.tscn") != OK:
+	if get_tree().change_scene("res://Scenes/Tutorial/tutorial.tscn") != OK:
 		print("erro mudando de cena")
 
 # Botão de Créditos
