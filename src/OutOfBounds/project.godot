@@ -40,6 +40,7 @@ config/icon="res://Assets/UI/HeartUIFull.png"
 
 Global="*res://Global/global.gd"
 PauseMenu="*res://Scenes/PauseMenu/pauseMenu.tscn"
+TransitionScene="*res://Scenes/TransitionScene/transitionScene.tscn"
 Objectives="*res://Scenes/Objectives/objectives.tscn"
 
 [display]
