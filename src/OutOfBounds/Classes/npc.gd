@@ -94,3 +94,7 @@ func startDialog():
 
 	# Desabilitar interação com o Npc
 	canInteract = false
+	
+	# Esconder sistema de objetivos
+	Objectives.get_node("NinePatchRect").visible = false
+	Objectives.get_node("NinePatchRect/Label").text = ""

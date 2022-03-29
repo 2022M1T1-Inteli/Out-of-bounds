@@ -9,15 +9,22 @@ func _input(event):
 	if event.is_action_pressed("ui_cancel"): 
 		showPauseMenu(!get_tree().paused) 
 		get_tree().paused = !get_tree().paused #sistema de liga e desliga para o jogo 
+		setObjectiveVisibility(!get_tree().paused)
+		
 
 func showPauseMenu(is_visible): #is_visible é um parâmetro próprio do Godot
 	for node in get_children(): 
 		node.visible = is_visible
+		
+		setObjectiveVisibility(!get_tree().paused)
+			
 
 # Função executada quando botão de resume é pressionado
 func _on_ResumeBtn_pressed():
 	showPauseMenu(false)
 	get_tree().paused = false 
+	
+	setObjectiveVisibility(!get_tree().paused)
 
 # Função executada quando botão de voltar é pressionado
 func _on_QuitBtn_pressed():
@@ -25,3 +32,8 @@ func _on_QuitBtn_pressed():
 		print("Problema mudando de cena")
 	showPauseMenu(false)
 	get_tree().paused = false 
+	
+func setObjectiveVisibility(visibility):
+	# Mostrar ou esconder sistema de objetivos
+	Objectives.get_node("NinePatchRect").visible = visibility
+	
