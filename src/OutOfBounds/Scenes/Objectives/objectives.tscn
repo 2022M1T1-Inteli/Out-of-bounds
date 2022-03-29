@@ -7,13 +7,14 @@
 script = ExtResource( 2 )
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-visible = false
-margin_left = 214.0
+margin_left = 215.0
 margin_top = -1.0
-margin_right = 326.0
-margin_bottom = 45.0
+margin_right = 320.0
+margin_bottom = 51.0
 texture = ExtResource( 1 )
 region_rect = Rect2( 256, 32, 64, 64 )
+patch_margin_left = 8
+patch_margin_right = 8
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -21,10 +22,10 @@ __meta__ = {
 [node name="Label" type="Label" parent="NinePatchRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 15.0
-margin_top = 7.0
-margin_right = 106.0
-margin_bottom = 43.0
+margin_left = 18.0
+margin_top = 8.0
+margin_right = 88.0
+margin_bottom = 46.0
 rect_scale = Vector2( 0.4, 0.4 )
 align = 1
 valign = 1

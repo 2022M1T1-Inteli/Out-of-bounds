@@ -16,7 +16,7 @@ var phase1Dialogs = [
 		phase1DialogsRootPath + "Chapter2/1firstContact.json",
 		false,
 		false,
-		"Encontre o mecânico na cidade"
+		"Encontre o mecânico na cidade (siga a estrada)"
 	),
 	Dialog.new(phase1DialogsRootPath + "Chapter3/2mechanicOutSide", false, false, ""),
 	Dialog.new(phase1DialogsRootPath + "Chapter3/3firstBockEncounter", false, false, ""),
@@ -30,3 +30,7 @@ var phases = [Phase.new("Fase 1", false, false, phase1Dialogs)]
 
 # Instancia do Player
 var player = Player.new("Astronauta", "", null, null)
+	
+	
+
+
