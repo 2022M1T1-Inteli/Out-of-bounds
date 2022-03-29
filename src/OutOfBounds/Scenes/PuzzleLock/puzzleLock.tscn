@@ -169,12 +169,14 @@ texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 26 )
 
 [node name="Screen" type="Label" parent="."]
-margin_left = 68.0
-margin_top = 33.0
-margin_right = 133.0
-margin_bottom = 55.0
+margin_left = 60.0
+margin_top = 30.0
+margin_right = 139.0
+margin_bottom = 62.0
+custom_constants/line_spacing = -1
 align = 1
 valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -205,6 +207,25 @@ position = Vector2( 127, 19 )
 scale = Vector2( 1.25458, 1.25458 )
 texture = ExtResource( 14 )
 
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 162.0
+margin_top = 9.0
+margin_right = 312.0
+margin_bottom = 169.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/line_spacing = 0
+text = "Dica da senha será
+inserida aqui"
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="HBoxContainer2/LeftBtn/Button1" to="." method="onButtonPressed" binds= [ "1" ]]
 [connection signal="pressed" from="HBoxContainer2/LeftBtn/Button4" to="." method="onButtonPressed" binds= [ "4" ]]
 [connection signal="pressed" from="HBoxContainer2/LeftBtn/Button7" to="." method="onButtonPressed" binds= [ "7" ]]
@@ -217,3 +238,4 @@ texture = ExtResource( 14 )
 [connection signal="pressed" from="HBoxContainer2/RightBtn/Button6" to="." method="onButtonPressed" binds= [ "6" ]]
 [connection signal="pressed" from="HBoxContainer2/RightBtn/Button9" to="." method="onButtonPressed" binds= [ "9" ]]
 [connection signal="pressed" from="HBoxContainer2/RightBtn/Confirme" to="." method="_on_Confirme_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

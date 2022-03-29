@@ -6,37 +6,51 @@ var correctCode = "1888"
 func onButtonPressed(buttonIdentifier):
 	$Screen.set_text($Screen.get_text() + buttonIdentifier)
 	
+	# Aqui os leds que indicam se a senha está correta, mudam de cor baseando nos valores que o usuário digita
 	for index in $Screen.text.length():
 		if $Screen.text[index] == correctCode[index]:
-			get_node("HBoxContainer/DefaultLed" + buttonIdentifier).texture = load("res://Assets/PuzzleLock/GreenLed.png")
+			# Caso o usuário tenha digitado o valor correto para a posição correta o led se torna verde
+			get_node("HBoxContainer/DefaultLed" + str(index+1)).texture = load("res://Assets/PuzzleLock/GreenLed.png")
 		else:
-			get_node("HBoxContainer/DefaultLed" + buttonIdentifier).texture = load("res://Assets/PuzzleLock/RedLed.png")
-
-
+			# Caso o usuário tenha digitado o valor errado o led se torna vermelho
+			get_node("HBoxContainer/DefaultLed" + str(index+1)).texture = load("res://Assets/PuzzleLock/RedLed.png")
+		
+# Função que execulta quando o botão de Confirmar é acionado
 func _on_Confirme_pressed():
 	var password = str($Screen.text)
+	var isFinished 
+	
 	 
+	# Verificação se a senha digitada é a corrte
 	if correctCode == password:
-		$Screen.text = " Deu bom "
-		
+		$Screen.text = "" # Mensagem temporária de teste
+		isFinished = true
 	else: 
-		get_tree().change_scene("res://Scenes/PuzzleLock/ErrorScene.tscn")
+		$Screen.text = "Senha inválida!"
+		isFinished = false # Define a váriavel para que o timer seja ativado
 		
 	
+	# Iniciar o timer
+	if isFinished == false: 
+		$Timer.start(2)
+	
+
 
 # Função de deletar 
 func _on_Delete_pressed():
-	var text = []
-	for i in $Screen.get_text():
-		text.append(i) # Cada número da tela, será mapeado e adicionado a uma posição no Array Text
-	text.remove(text.size() - 1) # Faz com que a última posição do Array Text seja apagada
-	$Screen.set_text("")
-	for i in text: 
-		$Screen.set_text($Screen.get_text() + i)
+	var text = $Screen.get_text() # atribui o valor digitado em um variável text
+	text.erase(text.length() - 1, 1) # apaga o último caractere digitado
+	$Screen.set_text(text) # atribui o valor de text na tela
+	
+	# muda a cor do let para cinza
+	get_node("HBoxContainer/DefaultLed" + str(text.length() + 1)).texture = load("res://Assets/PuzzleLock/DefaultLed.png")
 
-
-
-
-func _on_Button2_pressed(extra_arg_0):
-	pass # Replace with function body.
-
+# Esta função executa após o Timer acabar 
+func _on_Timer_timeout():
+	$Screen.set_text("") # Limpa o valor da tela
+	
+	# Muda a cor de todos os leds para cinza
+	get_node("HBoxContainer/DefaultLed1").texture = load("res://Assets/PuzzleLock/DefaultLed.png")
+	get_node("HBoxContainer/DefaultLed2").texture = load("res://Assets/PuzzleLock/DefaultLed.png")
+	get_node("HBoxContainer/DefaultLed3").texture = load("res://Assets/PuzzleLock/DefaultLed.png")
+	get_node("HBoxContainer/DefaultLed4").texture = load("res://Assets/PuzzleLock/DefaultLed.png")
