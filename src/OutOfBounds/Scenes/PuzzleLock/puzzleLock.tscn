@@ -1,0 +1,241 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://Scenes/PuzzleLock/puzzleLock.gd" type="Script" id=1]
+[ext_resource path="res://Assets/PuzzleLock/Numbers/Number1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/PuzzleLock/Numbers/Number7.png" type="Texture" id=3]
+[ext_resource path="res://Assets/PuzzleLock/Numbers/Number2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/PuzzleLock/Numbers/Number5.png" type="Texture" id=5]
+[ext_resource path="res://Assets/PuzzleLock/Numbers/Number0.png" type="Texture" id=6]
+[ext_resource path="res://Assets/PuzzleLock/Numbers/Delete.png" type="Texture" id=7]
+[ext_resource path="res://Assets/PuzzleLock/Numbers/Confirm.png" type="Texture" id=8]
+[ext_resource path="res://Assets/PuzzleLock/Numbers/Number4.png" type="Texture" id=9]
+[ext_resource path="res://Assets/PuzzleLock/Numbers/Number8.png" type="Texture" id=10]
+[ext_resource path="res://Assets/PuzzleLock/Numbers/Number9.png" type="Texture" id=11]
+[ext_resource path="res://Assets/PuzzleLock/Numbers/Number6.png" type="Texture" id=12]
+[ext_resource path="res://Assets/PuzzleLock/Numbers/Number3.png" type="Texture" id=13]
+[ext_resource path="res://Assets/PuzzleLock/DefaultLed.png" type="Texture" id=14]
+[ext_resource path="res://Assets/PuzzleLock/KeyPad.png" type="Texture" id=15]
+[ext_resource path="res://Assets/PuzzleLock/Display.png" type="Texture" id=17]
+[ext_resource path="res://Assets/PuzzleLock/PressedNumbers/Number0Pressed.png" type="Texture" id=19]
+[ext_resource path="res://Assets/PuzzleLock/PressedNumbers/DeletePressed.png" type="Texture" id=20]
+[ext_resource path="res://Assets/PuzzleLock/PressedNumbers/Number2Pressed.png" type="Texture" id=21]
+[ext_resource path="res://Assets/PuzzleLock/PressedNumbers/Number3Pressed.png" type="Texture" id=22]
+[ext_resource path="res://Assets/PuzzleLock/PressedNumbers/Number8Pressed.png" type="Texture" id=23]
+[ext_resource path="res://Assets/PuzzleLock/PressedNumbers/Number6Pressed.png" type="Texture" id=24]
+[ext_resource path="res://Assets/PuzzleLock/PressedNumbers/Number9Pressed.png" type="Texture" id=25]
+[ext_resource path="res://Assets/PuzzleLock/PressedNumbers/ConfirmPressed.png" type="Texture" id=26]
+[ext_resource path="res://Assets/PuzzleLock/PressedNumbers/Number4Pressed.png" type="Texture" id=27]
+[ext_resource path="res://Assets/PuzzleLock/PressedNumbers/Number7Pressed.png" type="Texture" id=28]
+[ext_resource path="res://Assets/PuzzleLock/PressedNumbers/Number1Pressed.png" type="Texture" id=29]
+[ext_resource path="res://Assets/PuzzleLock/PressedNumbers/Number5Pressed.png" type="Texture" id=30]
+
+[node name="puzzleLock" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 1, 1, 0.254902 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KeyPad" type="Sprite" parent="."]
+position = Vector2( 100, 92 )
+scale = Vector2( 1.09831, 1.09831 )
+texture = ExtResource( 15 )
+
+[node name="Display" type="Sprite" parent="KeyPad"]
+position = Vector2( -1.90735e-06, -42.7928 )
+scale = Vector2( 1.14228, 1.14228 )
+texture = ExtResource( 17 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -95.0
+margin_top = -25.0
+margin_right = -15.0
+margin_bottom = 83.0
+rect_scale = Vector2( 1.1, 1.1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftBtn" type="VBoxContainer" parent="HBoxContainer2"]
+margin_right = 19.0
+margin_bottom = 108.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button1" type="TextureButton" parent="HBoxContainer2/LeftBtn"]
+margin_right = 19.0
+margin_bottom = 18.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 29 )
+
+[node name="Button4" type="TextureButton" parent="HBoxContainer2/LeftBtn"]
+margin_top = 22.0
+margin_right = 19.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 27 )
+
+[node name="Button7" type="TextureButton" parent="HBoxContainer2/LeftBtn"]
+margin_top = 44.0
+margin_right = 19.0
+margin_bottom = 63.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 28 )
+
+[node name="Delete" type="TextureButton" parent="HBoxContainer2/LeftBtn"]
+margin_top = 67.0
+margin_right = 19.0
+margin_bottom = 86.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 20 )
+
+[node name="MiddleBtn" type="VBoxContainer" parent="HBoxContainer2"]
+margin_left = 23.0
+margin_right = 42.0
+margin_bottom = 108.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="TextureButton" parent="HBoxContainer2/MiddleBtn"]
+margin_right = 19.0
+margin_bottom = 18.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 21 )
+
+[node name="Button5" type="TextureButton" parent="HBoxContainer2/MiddleBtn"]
+margin_top = 22.0
+margin_right = 19.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 30 )
+
+[node name="Button8" type="TextureButton" parent="HBoxContainer2/MiddleBtn"]
+margin_top = 44.0
+margin_right = 19.0
+margin_bottom = 63.0
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 23 )
+
+[node name="Button0" type="TextureButton" parent="HBoxContainer2/MiddleBtn"]
+margin_top = 67.0
+margin_right = 19.0
+margin_bottom = 86.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 19 )
+
+[node name="RightBtn" type="VBoxContainer" parent="HBoxContainer2"]
+margin_left = 46.0
+margin_right = 65.0
+margin_bottom = 108.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="TextureButton" parent="HBoxContainer2/RightBtn"]
+margin_right = 19.0
+margin_bottom = 18.0
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 22 )
+
+[node name="Button6" type="TextureButton" parent="HBoxContainer2/RightBtn"]
+margin_top = 22.0
+margin_right = 19.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 24 )
+
+[node name="Button9" type="TextureButton" parent="HBoxContainer2/RightBtn"]
+margin_top = 44.0
+margin_right = 19.0
+margin_bottom = 63.0
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 25 )
+
+[node name="Confirme" type="TextureButton" parent="HBoxContainer2/RightBtn"]
+margin_top = 67.0
+margin_right = 19.0
+margin_bottom = 86.0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 26 )
+
+[node name="Screen" type="Label" parent="."]
+margin_left = 60.0
+margin_top = 30.0
+margin_right = 139.0
+margin_bottom = 62.0
+custom_constants/line_spacing = -1
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DefaultLed1" type="Sprite" parent="HBoxContainer"]
+position = Vector2( 75, 19 )
+scale = Vector2( 1.25458, 1.25458 )
+texture = ExtResource( 14 )
+
+[node name="DefaultLed2" type="Sprite" parent="HBoxContainer"]
+position = Vector2( 92, 19 )
+scale = Vector2( 1.25458, 1.25458 )
+texture = ExtResource( 14 )
+
+[node name="DefaultLed3" type="Sprite" parent="HBoxContainer"]
+position = Vector2( 110, 19 )
+scale = Vector2( 1.27778, 1.27778 )
+texture = ExtResource( 14 )
+
+[node name="DefaultLed4" type="Sprite" parent="HBoxContainer"]
+position = Vector2( 127, 19 )
+scale = Vector2( 1.25458, 1.25458 )
+texture = ExtResource( 14 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 162.0
+margin_top = 9.0
+margin_right = 312.0
+margin_bottom = 169.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/line_spacing = 0
+text = "Dica da senha será
+inserida aqui"
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="HBoxContainer2/LeftBtn/Button1" to="." method="onButtonPressed" binds= [ "1" ]]
+[connection signal="pressed" from="HBoxContainer2/LeftBtn/Button4" to="." method="onButtonPressed" binds= [ "4" ]]
+[connection signal="pressed" from="HBoxContainer2/LeftBtn/Button7" to="." method="onButtonPressed" binds= [ "7" ]]
+[connection signal="pressed" from="HBoxContainer2/LeftBtn/Delete" to="." method="_on_Delete_pressed"]
+[connection signal="pressed" from="HBoxContainer2/MiddleBtn/Button2" to="." method="onButtonPressed" binds= [ "2" ]]
+[connection signal="pressed" from="HBoxContainer2/MiddleBtn/Button5" to="." method="onButtonPressed" binds= [ "5" ]]
+[connection signal="pressed" from="HBoxContainer2/MiddleBtn/Button8" to="." method="onButtonPressed" binds= [ "8" ]]
+[connection signal="pressed" from="HBoxContainer2/MiddleBtn/Button0" to="." method="onButtonPressed" binds= [ "0" ]]
+[connection signal="pressed" from="HBoxContainer2/RightBtn/Button3" to="." method="onButtonPressed" binds= [ "3" ]]
+[connection signal="pressed" from="HBoxContainer2/RightBtn/Button6" to="." method="onButtonPressed" binds= [ "6" ]]
+[connection signal="pressed" from="HBoxContainer2/RightBtn/Button9" to="." method="onButtonPressed" binds= [ "9" ]]
+[connection signal="pressed" from="HBoxContainer2/RightBtn/Confirme" to="." method="_on_Confirme_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
