@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://ExclusiveAssets/Textures/Cyberpunk_D.png" type="Texture" id=1]
 [ext_resource path="res://ExclusiveAssets/Textures/non-rm-a4-square.png" type="Texture" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://ExclusiveAssets/Textures/Cyberpunk_C.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/Player/player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Mecanic/Mecanica.gd" type="Script" id=6]
+[ext_resource path="res://ExclusiveAssets/Textures/Cyberpunk_B2.png" type="Texture" id=7]
+[ext_resource path="res://ExclusiveAssets/Textures/Cyberpunk_E.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Jarvis/Jarvis.tscn" type="PackedScene" id=9]
 
 [sub_resource type="TileSet" id=1]
 0/name = "non-rm-a4-square.png 0"
@@ -32,63 +35,57 @@
 0/shapes = [  ]
 0/z_index = 0
 
-[sub_resource type="CapsuleShape2D" id=15]
-radius = 18.0
-height = 0.0
+[sub_resource type="CapsuleShape2D" id=21]
+radius = 6.0
+height = 24.0
+
+[sub_resource type="CapsuleShape2D" id=23]
+radius = 8.0
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 24.5, 20.5 )
 
 [sub_resource type="RectangleShape2D" id=16]
 extents = Vector2( 10.5, 62.5 )
 
-[sub_resource type="RectangleShape2D" id=18]
-extents = Vector2( 34.5, 2 )
-
-[sub_resource type="RectangleShape2D" id=19]
-extents = Vector2( 33.5, 2.5 )
-
-[sub_resource type="RectangleShape2D" id=20]
-extents = Vector2( 75, 40 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 23, 29 )
+[sub_resource type="CircleShape2D" id=22]
 
 [sub_resource type="RectangleShape2D" id=17]
-extents = Vector2( 64.1667, 56.6667 )
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 8, 19.5 )
+extents = Vector2( 155, 10 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 8.5, 19 )
+extents = Vector2( 10, 19 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 8, 21.5 )
+extents = Vector2( 14, 26 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 12.0105, 34.7643 )
+extents = Vector2( 35.5, 13.4411 )
 
 [sub_resource type="CapsuleShape2D" id=7]
-radius = 9.0
+radius = 6.0
 height = 0.0
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 12.5, 13 )
-
-[sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 7, 18 )
+extents = Vector2( 32.5, 10 )
 
 [sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 14.5, 14.5 )
+extents = Vector2( 18, 11 )
 
 [sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 27, 8.5 )
+extents = Vector2( 27, 8.75 )
 
 [sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 8, 5 )
 
 [sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 8.5, 22 )
+extents = Vector2( 11.75, 28 )
 
-[sub_resource type="CircleShape2D" id=14]
-radius = 8.0
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 4, 79.5 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 23, 8.5 )
 
 [node name="Mecanic" type="Node2D"]
 script = ExtResource( 6 )
@@ -102,177 +99,34 @@ tile_data = PoolIntArray( -458749, 0, 655360, -458748, 0, 262162, -458747, 0, 2,
 [node name="YSort" type="YSort" parent="."]
 position = Vector2( 83, 51 )
 
-[node name="Drain1" type="NinePatchRect" parent="YSort"]
-margin_left = -132.0
-margin_top = -55.0
-margin_right = -62.0
-margin_bottom = -18.0
-rect_scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 1 )
-region_rect = Rect2( 382.543, 479.377, 63.3954, 31.3203 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Player" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 70, 172 )
 
-[node name="Drain2" type="NinePatchRect" parent="YSort"]
-margin_left = -186.0
-margin_top = -53.0
-margin_right = -116.0
-margin_bottom = -16.0
-rect_scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 1 )
-region_rect = Rect2( 382.543, 479.377, 63.3954, 31.3203 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
+current = true
+limit_left = -210
+limit_top = -125
+limit_right = 325
+limit_bottom = 260
+limit_smoothed = true
+smoothing_enabled = true
+smoothing_speed = 3.0
+editor_draw_screen = false
 
-[node name="Drain3" type="NinePatchRect" parent="YSort"]
-margin_left = -239.0
-margin_top = -53.0
-margin_right = -169.0
-margin_bottom = -16.0
-rect_scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 1 )
-region_rect = Rect2( 382.543, 479.377, 63.3954, 31.3203 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Railroad4" type="NinePatchRect" parent="YSort"]
-margin_left = -209.0
-margin_top = 156.0
-margin_right = -169.0
-margin_bottom = 196.0
-texture = ExtResource( 3 )
-region_rect = Rect2( 322.601, 448.458, 59.724, 64.8432 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Railroad5" type="NinePatchRect" parent="YSort"]
-margin_left = -209.0
-margin_top = 121.0
-margin_right = -169.0
-margin_bottom = 161.0
-texture = ExtResource( 3 )
-region_rect = Rect2( 322.601, 448.458, 59.724, 64.8432 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Railroad6" type="NinePatchRect" parent="YSort"]
-margin_left = -209.0
-margin_top = 82.0
-margin_right = -169.0
-margin_bottom = 122.0
-texture = ExtResource( 3 )
-region_rect = Rect2( 322.601, 448.458, 59.724, 64.8432 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="AutomotiveElevator" type="StaticBody2D" parent="YSort"]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AutomotiveElevator3" type="NinePatchRect" parent="YSort/AutomotiveElevator"]
-margin_left = -255.0
-margin_top = -194.0
-margin_right = -138.0
-margin_bottom = 189.0
-rect_scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 1 )
-region_rect = Rect2( 294.609, 5.15986, 115.99, 87.3503 )
-patch_margin_left = 117
-patch_margin_bottom = 383
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="YSort/AutomotiveElevator"]
-polygon = PoolVector2Array( -253, -45, -250, -45, -250, -64, -246, -68, -218, -68, -214, -64, -214, -45, -211, -45, -211, -64, -210, -66, -209, -71, -213, -72, -220, -73, -244, -73, -252, -72, -255, -70, -255, -66, -253, -64 )
-
-[node name="AutomotiveElevator2" type="StaticBody2D" parent="YSort"]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AutomotiveElevator2" type="NinePatchRect" parent="YSort/AutomotiveElevator2"]
-margin_left = -202.0
-margin_top = -193.0
-margin_right = -85.0
-margin_bottom = 190.0
-rect_scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 1 )
-region_rect = Rect2( 294.609, 5.15986, 115.99, 87.3503 )
-patch_margin_left = 117
-patch_margin_bottom = 383
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="YSort/AutomotiveElevator2"]
-position = Vector2( 53, 1 )
-polygon = PoolVector2Array( -253, -45, -250, -45, -250, -64, -246, -68, -218, -68, -214, -64, -214, -45, -211, -45, -211, -64, -210, -66, -209, -71, -213, -72, -220, -73, -244, -73, -252, -72, -255, -70, -255, -66, -253, -64 )
-
-[node name="AutomotiveElevator3" type="StaticBody2D" parent="YSort"]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AutomotiveElevator1" type="NinePatchRect" parent="YSort/AutomotiveElevator3"]
-margin_left = -148.0
-margin_top = -192.0
-margin_right = -31.0
-margin_bottom = 191.0
-rect_scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 1 )
-region_rect = Rect2( 294.609, 5.15986, 115.99, 87.3503 )
-patch_margin_left = 117
-patch_margin_bottom = 383
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="YSort/AutomotiveElevator3"]
-position = Vector2( 107, 2 )
-polygon = PoolVector2Array( -253, -45, -250, -45, -250, -64, -246, -68, -218, -68, -214, -64, -214, -45, -211, -45, -211, -64, -210, -66, -209, -71, -213, -72, -220, -73, -244, -73, -252, -72, -255, -70, -255, -66, -253, -64 )
+[node name="Jarvis" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 137, -25 )
 
 [node name="Feathers" type="StaticBody2D" parent="YSort"]
+position = Vector2( -109, 184 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Feather" type="NinePatchRect" parent="YSort/Feathers"]
-margin_left = -282.0
-margin_top = -31.0
-margin_right = -232.0
-margin_bottom = 19.0
-rect_scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 3 )
-region_rect = Rect2( 256.958, 62.8256, 64.2744, 34.6968 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Feather2" type="NinePatchRect" parent="YSort/Feathers"]
-margin_left = -271.0
-margin_top = -25.0
-margin_right = -221.0
-margin_bottom = 25.0
-rect_scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 3 )
-region_rect = Rect2( 256.958, 62.8256, 64.2744, 34.6968 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Feather3" type="NinePatchRect" parent="YSort/Feathers"]
-margin_left = -282.0
-margin_top = -19.0
-margin_right = -232.0
-margin_bottom = 31.0
+margin_left = -20.0
+margin_top = -18.0
+margin_right = 82.0
+margin_bottom = 43.0
 rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 3 )
 region_rect = Rect2( 256.958, 62.8256, 64.2744, 34.6968 )
@@ -281,19 +135,22 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Feathers"]
-position = Vector2( -270, -11 )
-shape = SubResource( 15 )
+position = Vector2( 1, -1 )
+rotation = -1.5708
+shape = SubResource( 21 )
 
 [node name="Boxes" type="StaticBody2D" parent="YSort"]
+position = Vector2( -268, 178 )
+collision_mask = 0
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Box" type="NinePatchRect" parent="YSort/Boxes"]
-margin_left = -280.0
-margin_top = 167.0
-margin_right = -217.0
-margin_bottom = 230.0
+margin_left = -8.0
+margin_top = -19.0
+margin_right = 55.0
+margin_bottom = 44.0
 rect_scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 3 )
 region_rect = Rect2( 291.072, 121.585, 26.4148, 41.1315 )
@@ -302,10 +159,10 @@ __meta__ = {
 }
 
 [node name="Box2" type="NinePatchRect" parent="YSort/Boxes"]
-margin_left = -287.0
-margin_top = 183.0
-margin_right = -224.0
-margin_bottom = 246.0
+margin_left = 4.0
+margin_top = -16.0
+margin_right = 67.0
+margin_bottom = 47.0
 rect_scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 3 )
 region_rect = Rect2( 291.072, 121.585, 26.4148, 41.1315 )
@@ -314,10 +171,10 @@ __meta__ = {
 }
 
 [node name="Box3" type="NinePatchRect" parent="YSort/Boxes"]
-margin_left = -270.0
-margin_top = 181.0
-margin_right = -207.0
-margin_bottom = 244.0
+margin_left = 6.0
+margin_top = -9.0
+margin_right = 69.0
+margin_bottom = 54.0
 rect_scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 3 )
 region_rect = Rect2( 291.072, 121.585, 26.4148, 41.1315 )
@@ -326,10 +183,10 @@ __meta__ = {
 }
 
 [node name="Box4" type="NinePatchRect" parent="YSort/Boxes"]
-margin_left = -281.0
-margin_top = 182.0
-margin_right = -218.0
-margin_bottom = 245.0
+margin_left = -17.0
+margin_top = -11.0
+margin_right = 46.0
+margin_bottom = 52.0
 rect_scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 3 )
 region_rect = Rect2( 291.072, 121.585, 26.4148, 41.1315 )
@@ -338,10 +195,10 @@ __meta__ = {
 }
 
 [node name="Box5" type="NinePatchRect" parent="YSort/Boxes"]
-margin_left = -270.0
-margin_top = 171.0
-margin_right = -207.0
-margin_bottom = 234.0
+margin_left = -14.0
+margin_top = -5.0
+margin_right = 49.0
+margin_bottom = 58.0
 rect_scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 3 )
 region_rect = Rect2( 291.072, 121.585, 26.4148, 41.1315 )
@@ -350,10 +207,10 @@ __meta__ = {
 }
 
 [node name="Box6" type="NinePatchRect" parent="YSort/Boxes"]
-margin_left = -285.0
-margin_top = 173.0
-margin_right = -222.0
-margin_bottom = 236.0
+margin_left = -3.0
+margin_top = -4.0
+margin_right = 60.0
+margin_bottom = 59.0
 rect_scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 3 )
 region_rect = Rect2( 291.072, 121.585, 26.4148, 41.1315 )
@@ -361,19 +218,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="YSort/Boxes"]
-polygon = PoolVector2Array( -284, 180, -277, 173, -270, 171, -264, 173, -253, 177, -251, 184, -251, 195, -252, 198, -284, 201, -287, 201 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Boxes"]
+position = Vector2( 4, 3 )
+rotation = -1.5708
+shape = SubResource( 23 )
 
-[node name="Box7" type="StaticBody2D" parent="YSort"]
+[node name="Boxes2" type="StaticBody2D" parent="YSort"]
+position = Vector2( 197, 51 )
+collision_mask = 0
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Box7" type="NinePatchRect" parent="YSort/Box7"]
-margin_left = -249.0
-margin_top = 181.0
-margin_right = -186.0
-margin_bottom = 244.0
+[node name="Box" type="NinePatchRect" parent="YSort/Boxes2"]
+margin_left = -8.0
+margin_top = -19.0
+margin_right = 55.0
+margin_bottom = 44.0
 rect_scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 3 )
 region_rect = Rect2( 291.072, 121.585, 26.4148, 41.1315 )
@@ -381,16 +242,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="YSort/Box7"]
-polygon = PoolVector2Array( -248, 194, -247, 188, -240, 185, -233, 187, -231, 191, -231, 197, -241, 199 )
-
-[node name="Box8" type="StaticBody2D" parent="YSort"]
-
-[node name="Box8" type="NinePatchRect" parent="YSort/Box8"]
-margin_left = -284.0
-margin_top = 148.0
-margin_right = -221.0
-margin_bottom = 211.0
+[node name="Box2" type="NinePatchRect" parent="YSort/Boxes2"]
+margin_left = 4.0
+margin_top = -16.0
+margin_right = 67.0
+margin_bottom = 47.0
 rect_scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 3 )
 region_rect = Rect2( 291.072, 121.585, 26.4148, 41.1315 )
@@ -398,11 +254,169 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="YSort/Box8"]
-position = Vector2( -35, -33 )
-polygon = PoolVector2Array( -248, 194, -247, 188, -240, 185, -233, 187, -231, 191, -231, 197, -241, 199 )
+[node name="Box3" type="NinePatchRect" parent="YSort/Boxes2"]
+margin_left = 6.0
+margin_top = -9.0
+margin_right = 69.0
+margin_bottom = 54.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+region_rect = Rect2( 291.072, 121.585, 26.4148, 41.1315 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Box4" type="NinePatchRect" parent="YSort/Boxes2"]
+margin_left = -17.0
+margin_top = -11.0
+margin_right = 46.0
+margin_bottom = 52.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+region_rect = Rect2( 291.072, 121.585, 26.4148, 41.1315 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Box5" type="NinePatchRect" parent="YSort/Boxes2"]
+margin_left = -14.0
+margin_top = -5.0
+margin_right = 49.0
+margin_bottom = 58.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+region_rect = Rect2( 291.072, 121.585, 26.4148, 41.1315 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Box6" type="NinePatchRect" parent="YSort/Boxes2"]
+margin_left = -3.0
+margin_top = -4.0
+margin_right = 60.0
+margin_bottom = 59.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+region_rect = Rect2( 291.072, 121.585, 26.4148, 41.1315 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Boxes2"]
+position = Vector2( 4, 3 )
+rotation = -1.5708
+shape = SubResource( 23 )
+
+[node name="Boxes3" type="StaticBody2D" parent="YSort"]
+position = Vector2( -13, -79 )
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Box" type="NinePatchRect" parent="YSort/Boxes3"]
+margin_left = -8.0
+margin_top = -19.0
+margin_right = 55.0
+margin_bottom = 44.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+region_rect = Rect2( 291.072, 121.585, 26.4148, 41.1315 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Box2" type="NinePatchRect" parent="YSort/Boxes3"]
+margin_left = 4.0
+margin_top = -16.0
+margin_right = 67.0
+margin_bottom = 47.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+region_rect = Rect2( 291.072, 121.585, 26.4148, 41.1315 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Box3" type="NinePatchRect" parent="YSort/Boxes3"]
+margin_left = 6.0
+margin_top = -9.0
+margin_right = 69.0
+margin_bottom = 54.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+region_rect = Rect2( 291.072, 121.585, 26.4148, 41.1315 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Box4" type="NinePatchRect" parent="YSort/Boxes3"]
+margin_left = -17.0
+margin_top = -11.0
+margin_right = 46.0
+margin_bottom = 52.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+region_rect = Rect2( 291.072, 121.585, 26.4148, 41.1315 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Box5" type="NinePatchRect" parent="YSort/Boxes3"]
+margin_left = -14.0
+margin_top = -5.0
+margin_right = 49.0
+margin_bottom = 58.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+region_rect = Rect2( 291.072, 121.585, 26.4148, 41.1315 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Box6" type="NinePatchRect" parent="YSort/Boxes3"]
+margin_left = -3.0
+margin_top = -4.0
+margin_right = 60.0
+margin_bottom = 59.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+region_rect = Rect2( 291.072, 121.585, 26.4148, 41.1315 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Boxes3"]
+position = Vector2( 4, 3 )
+rotation = -1.5708
+shape = SubResource( 23 )
+
+[node name="BigTable" type="StaticBody2D" parent="YSort"]
+position = Vector2( 42, 20 )
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BigTable" type="NinePatchRect" parent="YSort/BigTable"]
+margin_left = -19.0
+margin_top = -50.0
+margin_right = 118.0
+margin_bottom = 180.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 8 )
+region_rect = Rect2( 32, 192, 32, 64 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/BigTable"]
+position = Vector2( 1.5, -9.5 )
+rotation = -1.5708
+shape = SubResource( 26 )
 
 [node name="Wardrobe" type="StaticBody2D" parent="YSort"]
+position = Vector2( -4, 14 )
 
 [node name="Wardrobe" type="NinePatchRect" parent="YSort/Wardrobe"]
 margin_left = -74.0
@@ -452,42 +466,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Box9" type="NinePatchRect" parent="YSort/Wardrobe"]
-margin_left = -73.0
-margin_top = 64.0
-margin_right = -10.0
-margin_bottom = 127.0
-rect_scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 3 )
-region_rect = Rect2( 291.072, 121.585, 26.4148, 41.1315 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Box10" type="NinePatchRect" parent="YSort/Wardrobe"]
-margin_left = -71.0
-margin_top = 98.0
-margin_right = -8.0
-margin_bottom = 161.0
-rect_scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 3 )
-region_rect = Rect2( 291.072, 121.585, 26.4148, 41.1315 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Box11" type="NinePatchRect" parent="YSort/Wardrobe"]
-margin_left = -72.0
-margin_top = 75.0
-margin_right = -9.0
-margin_bottom = 138.0
-rect_scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 3 )
-region_rect = Rect2( 291.072, 121.585, 26.4148, 41.1315 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Exhaust4" type="NinePatchRect" parent="YSort/Wardrobe"]
 margin_left = -72.0
 margin_top = 148.0
@@ -504,202 +482,108 @@ __meta__ = {
 position = Vector2( -64.5, 126.5 )
 shape = SubResource( 16 )
 
-[node name="Glass" type="StaticBody2D" parent="YSort"]
-
-[node name="Glass" type="NinePatchRect" parent="YSort/Glass"]
-margin_left = -31.0
-margin_top = -53.0
-margin_right = -12.0
-margin_bottom = -13.0
-rect_scale = Vector2( 4, 0.1 )
-texture = ExtResource( 3 )
-region_rect = Rect2( 129.351, 372.114, 34.3939, 9.24014 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Glass"]
-position = Vector2( 4.5, -51 )
-shape = SubResource( 18 )
-
-[node name="Glass2" type="StaticBody2D" parent="YSort"]
-
-[node name="Glass2" type="NinePatchRect" parent="YSort/Glass2"]
-margin_left = 83.0
-margin_top = -52.0
-margin_right = 102.0
-margin_bottom = -12.0
-rect_scale = Vector2( 4, 0.1 )
-texture = ExtResource( 3 )
-region_rect = Rect2( 129.351, 372.114, 34.3939, 9.24014 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Glass2"]
-position = Vector2( 117.5, -49.5 )
-shape = SubResource( 19 )
-
-[node name="Spot" type="NinePatchRect" parent="YSort"]
-margin_left = -132.0
-margin_top = -66.0
-margin_right = -80.0
-margin_bottom = -14.0
-rect_scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 1 )
-region_rect = Rect2( 260.048, 247.77, 54.036, 39.816 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Spot2" type="NinePatchRect" parent="YSort"]
-margin_left = -269.0
-margin_top = -15.0
-margin_right = -217.0
-margin_bottom = 37.0
-rect_scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 1 )
-region_rect = Rect2( 260.048, 247.77, 54.036, 39.816 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Spot3" type="NinePatchRect" parent="YSort"]
-margin_left = -213.0
-margin_top = 169.0
-margin_right = -161.0
-margin_bottom = 221.0
-rect_scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 1 )
-region_rect = Rect2( 260.048, 247.77, 54.036, 39.816 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Spot4" type="NinePatchRect" parent="YSort"]
-margin_left = -198.0
-margin_top = 81.0
-margin_right = -146.0
-margin_bottom = 133.0
-rect_scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 1 )
-region_rect = Rect2( 260.048, 247.77, 54.036, 39.816 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Door2" type="NinePatchRect" parent="YSort"]
-margin_left = 39.0
-margin_top = -72.0
-margin_right = 189.0
-margin_bottom = 65.0
-rect_scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 1 )
-region_rect = Rect2( -4.52731, 255.829, 67.7415, 86.4288 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="DoorBoss" type="Area2D" parent="YSort/Door2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Door2/DoorBoss"]
-position = Vector2( 75, 76.6667 )
-shape = SubResource( 20 )
-
 [node name="ChearSecretary2" type="StaticBody2D" parent="YSort"]
-position = Vector2( -83, -51 )
+position = Vector2( -5, 105 )
+scale = Vector2( 0.8, 0.9 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="ChearSecretary2" type="NinePatchRect" parent="YSort/ChearSecretary2"]
-margin_left = 55.0
-margin_top = 112.0
-margin_right = 177.0
-margin_bottom = 254.0
+margin_left = -25.0
+margin_top = -54.0
+margin_right = 97.0
+margin_bottom = 113.0
 rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 3 )
-region_rect = Rect2( 254, 220, 70, 96 )
+region_rect = Rect2( 256, 224, 64, 96 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/ChearSecretary2"]
-position = Vector2( 77, 140 )
-shape = SubResource( 3 )
+position = Vector2( -1, 3 )
+shape = SubResource( 22 )
 
-[node name="DoorSecretary2" type="NinePatchRect" parent="YSort"]
-margin_left = 51.0
-margin_top = 165.0
-margin_right = 201.0
-margin_bottom = 302.0
-rect_scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 4 )
-region_rect = Rect2( 163.75, 129.45, 84.55, 68.4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CityDoor" type="Area2D" parent="YSort/DoorSecretary2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/DoorSecretary2/CityDoor"]
-position = Vector2( 79.1667, 66.6666 )
-shape = SubResource( 17 )
-
-[node name="Table2" type="StaticBody2D" parent="YSort"]
+[node name="ChearSecretary3" type="StaticBody2D" parent="YSort"]
+position = Vector2( -187, 179 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Table2" type="NinePatchRect" parent="YSort/Table2"]
-margin_left = -270.0
-margin_top = 123.0
-margin_right = -230.0
-margin_bottom = 220.0
-rect_rotation = 180.0
+[node name="ChearSecretary2" type="NinePatchRect" parent="YSort/ChearSecretary3"]
+margin_left = -25.0
+margin_top = -54.0
+margin_right = 97.0
+margin_bottom = 113.0
 rect_scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 4 )
-region_rect = Rect2( 128.671, 319.44, 30.1464, 64.2744 )
+texture = ExtResource( 3 )
+region_rect = Rect2( 256, 224, 64, 96 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Table2"]
-position = Vector2( -278, 103.5 )
-shape = SubResource( 4 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/ChearSecretary3"]
+position = Vector2( -1, 3 )
+shape = SubResource( 22 )
+
+[node name="CityDoor" type="Area2D" parent="YSort"]
+position = Vector2( 75, 200 )
+scale = Vector2( 0.3, 0.3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DoorSecretary2" type="NinePatchRect" parent="YSort/CityDoor"]
+margin_left = -160.0
+margin_top = -83.3333
+margin_right = 896.0
+margin_bottom = 205.667
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+region_rect = Rect2( 160, 224, 32, 32 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/CityDoor"]
+position = Vector2( 6.10352e-05, -10 )
+shape = SubResource( 17 )
 
 [node name="Table" type="StaticBody2D" parent="YSort"]
+position = Vector2( -273, 49 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Table" type="NinePatchRect" parent="YSort/Table"]
-margin_left = -271.0
-margin_top = 75.0
-margin_right = -231.0
-margin_bottom = 172.0
+margin_left = 11.0
+margin_top = 21.0
+margin_right = 65.0
+margin_bottom = 164.0
 rect_rotation = 180.0
 rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 4 )
-region_rect = Rect2( 128.671, 319.44, 30.1464, 64.2744 )
+region_rect = Rect2( 352, 224, 64, 64 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Table"]
-position = Vector2( -279.5, 56 )
+position = Vector2( 0, -2 )
 shape = SubResource( 2 )
 
 [node name="Sofa" type="StaticBody2D" parent="YSort"]
+position = Vector2( 216, 124 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sofa" type="NinePatchRect" parent="YSort/Sofa"]
-margin_left = 215.0
-margin_top = 76.0
-margin_right = 255.0
-margin_bottom = 186.0
+margin_left = -16.0
+margin_top = -36.0
+margin_right = 59.0
+margin_bottom = 119.0
 rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 4 )
 region_rect = Rect2( 321.829, 356.425, 27.2352, 57.2637 )
@@ -708,44 +592,42 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Sofa"]
-position = Vector2( 224, 97.5 )
+position = Vector2( 0, -1 )
 shape = SubResource( 5 )
 
 [node name="TableSecretary" type="StaticBody2D" parent="YSort"]
-position = Vector2( -83, -51 )
+position = Vector2( 195, 10 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="TableSecretary" type="NinePatchRect" parent="YSort/TableSecretary"]
-margin_left = 221.0
-margin_top = 48.0
-margin_right = 284.0
-margin_bottom = 254.0
-rect_rotation = -52.8
+margin_left = -39.0
+margin_top = -23.0
+margin_right = 146.0
+margin_bottom = 77.0
 rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 4 )
-region_rect = Rect2( 352.468, 225.763, 63.9724, 59.7912 )
+region_rect = Rect2( 352, 224, 64, 64 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/TableSecretary"]
-position = Vector2( 258.952, 61.4517 )
-rotation = -0.921534
-scale = Vector2( 1, 1 )
+position = Vector2( -2, -1.55892 )
 shape = SubResource( 6 )
 
 [node name="ChairSecretary2" type="StaticBody2D" parent="YSort"]
+position = Vector2( 195, -15 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="ChairSecretary" type="NinePatchRect" parent="YSort/ChairSecretary2"]
-margin_left = 186.0
-margin_top = -28.0
-margin_right = 243.0
-margin_bottom = 38.0
+margin_left = -12.0
+margin_top = -19.0
+margin_right = 45.0
+margin_bottom = 47.0
 rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 4 )
 region_rect = Rect2( 193.99, 382.256, 29.4037, 44.8406 )
@@ -754,74 +636,37 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/ChairSecretary2"]
-position = Vector2( 199, -12 )
 shape = SubResource( 7 )
 
-[node name="TvBoss2" type="StaticBody2D" parent="YSort"]
-__meta__ = {
-"_edit_group_": true
-}
+[node name="BookBoss" type="StaticBody2D" parent="YSort"]
+position = Vector2( 130, -158 )
 
-[node name="TvBoss2" type="NinePatchRect" parent="YSort/TvBoss2"]
-margin_left = 110.0
-margin_top = -160.0
-margin_right = 135.0
-margin_bottom = -134.0
+[node name="BookBoss" type="NinePatchRect" parent="YSort/BookBoss"]
+margin_left = -44.0
+margin_top = -21.0
+margin_right = 21.0
+margin_bottom = 16.0
 texture = ExtResource( 4 )
-region_rect = Rect2( 383.026, -0.411143, 63.9515, 60.7738 )
-patch_margin_right = 5
+region_rect = Rect2( 384, 0, 128, 64 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/TvBoss2"]
-position = Vector2( 122.5, -147 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/BookBoss"]
+position = Vector2( -11.5, 5 )
 shape = SubResource( 8 )
 
-[node name="TvBoss" type="StaticBody2D" parent="YSort"]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="TableBoss2" type="NinePatchRect" parent="YSort/TvBoss"]
-margin_left = -29.0
-margin_top = -113.0
-margin_right = -16.0
-margin_bottom = -76.0
-texture = ExtResource( 4 )
-region_rect = Rect2( 373.854, 436.27, 1.22778, 0 )
-patch_margin_right = 5
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TvBoss" type="NinePatchRect" parent="YSort/TvBoss"]
-margin_left = -27.0
-margin_top = -111.0
-margin_right = -22.0
-margin_bottom = -81.0
-rect_rotation = -9.3
-rect_scale = Vector2( 0.5, 1 )
-texture = ExtResource( 4 )
-region_rect = Rect2( 354.211, 410.488, 58.9314, 38.0599 )
-patch_margin_right = 5
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/TvBoss"]
-position = Vector2( -23, -95 )
-shape = SubResource( 9 )
-
 [node name="FrezeBar" type="StaticBody2D" parent="YSort"]
+position = Vector2( -11, -155 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="FrezeBar" type="NinePatchRect" parent="YSort/FrezeBar"]
-margin_left = -29.0
-margin_top = -163.0
-margin_bottom = -134.0
+margin_left = -19.0
+margin_top = -20.0
+margin_right = 28.0
+margin_bottom = 12.0
 texture = ExtResource( 4 )
 region_rect = Rect2( 415.8, 62.1, 95.95, 62.7 )
 __meta__ = {
@@ -829,61 +674,63 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/FrezeBar"]
-position = Vector2( -14.5, -147.5 )
 shape = SubResource( 10 )
 
 [node name="TableBoss" type="StaticBody2D" parent="YSort"]
+position = Vector2( 63, -117 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="TableBoss" type="NinePatchRect" parent="YSort/TableBoss"]
-margin_left = 89.0
-margin_top = -134.0
-margin_right = 131.0
-rect_rotation = 90.0
+margin_left = -29.0
+margin_top = -18.0
+margin_right = 114.0
+margin_bottom = 60.0
 rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 4 )
-region_rect = Rect2( 353.129, 164.63, 62.081, 50.4987 )
+region_rect = Rect2( 352, 160, 64, 64 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/TableBoss"]
-position = Vector2( 62, -125.5 )
+position = Vector2( 0, -0.25 )
 shape = SubResource( 11 )
 
 [node name="ChearBoss" type="StaticBody2D" parent="YSort"]
+position = Vector2( 62, -143 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="ChearBoss" type="NinePatchRect" parent="YSort/ChearBoss"]
-margin_left = 49.0
-margin_top = -156.0
-margin_right = 126.0
-margin_bottom = -79.0
+margin_left = -12.0
+margin_top = -15.0
+margin_right = 65.0
+margin_bottom = 62.0
 rect_scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
-region_rect = Rect2( 417.392, 160.652, 31.7772, 36.3765 )
+region_rect = Rect2( 416, 160, 32, 32 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/ChearBoss"]
-position = Vector2( 62, -146 )
+position = Vector2( 0, 2 )
 shape = SubResource( 12 )
 
 [node name="SofaBoss" type="StaticBody2D" parent="YSort"]
+position = Vector2( 143, -101 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="SofaBoss" type="NinePatchRect" parent="YSort/SofaBoss"]
-margin_left = 137.0
-margin_top = -122.0
-margin_right = 177.0
-margin_bottom = -12.0
+margin_left = -16.0
+margin_top = -27.0
+margin_right = 44.0
+margin_bottom = 133.0
 rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 4 )
 region_rect = Rect2( 321.829, 356.425, 27.2352, 57.2637 )
@@ -892,49 +739,327 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/SofaBoss"]
-position = Vector2( 145.5, -100 )
+position = Vector2( -3.25, 10 )
 shape = SubResource( 13 )
 
-[node name="Support" type="StaticBody2D" parent="YSort"]
+[node name="AutomotiveElevator2" type="StaticBody2D" parent="YSort"]
+position = Vector2( -176, -61 )
+collision_mask = 0
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Support" type="NinePatchRect" parent="YSort/Support"]
-margin_left = 105.0
-margin_top = -111.0
-margin_right = 135.0
-margin_bottom = -91.0
-texture = ExtResource( 4 )
-region_rect = Rect2( 256.906, 186.581, 31.8442, 35.1613 )
-patch_margin_right = 30
+[node name="AutomotiveElevator2" type="NinePatchRect" parent="YSort/AutomotiveElevator2"]
+margin_left = -31.0
+margin_top = -79.0
+margin_right = 30.0
+margin_bottom = 17.0
+texture = ExtResource( 1 )
+draw_center = false
+region_rect = Rect2( 288, 0, 128, 96 )
+patch_margin_bottom = 96
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Support"]
-position = Vector2( 126, -100 )
-shape = SubResource( 14 )
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="YSort/AutomotiveElevator2"]
+position = Vector2( 264, 58 )
+scale = Vector2( 1.13859, 1.10268 )
+polygon = PoolVector2Array( -254.923, -43.3109, -251.41, -43.3109, -250, -64, -246, -68, -218, -68, -214, -64, -213.644, -43.3109, -211.009, -43.3109, -211, -64, -209.253, -65.983, -209, -71, -213, -72, -220, -73, -244, -73, -252, -72, -256.68, -70.5174, -255.801, -66.8899, -254.923, -64.1692 )
 
-[node name="Player" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 49, 15 )
+[node name="AutomotiveElevator3" type="StaticBody2D" parent="YSort"]
+position = Vector2( -249, -61 )
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
-current = true
-limit_left = -210
-limit_top = -125
-limit_right = 325
-limit_bottom = 260
-limit_smoothed = true
-smoothing_enabled = true
-smoothing_speed = 3.0
-editor_draw_limits = true
-editor_draw_drag_margin = true
+[node name="AutomotiveElevator2" type="NinePatchRect" parent="YSort/AutomotiveElevator3"]
+margin_left = -31.0
+margin_top = -79.0
+margin_right = 30.0
+margin_bottom = 17.0
+texture = ExtResource( 1 )
+draw_center = false
+region_rect = Rect2( 288, 0, 128, 96 )
+patch_margin_bottom = 96
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="YSort/AutomotiveElevator3"]
+position = Vector2( 264, 58 )
+scale = Vector2( 1.13859, 1.10268 )
+polygon = PoolVector2Array( -254.923, -43.3109, -251.41, -43.3109, -250, -64, -246, -68, -218, -68, -214, -64, -213.644, -43.3109, -211.009, -43.3109, -211, -64, -209.253, -65.983, -209, -71, -213, -72, -220, -73, -244, -73, -252, -72, -256.68, -70.5174, -255.801, -66.8899, -254.923, -64.1692 )
+
+[node name="AutomotiveElevator4" type="StaticBody2D" parent="YSort"]
+position = Vector2( -105, -61 )
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AutomotiveElevator2" type="NinePatchRect" parent="YSort/AutomotiveElevator4"]
+margin_left = -31.0
+margin_top = -79.0
+margin_right = 30.0
+margin_bottom = 17.0
+texture = ExtResource( 1 )
+draw_center = false
+region_rect = Rect2( 288, 0, 128, 96 )
+patch_margin_bottom = 96
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="YSort/AutomotiveElevator4"]
+position = Vector2( 264, 58 )
+scale = Vector2( 1.13859, 1.10268 )
+polygon = PoolVector2Array( -254.923, -43.3109, -251.41, -43.3109, -250, -64, -246, -68, -218, -68, -214, -64, -213.644, -43.3109, -211.009, -43.3109, -211, -64, -209.253, -65.983, -209, -71, -213, -72, -220, -73, -244, -73, -252, -72, -256.68, -70.5174, -255.801, -66.8899, -254.923, -64.1692 )
+
+[node name="SideBar" type="StaticBody2D" parent="YSort"]
+position = Vector2( -206, 33 )
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AutomotiveElevator2" type="NinePatchRect" parent="YSort/SideBar"]
+margin_left = -7.0
+margin_top = -88.0
+margin_right = 10.0
+margin_bottom = 72.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 448, 224, 32, 128 )
+patch_margin_top = 32
+patch_margin_bottom = 32
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/SideBar"]
+position = Vector2( 2, -10.5 )
+shape = SubResource( 25 )
+
+[node name="SideBar2" type="StaticBody2D" parent="YSort"]
+position = Vector2( -150, 34 )
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AutomotiveElevator2" type="NinePatchRect" parent="YSort/SideBar2"]
+margin_left = -7.0
+margin_top = -88.0
+margin_right = 10.0
+margin_bottom = 73.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 480, 224, 32, 128 )
+patch_margin_top = 32
+patch_margin_bottom = 32
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/SideBar2"]
+position = Vector2( 2, -10.5 )
+shape = SubResource( 25 )
+
+[node name="RunningMachine" type="StaticBody2D" parent="YSort"]
+position = Vector2( -177, 12 )
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AutomotiveElevator2" type="NinePatchRect" parent="YSort/RunningMachine"]
+margin_left = -19.0
+margin_top = -25.0
+margin_right = 19.0
+margin_bottom = 19.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 480, 0, 32, 64 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RunningMachine2" type="StaticBody2D" parent="YSort"]
+position = Vector2( -177, 40 )
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AutomotiveElevator2" type="NinePatchRect" parent="YSort/RunningMachine2"]
+margin_left = -19.0
+margin_top = -25.0
+margin_right = 19.0
+margin_bottom = 19.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 480, 0, 32, 64 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RunningMachine3" type="StaticBody2D" parent="YSort"]
+position = Vector2( -177, 69 )
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AutomotiveElevator2" type="NinePatchRect" parent="YSort/RunningMachine3"]
+margin_left = -19.0
+margin_top = -25.0
+margin_right = 19.0
+margin_bottom = 19.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 480, 0, 32, 64 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RunningMachine4" type="StaticBody2D" parent="YSort"]
+position = Vector2( -177, 92 )
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AutomotiveElevator2" type="NinePatchRect" parent="YSort/RunningMachine4"]
+margin_left = -19.0
+margin_top = -25.0
+margin_right = 19.0
+margin_bottom = 19.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 480, 0, 32, 64 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RunningMachine5" type="StaticBody2D" parent="YSort"]
+position = Vector2( -177, -12 )
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AutomotiveElevator2" type="NinePatchRect" parent="YSort/RunningMachine5"]
+margin_left = -19.0
+margin_top = -25.0
+margin_right = 19.0
+margin_bottom = 19.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 480, 0, 32, 64 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RunningMachine6" type="StaticBody2D" parent="YSort"]
+position = Vector2( -177, -35 )
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AutomotiveElevator2" type="NinePatchRect" parent="YSort/RunningMachine6"]
+margin_left = -19.0
+margin_top = -25.0
+margin_right = 19.0
+margin_bottom = 19.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 480, 0, 32, 64 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RunningMachine7" type="StaticBody2D" parent="YSort"]
+position = Vector2( -177, -61 )
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AutomotiveElevator2" type="NinePatchRect" parent="YSort/RunningMachine7"]
+margin_left = -19.0
+margin_top = -17.0
+margin_right = 19.0
+margin_bottom = 19.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 480, 0, 32, 64 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Machine" type="StaticBody2D" parent="YSort"]
+position = Vector2( -177, 101 )
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Machine" type="NinePatchRect" parent="YSort/Machine"]
+margin_left = -33.0
+margin_top = -42.0
+margin_right = 35.0
+margin_bottom = 18.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 192, 32, 64, 64 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Machine"]
+position = Vector2( 0, 6.5 )
+shape = SubResource( 24 )
+
+[node name="Cone" type="StaticBody2D" parent="YSort"]
+position = Vector2( -105, -56 )
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Cone" type="NinePatchRect" parent="YSort/Cone"]
+margin_left = -20.0
+margin_top = -13.0
+margin_right = 20.0
+margin_bottom = 9.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 416, 0, 64, 32 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Cone"]
+position = Vector2( 0.25, 2 )
+shape = SubResource( 24 )
+
+[node name="Cone2" type="StaticBody2D" parent="YSort"]
+position = Vector2( -250, -57 )
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Cone" type="NinePatchRect" parent="YSort/Cone2"]
+margin_left = -20.0
+margin_top = -13.0
+margin_right = 20.0
+margin_bottom = 9.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 416, 0, 64, 32 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Cone2"]
+position = Vector2( 0.25, 2 )
+shape = SubResource( 24 )
 
 [node name="Walls" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls"]
 polygon = PoolVector2Array( -205, -29, 29, -29, 29, 4, 51, 4, 52, -109, 237, -109, 237, 3, 317, 3, 318, 203, 319, 204, 254, 205, 253, 254, 66, 253, 66, 173, 50, 173, 51, 109, 30, 109, 29, 252, -206, 253, -205, -24, -613, -19, -616, 535, 723, 529, 723, -382, -616, -387 )
 
-[connection signal="body_entered" from="YSort/Door2/DoorBoss" to="." method="_on_DoorBoss_body_entered"]
-[connection signal="body_entered" from="YSort/DoorSecretary2/CityDoor" to="." method="_on_CityDoor_body_entered"]
+[connection signal="body_entered" from="YSort/CityDoor" to="." method="_on_CityDoor_body_entered"]

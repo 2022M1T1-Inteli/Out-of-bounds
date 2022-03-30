@@ -30,15 +30,21 @@ func onNpcBodyEntered(body):
 			
 		# Loop no estado do progresso para checar se aquele diálogo já foi completado ou não
 		for phase in Global.phases:
-			for dialog in phase.dialogs:
-				if dialog.path == dialogPath:
-					if dialog.active == false && dialog.completed == false:
-						
-						# Permitir a interação com o Npc
-						canInteract = true 
-						
-						# Mostrar icone do botão "E" em cima do Npc
-						$Key.visible = true 
+			for dialogIndex in phase.dialogs.size():
+				if phase.dialogs[dialogIndex].path == dialogPath:
+					if phase.dialogs[dialogIndex].active == false && phase.dialogs[dialogIndex].completed == false:
+						if dialogIndex == 0:
+							# Permitir a interação com o Npc
+							canInteract = true 
+							
+							# Mostrar icone do botão "E" em cima do Npc
+							$Key.visible = true 
+						if dialogIndex > 0 && phase.dialogs[dialogIndex - 1].completed:
+							# Permitir a interação com o Npc
+							canInteract = true 
+							
+							# Mostrar icone do botão "E" em cima do Npc
+							$Key.visible = true
 
 # Função executada quando o Player sai de perto do Npc
 func onNpcBodyExited(body):
