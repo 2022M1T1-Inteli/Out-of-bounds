@@ -9,7 +9,7 @@
 [ext_resource path="res://Assets/Buttons/arrowKeys.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Buttons/wasd.png" type="Texture" id=8]
 [ext_resource path="res://Assets/Buttons/e.png" type="Texture" id=9]
-[ext_resource path="res://Assets/Buttons/leftClick.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Tutorial/mouseLeft.png" type="Texture" id=10]
 [ext_resource path="res://Scenes/Grass/grass.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Tutorial/tutorial.gd" type="Script" id=12]
 [ext_resource path="res://Scenes/TutorialNpc/tutorialNpc.tscn" type="PackedScene" id=13]
@@ -336,7 +336,7 @@ texture = ExtResource( 7 )
 
 [node name="LeftClick" type="Sprite" parent="."]
 position = Vector2( 568, 53 )
-scale = Vector2( 0.7, 0.913793 )
+scale = Vector2( 0.100781, 0.0917969 )
 texture = ExtResource( 10 )
 
 [node name="Label2" type="Label" parent="."]
