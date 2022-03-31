@@ -42,6 +42,7 @@ Global="*res://Global/global.gd"
 PauseMenu="*res://Scenes/PauseMenu/pauseMenu.tscn"
 TransitionScene="*res://Scenes/TransitionScene/transitionScene.tscn"
 Objectives="*res://Scenes/Objectives/objectives.tscn"
+Score="*res://Scenes/PuzzleCleaning/Score.gd"
 
 [display]
 
