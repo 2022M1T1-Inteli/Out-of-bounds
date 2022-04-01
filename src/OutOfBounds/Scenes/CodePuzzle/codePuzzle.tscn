@@ -24,100 +24,100 @@ __meta__ = {
 }
 
 [node name="Button1" type="Button" parent="ColorRect/NinePatchRect"]
-margin_left = 60.0
-margin_top = 27.0
-margin_right = 82.0
-margin_bottom = 47.0
+margin_left = 74.0
+margin_top = 25.0
+margin_right = 96.0
+margin_bottom = 45.0
 text = "1"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button2" type="Button" parent="ColorRect/NinePatchRect"]
-margin_left = 60.0
-margin_top = 53.0
-margin_right = 82.0
-margin_bottom = 73.0
+margin_left = 74.0
+margin_top = 51.0
+margin_right = 96.0
+margin_bottom = 71.0
 text = "2"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button3" type="Button" parent="ColorRect/NinePatchRect"]
-margin_left = 60.0
-margin_top = 79.0
-margin_right = 82.0
-margin_bottom = 99.0
+margin_left = 74.0
+margin_top = 77.0
+margin_right = 96.0
+margin_bottom = 97.0
 text = "3"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button4" type="Button" parent="ColorRect/NinePatchRect"]
-margin_left = 60.0
-margin_top = 105.0
-margin_right = 82.0
-margin_bottom = 125.0
+margin_left = 74.0
+margin_top = 103.0
+margin_right = 96.0
+margin_bottom = 123.0
 text = "4"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button5" type="Button" parent="ColorRect/NinePatchRect"]
-margin_left = 60.0
-margin_top = 131.0
-margin_right = 82.0
-margin_bottom = 151.0
+margin_left = 74.0
+margin_top = 129.0
+margin_right = 96.0
+margin_bottom = 149.0
 text = "5"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ButtonA" type="Button" parent="ColorRect/NinePatchRect"]
-margin_left = 94.0
-margin_top = 27.0
-margin_right = 116.0
-margin_bottom = 47.0
+margin_left = 108.0
+margin_top = 25.0
+margin_right = 130.0
+margin_bottom = 45.0
 text = "A"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ButtonB" type="Button" parent="ColorRect/NinePatchRect"]
-margin_left = 94.0
-margin_top = 53.0
-margin_right = 116.0
-margin_bottom = 73.0
+margin_left = 108.0
+margin_top = 51.0
+margin_right = 130.0
+margin_bottom = 71.0
 text = "B"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ButtonC" type="Button" parent="ColorRect/NinePatchRect"]
-margin_left = 94.0
-margin_top = 79.0
-margin_right = 116.0
-margin_bottom = 99.0
+margin_left = 108.0
+margin_top = 77.0
+margin_right = 130.0
+margin_bottom = 97.0
 text = "C"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ButtonD" type="Button" parent="ColorRect/NinePatchRect"]
-margin_left = 94.0
-margin_top = 105.0
-margin_right = 116.0
-margin_bottom = 125.0
+margin_left = 108.0
+margin_top = 103.0
+margin_right = 130.0
+margin_bottom = 123.0
 text = "D"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ButtonE" type="Button" parent="ColorRect/NinePatchRect"]
-margin_left = 94.0
-margin_top = 131.0
-margin_right = 116.0
-margin_bottom = 151.0
+margin_left = 108.0
+margin_top = 129.0
+margin_right = 130.0
+margin_bottom = 149.0
 text = "E"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -213,8 +213,32 @@ __meta__ = {
 }
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.05
+wait_time = 2.0
 one_shot = true
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 9.0
+margin_top = 30.0
+margin_right = 63.0
+margin_bottom = 148.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect2"]
+margin_left = 3.0
+margin_right = 160.0
+margin_bottom = 393.0
+rect_scale = Vector2( 0.3, 0.3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Descubra o código para ganhar o desafio de Jarvis. Ele é sempre composto por uma sequência de associações de um número e uma letra. Jarvis gosta apenas de  NÚMEROS EM ORDEM CRESCENTE e letras que não fazem associação com a sua ordem (Ex.: 1E, 2A, etc.). Você pode tentar quantas vezes quiser, mas so conseguirá ganhar de Jarvis se todas as associações estiverem certas."
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="ColorRect/NinePatchRect/Button1" to="." method="onButtonPressed" binds= [ 1 ]]
 [connection signal="pressed" from="ColorRect/NinePatchRect/Button2" to="." method="onButtonPressed" binds= [ 2 ]]

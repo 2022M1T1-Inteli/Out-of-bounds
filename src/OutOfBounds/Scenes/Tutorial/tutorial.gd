@@ -3,6 +3,7 @@ extends Node2D
 func _on_Area2D_body_entered(body):
 	$AnimationPlayer.play("wasd")
 	TransitionScene.startAnimation()
+	Global.tutorialFinished = true
 
 func _ready():
 	TransitionScene.connect("animationMiddle", self, "onChangeSceneAnimationMiddle")

@@ -1,20 +1,20 @@
 [
     {
         "Name": "Desconhecido",
-        "Text": "O QUE VOCÊ FAZ NO MEU ESTABELECIMENTO, NÃO ESTÁ VENDO QUE ESSE LUGAR NÃO FOI FEITO PARA GENTE DA SUA LAIA, SEU ESQUISITÃO BRANQUELO!"
+        "Text": "O QUE VOCÊ FAZ NO MEU ESTABELECIMENTO? NÃO ESTÁ VENDO QUE ESSE LUGAR NÃO FOI FEITO PARA GENTE DE SUE LAIA? SUE ESQUISITON@ BRANQUEL@!"
     },
     {
         "Name": "Astronauta",
-        "Text": "Fui encaminhado por um amigo para ver o Jarvis, que diz que posso conseguir o que quero aqui para me ajudar a voltar ao meu lar."
+        "Text": "Fui encaminhad@ por um amigo para ver @ Jarvis, que diz que posso conseguir o que quero aqui para me ajudar a voltar ao meu lar."
     },
     {
         "Name": "Desconhecido",
-        "Text": "O TAL? EU SOU O Jarvis! E VOCÊ QUER AJUDA? AJUDA PARA O QUE? PARA VOCÊ TRAZER AQUELES CARAS PÁLIDAS PARA CÁ E ARRUINAR MINHA EMPRESA? VOCÊ NÃO TEM A CORAGEM NEM DE MOSTRAR QUEM VOCÊ É, FANTASIADO COM ESSA PELE ESQUISITA."
+        "Text": "@ TAL? EU SOU @ Jarvis! E VOCÊ QUER AJUDA? AJUDA PARA O QUE? PARA VOCÊ TRAZER AQUELES CARAS PÁLIDAS PARA CÁ E ARRUINAR MINHA EMPRESA? VOCÊ NÃO TEM A CORAGEM NEM DE MOSTRAR QUEM VOCÊ É, FANTASIAD@ COM ESSA PELE ESQUISITA."
     },
     { "Name": "Astronauta", "Text": "Não senhor. Quero mais é reconstruir minha nave e dar o fora daqui." },
     {
         "Name": "Jarvis",
-        "Text": "NAVE? VOCÊ LÁ TEM CONDIÇÃO DE TER UMA NAVE? ESSA CONVERSA JÁ DEU PRA MIM, JÁ ERA UM INSULTO SÓ CONVERSARMOS, AGORA AJUDAR VOCÊ É PIOR AINDA!"
+        "Text": "NAVE? VOCÊ LÁ TEM CONDIÇÃO DE TER UMA NAVE? ESSA CONVERSA JÁ DEU PRA MIM, JÁ É UM INSULTO SÓ CONVERSARMOS, AGORA AJUDAR VOCÊ É PIOR AINDA!"
     },
     {
         "Name": "Astronauta",
@@ -32,6 +32,6 @@
     { "Name": "Astronauta", "Text": "Mas você vai me dar minha peça certo?" },
     {
         "Name": "Narrador",
-        "Text": "Jarvis dá as costas para o astronauta, e retorna ao seu escritório sem respondê-lo. Como a sua missão era reconstruir a nave, o “Astronauta” decide começar a fazer o que Jarvis havia pedido."
+        "Text": "Jarvis dá as costas para @ Astronauta, e retorna ao seu escritório sem respondê-l@. Como a sua missão era reconstruir a nave, @ “Astronauta” decide começar a fazer o que Jarvis havia pedido."
     }
 ]

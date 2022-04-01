@@ -15,6 +15,9 @@ var phraseNum = 0
 var finished = false
 
 func _ready():
+	# Impossibilitar o jogador de pausar o jogo
+	PauseMenu.canBeActive = false
+	
 	# Setar a propriedade wait_time do Timer com o valor da variável textSpeed
 	$TextureRect/Timer.wait_time = textSpeed
 	
@@ -87,25 +90,37 @@ func nextPhrase() -> void:
 
 # Função executada quando diálogo acaba
 func onDialogFinish():
+	
+	# Checar se o jogador não está no tutorial
+	if dialogPath != Global.tutorialDialogPath:
 
-	# Loop em estado global do jogo para setar algumas propriedades do diálogo
-	for phase in Global.phases:
-		for dialogArrayIndex in len(phase.dialogs):
-			if phase.dialogs[dialogArrayIndex].path == dialogPath:
-				phase.dialogs[dialogArrayIndex].active = false
-				phase.dialogs[dialogArrayIndex].completed = true
-				
-				# Emitir sinal
-				Global.emit_signal("dialogChange")
-				
-				if len(phase.dialogs) == dialogArrayIndex:
-					phase.completed = true
-					phase.active = false
-					
-					# Disparar sinal
-					emit_signal("phaseChange")
-				
+		var dialog = Global.phases[0].dialogs[Global.phase1DialogIndex]
+		
+		dialog.active = false
+		dialog.completed = true
+
+		# Emitir sinal
+		Global.emit_signal("dialogChange")
+		
+		# Aumentar index do diálogo
+		Global.phase1DialogIndex += 1
+	
+		# Condições para fazer jogador jogar os Puzzles depois de determinados diálogos
+		if Global.phase1DialogIndex == 2:
+			get_tree().change_scene("res://Scenes/PuzzleCleaning/PuzzleCleaning.tscn")
+			
+		if Global.phase1DialogIndex == 5:
+			get_tree().change_scene("res://Scenes/CodePuzzle/codePuzzle.tscn")
+			
+		if Global.phase1DialogIndex == 6:
+			get_tree().change_scene("res://Scenes/TimeCutScene/timeCutScene.tscn")
+			
+		if Global.phase1DialogIndex == 7:
+			get_tree().change_scene("res://Scenes/HomeScreen/homeScreen.tscn")
 	
 	# Despausar o jogo e fechar a cena do diálogo
 	get_tree().paused = false
 	queue_free()
+	
+	# Retornar menu de pausa ao funcionamento normal
+	PauseMenu.canBeActive = true

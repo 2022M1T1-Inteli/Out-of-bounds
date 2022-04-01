@@ -3,9 +3,13 @@ extends Node2D
 export (String) var desertScenePath
 export (Vector2) var desertSpawnPosition
 
+# Função executada quando cena é carregada
 func _ready():
-	Objectives.get_node("NinePatchRect").visible = true
-	Objectives.get_node("NinePatchRect/Label").text = "Saia da nave e converse com o Alienigena"
+	
+	# Checar se o primeiro diálogo já começou
+	if Global.phase1DialogIndex == 0:
+		Objectives.get_node("NinePatchRect").visible = true
+		Objectives.get_node("NinePatchRect/Label").text = "Saia da nave e converse com o Alienigena"
 
 # Função que executa quando o Player chega perto da porta do deserto
 func _on_DesertDoor_body_entered(body): 

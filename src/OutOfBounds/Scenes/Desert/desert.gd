@@ -1,19 +1,29 @@
 extends Node2D
 
+# Função executada quando a cena é carregada
 func _ready():
+	
+	# Esconder ou mostrar o Stuart
+	if Global.phase1DialogIndex == 0:
+		$YSort/Stuart.visible = true
+	else:
+		$YSort/Stuart.queue_free()
+	
+	# Condições para setar a posição do Player
 	if Global.player.startPosition:
 		get_node("YSort/Player").global_position = Global.player.startPosition
 	else:
 		if Global.player.position:
 			get_node("YSort/Player").global_position = Global.player.position
 
-export (String) var worldScenePath
-export (Vector2) var worldSpawnPosition
+export (String) var citySceneSpawn
+export (Vector2) var citySpawnPosition
 
 # Função que executa quando o Player chega perto da porta do world
-func _on_WorldDoor_body_entered(_body):
-	if worldScenePath and worldSpawnPosition:
-		Global.player.startPosition = worldSpawnPosition
-		Global.player.scene = "res://Scenes/World/world.tscn"
-		get_tree().change_scene(worldScenePath)
-		
+func _on_CityDoor_body_entered(_body):
+	
+	# Trocar de cena
+	if citySceneSpawn and citySpawnPosition:
+		Global.player.startPosition = citySpawnPosition
+		Global.player.scene = citySceneSpawn
+		get_tree().change_scene(citySceneSpawn)

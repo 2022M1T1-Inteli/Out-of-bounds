@@ -7,13 +7,14 @@ var arrayScore = []
 
 func _on_Area2D_Oil_body_entered(body):
 	isNear = true
-	if isNear == true:
-# Condição que apaga um elemento Oil correspondente e adiciona pontos pelo tamanho da array
-		if Input.is_action_pressed("interact"):
+			
+func _process(delta):
+	# Condição que apaga um elemento Oil correspondente e adiciona pontos pelo tamanho da array
+	if Input.is_action_pressed("interact"):
+		if isNear == true:
 			queue_free()
 			arrayScore.append(1)
 			Score._score(arrayScore.size())
-
 
 func _on_Area2D_Oil_body_exited(body):
 	isNear = false

@@ -7,8 +7,6 @@ func _ready():
 	Global.connect("dialogChange", self, "onDialogChange")
 
 func onDialogChange():
-	$NinePatchRect.visible = true
-	
 	# Loop em estado global do jogo para setar texto do Label
 	for phase in Global.phases:
 		
@@ -17,7 +15,8 @@ func onDialogChange():
 		
 		for dialog in invertedDialogs:
 			if dialog.completed:
-				$NinePatchRect/Label.text = dialog.objective
-				$NinePatchRect.visible = true
+				if dialog.objective:
+					$NinePatchRect/Label.text = dialog.objective
+					$NinePatchRect.visible = true
 				break
 	

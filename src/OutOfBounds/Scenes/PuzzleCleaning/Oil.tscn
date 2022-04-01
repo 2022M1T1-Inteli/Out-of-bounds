@@ -1,28 +1,27 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://ExclusiveAssets/Textures/Cyberpunk_D.png" type="Texture" id=1]
-[ext_resource path="res://Oil.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/PuzzleCleaning/Oil.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 14.0357
+radius = 8.0
 
 [node name="Oil" type="NinePatchRect"]
-margin_left = -12.0
+margin_left = -8.0
 margin_top = -8.0
-margin_right = 13.0
+margin_right = 9.0
 margin_bottom = 8.0
 texture = ExtResource( 1 )
 region_rect = Rect2( 260.346, 255.492, 53.2914, 31.3204 )
 script = ExtResource( 2 )
 __meta__ = {
-"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 12, 8 )
+position = Vector2( 8, 8 )
 shape = SubResource( 1 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_Oil_body_entered"]

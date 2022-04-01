@@ -12,7 +12,11 @@ var lengthBox = 0
 var currentType = null
 
 # Array com a sequência correta
-var correctCode = ["1A", "2B", "3C", "4D", "5E"]
+var correctCode = ["1E", "2C", "3D", "4A", "5B"]
+
+func _ready():
+	Objectives.get_node("NinePatchRect").visible = false
+	PauseMenu.canBeActive = false
 
 # Função que roda em Loop enquanto o jogo está sendo executado
 func _process(delta):
@@ -88,6 +92,7 @@ func _on_Verify_pressed():
 		#Condicao caso os valores inseridos estejam na ordem correta ou não
 		if elementLabel.text == correctCode[idx-1]:
 			colorReact.color = green
+			
 		else:
 			colorReact.color = red
 			finished = false
@@ -99,6 +104,12 @@ func _on_Verify_pressed():
 	# Checagem para começar o Timer
 	if finished == false:
 		$Timer.start()
+		return
+	
+#	Objectives.get_node("NinePatchRect").visible = true
+	PauseMenu.canBeActive = true
+	Global.codePuzzleFinished = true
+	get_tree().change_scene("res://Scenes/Mecanic/Mecanica.tscn")
 
 # Função executada quando o Timer acabar
 func _on_Timer_timeout():

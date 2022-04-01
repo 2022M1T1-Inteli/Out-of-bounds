@@ -1,14 +1,14 @@
 [
     {
         "Name": "Astronauta",
-        "Text": "Oi eu sou o Astronauta, acabei de sair de um acidente que destruiu o meu transporte, estou perdido aqui, e vim em paz. Minha nave está toda quebrada e preciso de ajuda para consertá-la."
+        "Text": "Oi eu sou @ Astronauta, acabei de sair de um acidente que destruiu o meu transporte. Estou perdid@ aqui. Minha nave está toda quebrada e preciso de ajuda para consertá-la."
     },
     { "Name": "Ser Desconhecido", "Text": "......." },
     {
         "Name": "Ser Desconhecido",
-        "Text": "Olá astronauta, desculpe pelo incomodo dos meus companheiros, eles ficaram com medo da sua dominância ou estão horrorizados com a sua aparência. Mas tirando isso, bem vindo ao planeta Brahma, eu sou Stuart, me considere seu guia. Vou te ajudar a reconstruir sua nave. Quais peças você precisa?"
+        "Text": "Olá Astronauta, bem vind@ ao planeta Brahma. Eu sou Stuart, me considere seu guia. Vou te ajudar a reconstruir sua nave. Quais peças você precisa?"
     },
-    { "Name": "Astronauta", "Text": "Muito obrigado! Deixe-me verificar quais peças preciso." },
+    { "Name": "Astronauta", "Text": "Muito obrigad@! Deixe-me verificar quais peças preciso." },
     {
         "Name": "Astronauta",
         "Text": "..."
@@ -19,10 +19,10 @@
     },
     {
         "Name": "Stuart",
-        "Text": "Sem problemas! Primeiro lhe darei um mapa, siga o caminho sinalizado até a mecânica. Lá você irá encontrar o Jarvis, mas já aviso, ele é extremamente preconceituoso, te aconselho a fazer um bom acordo com ele. Te desejo boa sorte na sua aventura, a minha ajuda, por enquanto, para aqui."
+        "Text": "Sem problemas! Primeiro lhe darei um mapa, siga o caminho sinalizado até a mecânica. Lá você irá encontrar o Jarvis, mas já aviso, el@ é extremamente preconceituos@. Te aconselho a fazer um bom acordo com el@. Te desejo boa sorte na su@ aventura, e por enquanto a minha ajuda para aqui."
     },
     {
         "Name": "Astronauta",
-        "Text": "Muito obrigado!"
+        "Text": "Muito obrigad@!"
     }
 ]

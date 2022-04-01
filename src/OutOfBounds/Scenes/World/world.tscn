@@ -11,7 +11,6 @@
 [ext_resource path="res://Scenes/Grass/grass.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/World/world.gd" type="Script" id=10]
 
-
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
 0/texture = ExtResource( 4 )

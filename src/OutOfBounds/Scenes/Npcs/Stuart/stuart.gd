@@ -1,5 +1,6 @@
 extends "res://Classes/npc.gd"
 
+# Função executada quando cena é carregada
 func _ready():
 	# Setar o caminho do primeiro diálogo desse NPC 
 	dialogPath = Global.phases[0].dialogs[0].path

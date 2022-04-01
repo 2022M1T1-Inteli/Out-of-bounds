@@ -108,7 +108,7 @@ position = Vector2( 306, 114 )
 position = Vector2( 78, 146 )
 
 [node name="Computer" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 176, 10 )
+position = Vector2( 176, 22 )
 
 [node name="Table" type="StaticBody2D" parent="YSort"]
 position = Vector2( 191, 102 )

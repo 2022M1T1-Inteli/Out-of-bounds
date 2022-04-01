@@ -1166,8 +1166,8 @@ tracks/0/keys = {
 [node name="Desert" type="Node2D"]
 position = Vector2( 1, 0 )
 script = ExtResource( 1 )
-worldScenePath = "res://Scenes/World/world.tscn"
-worldSpawnPosition = Vector2( 335, 9 )
+citySceneSpawn = "res://Scenes/City/city.tscn"
+citySpawnPosition = Vector2( 311, -253 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = -49.0
@@ -1518,7 +1518,7 @@ position = Vector2( 514.585, 641.732 )
 rotation = -0.00246746
 
 [node name="Player" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 403, 60 )
+position = Vector2( 395, 66 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 current = true
@@ -1528,18 +1528,21 @@ limit_right = 910
 limit_bottom = 750
 smoothing_enabled = true
 
+[node name="Stuart" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( 465, 60 )
+
 [node name="SpaceShipExterior" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 351, 3 )
 
-[node name="WorldDoor" type="Area2D" parent="."]
+[node name="CityDoor" type="Area2D" parent="."]
 position = Vector2( 455, 832 )
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldDoor"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CityDoor"]
 position = Vector2( -8, -40 )
 shape = SubResource( 104 )
 
-[node name="NinePatchRect" type="NinePatchRect" parent="WorldDoor"]
+[node name="NinePatchRect" type="NinePatchRect" parent="CityDoor"]
 visible = false
 margin_left = 77.0
 margin_top = -558.0
@@ -1553,12 +1556,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="WorldDoor"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CityDoor"]
 autoplay = "DoorPointer"
 anims/DoorPointer = SubResource( 105 )
 anims/RESET = SubResource( 106 )
 
-[node name="Stuart" parent="." instance=ExtResource( 21 )]
-position = Vector2( 465, 60 )
-
-[connection signal="body_entered" from="WorldDoor" to="." method="_on_WorldDoor_body_entered"]
+[connection signal="body_entered" from="CityDoor" to="." method="_on_CityDoor_body_entered"]

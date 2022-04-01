@@ -1,23 +1,23 @@
 [
     {
         "Name": "Astronauta",
-        "Text": "arvis, estou querendo reconstruir a minha nave, mas não sinto que com minha proposta na mecânica terá resultado, mas acabei de presenciar uma cena que  me parece discriminatória, eu não tenho certeza, mas não é só comigo , e sim com todos diferentes de um tal de Jarvis, que julga todos pela aparência, principalmente no espaço de trabalho. O que eu faço?"
+        "Text": "Bock, estou querendo reconstruir a minha nave, mas não sinto que a minha proposta na mecânica terá um bom resultado. Acabei de presenciar uma cena que me parece discriminatória, eu não tenho certeza. Isso não acontece só comigo, mas sim com todos diferentes de um tal de Jarvis. Ele julga todos pela aparência, principalmente no espaço de trabalho. O que eu faço?"
     },
     {
-        "Name": "Jarvis",
-        "Text": "Olá Astronauta, estou ativa! Pelo que percebi em seu desabafo agora e com meus dados, isso acontece com frequência na Terra, e muitos lugares o pessoal já está trabalhando para mudar isso. Lembra do caso de George Floyd? O americano preto que foi executado por um policial só por causa da sua cor."
+        "Name": "Bock",
+        "Text": "Olá Astronauta, estou ativ@! Pelo que percebi em seu desabafo agora e de acordo com meus dados, isso acontece com frequência na Terra. Felizmente, em muitos lugares já estão trabalhando para mudar isso. Lembra do caso de George Floyd? O americano preto que foi executado por um policial só por causa da sua cor."
     },
     {
-        "Name": "Jarvis",
-        "Text": "Nesse caso, Floyd foi visto pelo policial branco não como um ser humano como ele, e por causa disso, qualquer coisa que Floyd falava não era importante para o oficial e a desconsiderava. Essa tragédia causou uma mobilização no mundo todo que pôs justiça a sua morte."
+        "Name": "Bock",
+        "Text": "Nesse caso, Floyd foi visto pelo policial branco não como um ser humano, e por causa disso, qualquer coisa que Floyd falava não era importante para o oficial e a desconsiderava. Essa tragédia causou uma mobilização no mundo todo que pôs justiça a sua morte."
     },
     {
-        "Name": "Jarvis",
-        "Text": "Empresas também estão a se mobilizar contra esses tipos de preconceito, por exemplo a empresa Ambev. Eles impõem a visão que grupos diversificados propõem melhores resultados, não só de lucros, mas em questões introspectivas que transformam a vida do funcionário para melhor."
+        "Name": "Bock",
+        "Text": "Empresas também estão a se mobilizar contra esses tipos de preconceito, por exemplo a empresa Ambev. Eles propõem a visão que grupos diversificados geram melhores resultados, não só de lucros, mas em questões introspectivas que transformam a vida do funcionário para melhor."
     },
-    { "Name": "Astronauta", "Text": "Então Jarvis, sua sugestão é impor essa visão?" },
+    { "Name": "Astronauta", "Text": "Então Bock, sua sugestão é propor essa visão?" },
     {
-        "Name": "Jarvis",
-        "Text": "Exatamente astronauta, faça um acordo com Jarvis, proponha algo que o faça mudar, o instigue a tentar."
+        "Name": "Bock",
+        "Text": "Exatamente astronauta, faça um acordo com Jarvis, proponh@ algo que @ faça mudar, @ instigue a tentar."
     }
 ]
