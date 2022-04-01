@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Assets/World/DirtTileset2.png" type="Texture" id=1]
 [ext_resource path="res://Assets/World/MoonTileset.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Scenes/Tutorial/tutorial.gd" type="Script" id=12]
 [ext_resource path="res://Scenes/TutorialNpc/tutorialNpc.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Assets/Tutorial/ArrowRight.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Anybody-SemiBold.ttf" type="DynamicFontData" id=15]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -131,6 +132,28 @@
 4/shape_one_way_margin = 0.0
 4/shapes = [  ]
 4/z_index = 0
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=9]
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 14
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=11]
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=12]
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=13]
+font_data = ExtResource( 15 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 8, 86.5 )
@@ -303,9 +326,6 @@ margin_bottom = 181.0
 texture = ExtResource( 6 )
 expand = true
 stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="DirtTileset2" type="Sprite" parent="."]
 position = Vector2( 1040, 115.337 )
@@ -320,17 +340,17 @@ format = 1
 tile_data = PoolIntArray( 54, 0, 196611, 65589, 0, 196611, 131124, 0, 196611, 131126, 0, 196611, 262197, 0, 196611, 262198, 4, 3, 262202, 4, 196611, 262207, 4, 196611, 262209, 4, 196611, 327728, 4, 196611, 327730, 4, 196611, 327732, 4, 196611, 327734, 4, 131075, 327736, 4, 196611, 327739, 4, 196611, 327741, 4, 196611, 458751, 4, 0, 393216, 4, 1, 393217, 4, 1, 393218, 4, 1, 393219, 4, 1, 393220, 4, 1, 393221, 4, 1, 393222, 4, 1, 393223, 4, 1, 393224, 4, 1, 393225, 4, 1, 393226, 4, 1, 393227, 4, 1, 393228, 4, 1, 393229, 4, 1, 393230, 4, 1, 393231, 4, 1, 393232, 4, 1, 393233, 4, 1, 393234, 4, 1, 393235, 4, 1, 393236, 4, 1, 393237, 4, 1, 393238, 4, 1, 393239, 4, 1, 393240, 4, 1, 393241, 4, 1, 393242, 4, 1, 393243, 4, 1, 393244, 4, 1, 393245, 4, 1, 393246, 4, 1, 393247, 4, 1, 393248, 4, 1, 393249, 4, 1, 393250, 4, 1, 393251, 4, 1, 393252, 4, 1, 393253, 4, 1, 393254, 4, 1, 393255, 4, 1, 393256, 4, 1, 393257, 4, 1, 393258, 4, 1, 393259, 4, 1, 393260, 4, 5, 393261, 4, 196609, 393262, 4, 196610, 393265, 4, 196611, 393269, 4, 196611, 393270, 0, 196611, 393271, 4, 196611, 393274, 4, 196611, 393276, 4, 196611, 393278, 4, 196611, 524287, 4, 131072, 458752, 4, 131073, 458753, 4, 131073, 458754, 4, 131073, 458755, 4, 131073, 458756, 4, 131073, 458757, 4, 131073, 458758, 4, 131073, 458759, 4, 131073, 458760, 4, 131073, 458761, 4, 131073, 458762, 4, 131073, 458763, 4, 131073, 458764, 4, 131073, 458765, 4, 131073, 458766, 4, 131073, 458767, 4, 131073, 458768, 4, 131073, 458769, 4, 131073, 458770, 4, 131073, 458771, 4, 131073, 458772, 4, 131073, 458773, 4, 131073, 458774, 4, 131073, 458775, 4, 131073, 458776, 4, 131073, 458777, 4, 131073, 458778, 4, 131073, 458779, 4, 131073, 458780, 4, 131073, 458781, 4, 131073, 458782, 4, 131073, 458783, 4, 131073, 458784, 4, 131073, 458785, 4, 131073, 458786, 4, 131073, 458787, 4, 131073, 458788, 4, 131073, 458789, 4, 131073, 458790, 4, 131073, 458791, 4, 131073, 458792, 4, 131073, 458793, 4, 131073, 458794, 4, 131073, 458795, 4, 131073, 458796, 4, 131074, 458799, 4, 196608, 458800, 4, 196610, 458803, 4, 196611, 458806, 4, 196611, 458809, 4, 196611, 458813, 4, 196611, 458817, 4, 196611, 524337, 4, 196611, 524340, 0, 196608, 524341, 0, 7, 589877, 0, 131075, 655414, 0, 196611, 720949, 0, 196611 )
 
 [node name="Wasd" type="Sprite" parent="."]
-position = Vector2( 159, 48 )
+position = Vector2( 146, 48 )
 scale = Vector2( 0.485248, 0.451923 )
 texture = ExtResource( 8 )
 
 [node name="E" type="Sprite" parent="."]
-position = Vector2( 359, 54 )
+position = Vector2( 360, 56 )
 scale = Vector2( 0.66, 0.66 )
 texture = ExtResource( 9 )
 
 [node name="ArrowKeys" type="Sprite" parent="."]
-position = Vector2( 63, 48 )
+position = Vector2( 72, 48 )
 scale = Vector2( 0.47, 0.47 )
 texture = ExtResource( 7 )
 
@@ -340,52 +360,48 @@ scale = Vector2( 0.100781, 0.0917969 )
 texture = ExtResource( 10 )
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 102.0
-margin_top = 35.0
-margin_right = 144.0
-margin_bottom = 49.0
+margin_left = 100.0
+margin_top = 28.0
+margin_right = 142.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 7 )
 text = "ou"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 90.0
-margin_top = 10.0
-margin_right = 132.0
-margin_bottom = 24.0
+margin_left = 87.0
+margin_top = 8.0
+margin_right = 136.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 8 )
 text = "Utilize"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label5" type="Label" parent="."]
-margin_left = 319.0
-margin_top = 74.0
-margin_right = 403.0
-margin_bottom = 88.0
+margin_left = 300.0
+margin_top = 72.0
+margin_right = 420.0
+margin_bottom = 89.0
+custom_fonts/font = SubResource( 9 )
 text = "para interagir"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label4" type="Label" parent="."]
 margin_left = 308.0
-margin_top = 2.0
+margin_top = 5.0
 margin_right = 410.0
-margin_bottom = 33.0
+margin_bottom = 62.0
+custom_fonts/font = SubResource( 10 )
 text = "Chegue perto e pressione"
 align = 1
 autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label3" type="Label" parent="."]
-margin_left = 66.0
+margin_left = 53.0
 margin_top = 73.0
-margin_right = 157.0
-margin_bottom = 104.0
+margin_right = 176.0
+margin_bottom = 110.0
+custom_fonts/font = SubResource( 11 )
 text = "Para se mover
 "
 __meta__ = {
@@ -393,10 +409,11 @@ __meta__ = {
 }
 
 [node name="Label6" type="Label" parent="."]
-margin_left = 528.0
-margin_top = 80.0
-margin_right = 612.0
-margin_bottom = 94.0
+margin_left = 520.0
+margin_top = 79.0
+margin_right = 622.0
+margin_bottom = 96.0
+custom_fonts/font = SubResource( 12 )
 text = "para atacar"
 align = 1
 __meta__ = {
@@ -408,11 +425,9 @@ margin_left = 528.0
 margin_top = 8.0
 margin_right = 612.0
 margin_bottom = 22.0
+custom_fonts/font = SubResource( 13 )
 text = "Pressione"
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="YSort" type="YSort" parent="."]
 
@@ -488,7 +503,7 @@ position = Vector2( 560, 128 )
 position = Vector2( 576, 128 )
 
 [node name="TutorialNpc" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 361, 114 )
+position = Vector2( 357, 135 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -521,5 +536,13 @@ texture = ExtResource( 14 )
 autoplay = "ArrowRight"
 anims/ArrowRight = SubResource( 5 )
 anims/RESET = SubResource( 6 )
+
+[node name="Label8" type="Label" parent="."]
+margin_left = 324.0
+margin_top = 151.0
+margin_right = 447.0
+margin_bottom = 188.0
+custom_fonts/font = SubResource( 11 )
+text = "interaja!"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

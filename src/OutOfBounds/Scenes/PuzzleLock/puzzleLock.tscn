@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Scenes/PuzzleLock/puzzleLock.gd" type="Script" id=1]
 [ext_resource path="res://Assets/PuzzleLock/Numbers/Number1.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Assets/PuzzleLock/Numbers/Number3.png" type="Texture" id=13]
 [ext_resource path="res://Assets/PuzzleLock/DefaultLed.png" type="Texture" id=14]
 [ext_resource path="res://Assets/PuzzleLock/KeyPad.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Anybody-SemiBold.ttf" type="DynamicFontData" id=16]
 [ext_resource path="res://Assets/PuzzleLock/Display.png" type="Texture" id=17]
 [ext_resource path="res://Assets/PuzzleLock/PressedNumbers/Number0Pressed.png" type="Texture" id=19]
 [ext_resource path="res://Assets/PuzzleLock/PressedNumbers/DeletePressed.png" type="Texture" id=20]
@@ -28,6 +29,9 @@
 [ext_resource path="res://Assets/PuzzleLock/PressedNumbers/Number7Pressed.png" type="Texture" id=28]
 [ext_resource path="res://Assets/PuzzleLock/PressedNumbers/Number1Pressed.png" type="Texture" id=29]
 [ext_resource path="res://Assets/PuzzleLock/PressedNumbers/Number5Pressed.png" type="Texture" id=30]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 16 )
 
 [node name="puzzleLock" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -211,20 +215,17 @@ texture = ExtResource( 14 )
 one_shot = true
 
 [node name="Label" type="Label" parent="."]
-margin_left = 162.0
-margin_top = 9.0
-margin_right = 312.0
-margin_bottom = 169.0
+margin_left = 164.0
+margin_top = 38.0
+margin_right = 314.0
+margin_bottom = 198.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 0
 custom_constants/line_spacing = 0
-text = "Dica da senha será
-inserida aqui"
+custom_fonts/font = SubResource( 1 )
+text = "A senha é igual ao ano da abolição da escravatura, em um país misterioso chamando Brasil"
 autowrap = true
 clip_text = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [connection signal="pressed" from="HBoxContainer2/LeftBtn/Button1" to="." method="onButtonPressed" binds= [ "1" ]]
 [connection signal="pressed" from="HBoxContainer2/LeftBtn/Button4" to="." method="onButtonPressed" binds= [ "4" ]]

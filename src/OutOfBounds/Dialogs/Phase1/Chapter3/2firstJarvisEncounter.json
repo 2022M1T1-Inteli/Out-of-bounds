@@ -1,15 +1,15 @@
 [
     {
         "Name": "Desconhecido",
-        "Text": "O QUE VOCÊ FAZ NO MEU ESTABELECIMENTO? NÃO ESTÁ VENDO QUE ESSE LUGAR NÃO FOI FEITO PARA GENTE DE SUE LAIA? SUE ESQUISITON@ BRANQUEL@!"
+        "Text": "O QUE VOCÊ FAZ NO MEU ESTABELECIMENTO? NÃO ESTÁ VENDO QUE ESSE LUGAR NÃO FOI FEITO PARA GENTE DE SUE LAIA? SUE ESQUISITONe BRANQUELe!"
     },
     {
         "Name": "Astronauta",
-        "Text": "Fui encaminhad@ por um amigo para ver @ Jarvis, que diz que posso conseguir o que quero aqui para me ajudar a voltar ao meu lar."
+        "Text": "Fui encaminhade por um amigo para ver o Jarvis, que diz que posso conseguir o que quero aqui para me ajudar a voltar ao meu lar."
     },
     {
         "Name": "Desconhecido",
-        "Text": "@ TAL? EU SOU @ Jarvis! E VOCÊ QUER AJUDA? AJUDA PARA O QUE? PARA VOCÊ TRAZER AQUELES CARAS PÁLIDAS PARA CÁ E ARRUINAR MINHA EMPRESA? VOCÊ NÃO TEM A CORAGEM NEM DE MOSTRAR QUEM VOCÊ É, FANTASIAD@ COM ESSA PELE ESQUISITA."
+        "Text": "O TAL? EU SOU O Jarvis! E VOCÊ QUER AJUDA? AJUDA PARA O QUE? PARA VOCÊ TRAZER AQUELES CARAS PÁLIDAS PARA CÁ E ARRUINAR MINHA EMPRESA? VOCÊ NÃO TEM A CORAGEM NEM DE MOSTRAR QUEM VOCÊ É, FANTASIADe COM ESSA PELE ESQUISITA."
     },
     { "Name": "Astronauta", "Text": "Não senhor. Quero mais é reconstruir minha nave e dar o fora daqui." },
     {
@@ -32,6 +32,6 @@
     { "Name": "Astronauta", "Text": "Mas você vai me dar minha peça certo?" },
     {
         "Name": "Narrador",
-        "Text": "Jarvis dá as costas para @ Astronauta, e retorna ao seu escritório sem respondê-l@. Como a sua missão era reconstruir a nave, @ “Astronauta” decide começar a fazer o que Jarvis havia pedido."
+        "Text": "Jarvis dá as costas para e Astronauta, e retorna ao seu escritório sem respondê-le. Como a sua missão era reconstruir a nave, e “Astronauta” decide começar a fazer o que Jarvis havia pedido."
     }
 ]

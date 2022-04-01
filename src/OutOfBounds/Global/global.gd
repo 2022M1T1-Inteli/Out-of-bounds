@@ -24,7 +24,7 @@ var phase1Dialogs = [
 	Dialog.new(phase1DialogsRootPath + "Chapter3/3secretaryJarvisArguing.json", false, false, "Volte à nave e interaja com o computador"),
 	Dialog.new(phase1DialogsRootPath + "Chapter4/4firstComputerEncounter.json", false, false, "Apresente suas novas ideias para o Jarvis"),
 	Dialog.new(phase1DialogsRootPath + "Chapter5/5secondJarvisEncounter.json", false, false, "Termine a conversa com o Jarvis"),
-	Dialog.new(phase1DialogsRootPath + "Chapter5/6thirdJarvisEncounter.json", false, false, ""),
+	Dialog.new(phase1DialogsRootPath + "Chapter5/6thirdJarvisEncounter.json", false, false, "Converse com o Jarvis novamente"),
 	Dialog.new(phase1DialogsRootPath + "Chapter5/7fourthJarvisEncounter.json", false, false, "")
 ]
 

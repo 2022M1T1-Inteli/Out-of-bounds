@@ -106,7 +106,7 @@ func _on_Verify_pressed():
 		$Timer.start()
 		return
 	
-#	Objectives.get_node("NinePatchRect").visible = true
+	Objectives.get_node("NinePatchRect").visible = true
 	PauseMenu.canBeActive = true
 	Global.codePuzzleFinished = true
 	get_tree().change_scene("res://Scenes/Mecanic/Mecanica.tscn")
