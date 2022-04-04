@@ -1,25 +1,25 @@
 [
     {
         "Name": "Astronauta",
-        "Text": "Oi eu sou e Astronauta, acabei de sair de um acidente que destruiu o meu transporte. Estou perdide aqui. Minha nave está toda quebrada e preciso de ajuda para consertá-la."
+        "Text": "Oi eu sou e Astronauta, acabei de sair de um acidente que destruiu o meu transporte. Estou perdide aqui. Preciso de ajuda para consertá-la."
     },
     { "Name": "Ser Desconhecido", "Text": "......." },
     {
         "Name": "Ser Desconhecido",
         "Text": "Olá Astronauta, bem vinde ao planeta Brahma. Eu sou Stuart, me considere seu guia. Vou te ajudar a reconstruir sua nave. Quais peças você precisa?"
     },
-    { "Name": "Astronauta","Text": "Muito obrigade! Deixe-me verificar quais peças preciso." },
+    { "Name": "Astronauta","Text": "Muito obrigade! Deixe-me verificar..." },
     {
         "Name": "Astronauta",
         "Text": "..."
     },
     {
         "Name": "Astronauta",
-        "Text": "Estou precisando de um motor de combustão interna, um MGU-K, um MGU-H e uma bateria."
+        "Text": "Estou precisando de um motor."
     },
     {
         "Name": "Stuart",
-        "Text": "Sem problemas! Primeiro lhe darei um mapa, siga o caminho sinalizado até a mecânica. Lá você irá encontrar o Jarvis, mas já aviso, ele é extremamente preconceituose. Te aconselho a fazer um bom acordo com ele. Te desejo boa sorte na sue aventura, e por enquanto a minha ajuda para aqui."
+        "Text": "Sem problemas! Primeiro, siga o caminho sinalizado até a mecânica. Lá você irá encontrar o Jarvis, mas já aviso, ele é extremamente preconceituose. Te aconselho a fazer um bom acordo com ele. Te desejo boa sorte na sue aventura!"
     },
     {
         "Name": "Astronauta",

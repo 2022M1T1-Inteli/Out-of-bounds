@@ -1,25 +1,23 @@
-[    {
+[
+    {
         "Name": "OutOfBounds",
-        "Text": "Olá! Bem vinde ao OutOfBounds! Eu sou e NPC. Irei te ensinar o básico do universo de OutOfBounds! Antes de tudo, para passar para o próximo dialogo, você deve clicar aqui em cima! Tente!"
+        "Text": "Olá! Bem vinde ao OutOfBounds! Eu sou e NPC. Irei te ensinar o básico do universo de OutOfBounds!"
     },
     {
         "Name": "OutOfBounds",
-        "Text": "Parabéns!"
+        "Text": "Nesse universo, o planeta Terra estava, por anos, passando por um período sem evolução tecnológica, por isso os presidentes das nações mais importantes do mundo se reuniram para encontrar soluções."
     },
     {
         "Name": "OutOfBounds",
-        "Text": "Nesse universo, o planeta Terra estava por anos passando por um período sem evolução tecnológica, por isso os presidentes das nações mais importantes do mundo se reuniram para a criação de um instituto responsável por encontrar soluções que vinham de fora do planeta."
+        "Text": "Tempos depois, surgiu um asteroide ,com um potencial incrível e com materiais raríssimos, que foi encontrado vagando pelo espaço."
     },
     {
         "Name": "OutOfBounds",
-        "Text": "Por essa razão, foi fundado o Instituto Internacional de Astronomia. Dois anos depois, sem nenhum projeto ainda efetuado, essa organização foi presenteada por uma oportunidade de ouro: um asteroide com um potencial incrível de materiais raríssimos foi encontrado vagando pelo espaço."
+        "Text": "E Astronauta foi escolhido, no caso você, para liderar a missão da extração do asteroide. Infelizmente sua missão foi interrompida por uma colisão de um metorito em sua espaçonave, forçando-a cair em uma planeta desconhecido, o Brahma."
     },
     {
         "Name": "OutOfBounds",
-        "Text": "Esse instituto decide então chamar e “Astronauta”, no caso você, para liderar a missão de extrair esses materiais do asteroide. Infelizmente sua missão foi interrompida por uma colisão de um metorito em sua espaçonave, forçando-a cair em uma planeta desconhecido, o Brahma."
-    },
-    {
-        "Name": "OutOfBounds",
-        "Text": "Nesse planeta você passará por situações difíceis, as quais e levare a conseguir as peças necessárias para a reconstrução da sua nave. Ao longo do caminho, você encontrará seres preconceituosos, então sempre tente converté-los para tornar Brahma um mundo melhor! No mais, aproveite a sua jornada! Até logo!"
+        "Text": "Nesse planeta você passará por situações difíceis, as quais e levará a conseguir a peça necessária para a reconstrução da sua nave. Ao longo do caminho, você encontrará seres preconceituosos, então sempre tente converté-los para tornar Brahma um mundo melhor! No mais, aproveite a sua jornada! Até logo!"
     }
 ]
+
