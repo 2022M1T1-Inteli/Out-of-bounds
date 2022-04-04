@@ -1,14 +1,15 @@
-[gd_scene load_steps=71 format=2]
+[gd_scene load_steps=74 format=2]
 
 [ext_resource path="res://Scenes/About/about.gd" type="Script" id=1]
 [ext_resource path="res://Assets/TelaInicial/Space Background (5).png" type="Texture" id=2]
 [ext_resource path="res://Assets/About/ambev-logo.png" type="Texture" id=3]
-[ext_resource path="res://Assets/TelaInicial/logoOutOfBounds.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Anybody-SemiBold.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Assets/About/inteli-logo.png" type="Texture" id=5]
 [ext_resource path="res://Assets/About/voltar-button-hover.png" type="Texture" id=6]
 [ext_resource path="res://Assets/About/egghead.png" type="Texture" id=7]
 [ext_resource path="res://Assets/About/voltar-button-normal.png" type="Texture" id=8]
 [ext_resource path="res://Assets/TelaInicial/7663630319.png" type="Texture" id=9]
+[ext_resource path="res://Assets/TelaInicial/logonew.png" type="Texture" id=10]
 
 [sub_resource type="AtlasTexture" id=202]
 atlas = ExtResource( 9 )
@@ -258,6 +259,14 @@ animations = [ {
 "speed": 15.0
 } ]
 
+[sub_resource type="DynamicFont" id=263]
+size = 9
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=264]
+size = 8
+font_data = ExtResource( 4 )
+
 [node name="Credito" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -270,45 +279,67 @@ __meta__ = {
 }
 
 [node name="VoltarBtn" type="TextureButton" parent="."]
-margin_left = 220.0
-margin_top = 7.0
-margin_right = 531.0
-margin_bottom = 86.0
-rect_scale = Vector2( 0.4, 0.4 )
+margin_left = 247.0
+margin_top = 3.0
+margin_right = 558.0
+margin_bottom = 82.0
+rect_scale = Vector2( 0.3, 0.3 )
 size_flags_stretch_ratio = 6.0
 texture_normal = ExtResource( 8 )
 texture_hover = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Inteli" type="Sprite" parent="."]
-position = Vector2( 285, 162 )
-scale = Vector2( 0.204128, 0.255495 )
+position = Vector2( 224.875, 101.187 )
+scale = Vector2( 0.248853, 0.32555 )
 texture = ExtResource( 5 )
 
 [node name="Ambev" type="Sprite" parent="."]
-position = Vector2( 229, 176 )
+position = Vector2( 117, 109 )
 scale = Vector2( 0.22973, 0.280488 )
 texture = ExtResource( 3 )
 
 [node name="EggHead" type="Sprite" parent="."]
-position = Vector2( 72, 111 )
+position = Vector2( 69, 13 )
 rotation = -0.383972
-scale = Vector2( 0.192516, 0.182792 )
+scale = Vector2( 0.0907645, 0.0858942 )
 texture = ExtResource( 7 )
 
 [node name="OutOfBoundsLogo" type="Sprite" parent="."]
-position = Vector2( 80, 27 )
-scale = Vector2( 0.225573, 0.280303 )
-texture = ExtResource( 4 )
+position = Vector2( 32, 15 )
+scale = Vector2( 0.246645, 0.280303 )
+texture = ExtResource( 10 )
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
-position = Vector2( 265, 93 )
+self_modulate = Color( 0.356863, 0.356863, 0.356863, 1 )
+position = Vector2( 146, 57 )
 rotation = 0.274017
 scale = Vector2( 0.297695, 0.285036 )
 frames = SubResource( 262 )
-frame = 21
+frame = 13
 playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 55.0
+margin_top = 32.0
+margin_right = 291.0
+margin_bottom = 85.0
+custom_fonts/font = SubResource( 263 )
+text = "Desenvolvido em 10 semanas, o OutOfBounds
+é um projeto que aborda o tema da diversidade e
+inclusão de maneira leve e exemplificada.
+Desenvolvido pela RainbowDev para a Ambev"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = -80.0
+margin_top = 158.0
+margin_right = 403.0
+margin_bottom = 210.0
+custom_fonts/font = SubResource( 264 )
+text = "Paulo Presa - Henrique Lemos - Lyorrei Quintão - Gabriel Carneiro
+Melyssa Rojas - Thomas Brand - Cristiane de Andrade - Antonio Ribeiro"
+align = 1
 
 [connection signal="pressed" from="VoltarBtn" to="." method="_on_TextureButton_pressed"]

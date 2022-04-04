@@ -1,7 +1,11 @@
 [
     {
         "Name": "OutOfBounds",
-        "Text": "Olá! Bem vinde ao OutOfBounds! Eu sou e NPC. Irei te ensinar o básico do universo de OutOfBounds!"
+        "Text": "Olá! Bem vinde ao OutOfBounds! Eu sou e NPC. Irei te ensinar o básico do universo de OutOfBounds! Antes de tudo, para passar para o próximo diálogo, você pode pressionar a barra de espaço! Tente!"
+    },
+    {
+        "Name": "OutOfBounds",
+        "Text": "Parabéns!"
     },
     {
         "Name": "OutOfBounds",
