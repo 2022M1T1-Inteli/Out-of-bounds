@@ -1,0 +1,101 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/DialogBox/dialogBox.gd" type="Script" id=1]
+[ext_resource path="res://Assets/DialogBox/10dialogBoxes.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Keys/spacebar.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 200, 9 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "SpacebarAnimation"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 200, 10 ), Vector2( 200, 11 ) ]
+}
+
+[node name="DialogBox" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 160, 90 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="NinePatchRect" parent="."]
+margin_left = 52.0
+margin_top = 108.0
+margin_right = 272.0
+margin_bottom = 167.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 0.521156, 561.07, 318.176, 77.8012 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="RichTextLabel" parent="TextureRect"]
+margin_left = 6.0
+margin_top = 7.0
+margin_right = 168.0
+margin_bottom = 25.0
+rect_scale = Vector2( 0.5, 0.5 )
+rect_clip_content = false
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode_enabled = true
+bbcode_text = "adwadsadwa"
+text = "adwadsadwa"
+fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="RichTextLabel" parent="TextureRect"]
+anchor_left = -0.267
+anchor_right = -0.267
+margin_left = 65.74
+margin_top = 20.0
+margin_right = 580.74
+margin_bottom = 100.0
+rect_scale = Vector2( 0.4, 0.4 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode_enabled = true
+fit_content_height = true
+scroll_following = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect"]
+position = Vector2( 200, 9 )
+scale = Vector2( 0.0611277, 0.0544643 )
+texture = ExtResource( 3 )
+
+[node name="Timer" type="Timer" parent="TextureRect"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
+autoplay = "SpacebarAnimation"
+anims/RESET = SubResource( 1 )
+anims/SpacebarAnimation = SubResource( 2 )

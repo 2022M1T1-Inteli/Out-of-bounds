@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/UI/joystickOutter.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/MobileInputs/mobileInputs.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Buttons/e.png" type="Texture" id=3]
+[ext_resource path="res://Assets/UI/joystickInner.png" type="Texture" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 845.0
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="JoystickInner" type="Sprite" parent="."]
+position = Vector2( 38, 142 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 4 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2( 6, 110 )
+scale = Vector2( 0.037, 0.0375942 )
+normal = ExtResource( 1 )
+shape = SubResource( 1 )
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
+position = Vector2( 267, 129 )
+scale = Vector2( 0.788462, 0.75 )
+normal = ExtResource( 3 )
+action = "interact"
+
+[connection signal="released" from="TouchScreenButton" to="." method="_on_TouchScreenButton_released"]

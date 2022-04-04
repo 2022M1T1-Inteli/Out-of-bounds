@@ -31,7 +31,7 @@ func _ready():
 func _process(_delta):
 
 	# Checar se o botão espaço foi apertado
-	if Input.is_action_just_pressed("space_bar"):
+	if Input.is_action_just_pressed("attack"):
 		if finished:
 			
 			# Avançar para próxima fala
