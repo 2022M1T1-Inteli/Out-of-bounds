@@ -1,4 +1,4 @@
-[gd_scene load_steps=135 format=2]
+[gd_scene load_steps=136 format=2]
 
 [ext_resource path="res://Scenes/Desert/desert.gd" type="Script" id=1]
 [ext_resource path="res://Assets/World/IceTileset.png" type="Texture" id=2]
@@ -26,6 +26,7 @@
 [ext_resource path="res://Assets/World/waterAnimatedTexture.tres" type="Texture" id=24]
 [ext_resource path="res://ExclusiveAssets/Textures/Cyberpunk_D.png" type="Texture" id=25]
 [ext_resource path="res://Scenes/Decorations/blueChandelier.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Assets/Music and Sounds/MusicGameList/Robots and Aliens - Joel Cummins (1).mp3" type="AudioStream" id=27]
 
 [sub_resource type="ConvexPolygonShape2D" id=107]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -1560,5 +1561,9 @@ __meta__ = {
 autoplay = "DoorPointer"
 anims/DoorPointer = SubResource( 105 )
 anims/RESET = SubResource( 106 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 27 )
+autoplay = true
 
 [connection signal="body_entered" from="CityDoor" to="." method="_on_CityDoor_body_entered"]
