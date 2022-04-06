@@ -1,19 +1,19 @@
 [
     {
         "Name": "Astronauta",
-        "Text": "Bock, estou querendo reconstruir a minha nave, mas não sinto que a minha proposta na mecânica terá um bom resultado. Acabei de presenciar uma cena que me parece discriminatória, eu não tenho certeza. Isso não acontece só comigo, mas sim com todos diferentes de um tal de Jarvis. Ele julga todos pela cor e aparência, principalmente no espaço de trabalho. O que eu faço?"
+        "Text": "Bock, estou querendo reconstruir a minha nave, mas não sinto que a minha proposta na mecânica terá um bom resultado. Acabei de presenciar uma cena que me parece discriminatória. Ela não aconteceu só comigo, mas sim com todos diferentes de um tal de Jarvis. Ele julga todos pela cor e aparência, principalmente no espaço de trabalho. O que eu faço?"
     },
     {
         "Name": "Bock",
-        "Text": "Olá Astronauta, estou ativo! Essas situações que você acabou de passar se chama racismo. Consiste no preconceito e na discriminação com base em percepções sociais baseadas em diferenças biológicas entre povos, principalmente por causa de sua cor. Apesar de estarmos em um planeta difente, a definição de racismo não muda aqui."
+        "Text": "Olá Astronauta, estou ativo! Você acabou de presenciar atitudes racistas. Elas consistem no preconceito e na discriminação com base em diferenças biológicas entre povos, principalmente por causa de sua cor. Apesar de estarmos em um planeta difente, a definição de racismo não muda aqui."
     },
     {
         "Name": "Bock",
-        "Text": "Situações racistas ou injuria racial podem acontecer em todos os lugares e de diferentes formas, no trabalho, na rua ou em lugares de entretenimento, sendo de uma forma sutil ou agressiva"
+        "Text": "Situações racistas ou injuria racial podem acontecer em todos os lugares e de diferentes formas: no trabalho, na rua ou em lugares de entretenimento, seja de uma forma sutil ou agressiva"
     },
     {
         "Name": "Bock",
-        "Text": "Porém, independente do lugar continua sendo racismo. é muito normal que você sinta essa dúvida se foi ou não racismo, por que geralmente a vitima se sente vúneravel e incapaz de distinguir a situação"
+        "Text": "Porém, independente do lugar continua sendo racismo. É muito normal que você sinta essa dúvida se foi ou não racismo, porque geralmente a vítima se sente vulnerável e incapaz de distinguir a situação"
     },
     {
         "Name": "Bock",
@@ -21,7 +21,7 @@
     },
     {
         "Name": "Bock",
-        "Text": "Nesse caso, Floyd foi visto pelo policial branco como um criminoso muito maior que realmente poderia ser, e o tratando da forma mais desumana possivel, o que ocasionou na morte de Floyd. Essa tragédia causou uma mobilização no mundo todo por busca de justiça a sua morte."
+        "Text": "Nesse caso, Floyd foi visto pelo policial branco como um criminoso muito maior do que realmente poderia ser. Floyd foi atacado de forma desumana e morto por causa de sua cor de pele. Essa tragédia causou uma mobilização no mundo todo por busca de justiça a sua morte."
     },
     {
         "Name": "Bock",
@@ -30,10 +30,6 @@
     { "Name": "Astronauta", "Text": "Então Bock, qual sua sugestão para a minha situação?" },
     {
         "Name": "Bock",
-        "Text": "Minha sugestão é que você faça o Jarvis entender que o que ele faz é errado. Lá na terra é considerada crime, atuando como Crime de injuria racial, podendo pegar de um a seis meses de detenção."
-    },
-    {
-        "Name": "Bock",
-        "Text": "Então faça um acordo com Jarvis, proponha algo que o faça mudar de ideia, como dito antes, ele me parece um cara muito desafiador."
+        "Text": "Minha sugestão é que você faça o Jarvis entender que o que ele faz é errado. Faça um acordo com ele e o proponha a mudar!"
     }
 ]

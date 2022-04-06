@@ -13,7 +13,7 @@
     },
     {
         "Name": "Jarvis",
-        "Text": "Já estou perdido mesmo, então, cá está seu desafio: você deverá resolver esse código o mais rápido possível, se você demorar demais, perde!"
+        "Text": "Já estou perdido mesmo, então, cá está seu desafio: você deverá resolver esse código o mais rápido possível. Se você demorar demais perde!"
     },
     { "Name": "Astronauta", "Text": "Feito!" }
 ]
