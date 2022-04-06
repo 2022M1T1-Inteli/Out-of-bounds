@@ -9,6 +9,8 @@ signal dialogChange
 var tutorialDialogPath = "res://Dialogs/Tutorial/tutorial.json"
 var tutorialFinished = false
 
+var listapedra = []
+
 # Caminho para di�logos da fase 1
 var phase1DialogsRootPath = "res://Dialogs/Phase1/"
 

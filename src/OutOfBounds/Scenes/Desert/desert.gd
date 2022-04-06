@@ -1,8 +1,10 @@
 extends Node2D
-
 # Função executada quando a cena é carregada
 func _ready():
-	
+	for i in Global.listapedra:
+		get_node('YSort/YSort/%s' % [i]).queue_free()
+		
+		
 	# Esconder ou mostrar o Stuart
 	if Global.phase1DialogIndex == 0:
 		$YSort/Stuart.visible = true
@@ -27,3 +29,4 @@ func _on_CityDoor_body_entered(_body):
 		Global.player.startPosition = citySpawnPosition
 		Global.player.scene = citySceneSpawn
 		get_tree().change_scene(citySceneSpawn)
+
