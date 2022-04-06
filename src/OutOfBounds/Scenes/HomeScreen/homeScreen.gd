@@ -7,6 +7,7 @@ func _ready():
 # Botão de Start
 func _on_StartBtn_pressed() -> void:
 	TransitionScene.startAnimation()
+	$AudioStreamPlayer2D.play()
 
 # Função para trocar de cena
 func onChangeSceneAnimationMiddle():
