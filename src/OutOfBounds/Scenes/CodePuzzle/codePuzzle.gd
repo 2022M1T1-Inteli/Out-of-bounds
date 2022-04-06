@@ -14,10 +14,6 @@ var currentType = null
 # Array com a sequência correta
 var correctCode = ["1E", "2C", "3D", "4A", "5B"]
 
-func _ready():
-	Objectives.get_node("NinePatchRect").visible = false
-	PauseMenu.canBeActive = false
-
 # Função que roda em Loop enquanto o jogo está sendo executado
 func _process(delta):
 	
@@ -105,10 +101,14 @@ func _on_Verify_pressed():
 	if finished == false:
 		$Timer.start()
 		return
-	
-	Objectives.get_node("NinePatchRect").visible = true
+
+	# Voltar status do menu de pausa como ativo
 	PauseMenu.canBeActive = true
+
+	# Setar variável mostrando que puzzle acabou
 	Global.codePuzzleFinished = true
+
+	# Mudar de cena
 	get_tree().change_scene("res://Scenes/Mecanic/Mecanica.tscn")
 
 # Função executada quando o Timer acabar

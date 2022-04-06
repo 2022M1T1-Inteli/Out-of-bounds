@@ -105,9 +105,14 @@ func onDialogFinish():
 		# Aumentar index do diálogo
 		Global.phase1DialogIndex += 1
 	
-		# Condições para fazer jogador jogar os Puzzles depois de determinados diálogos
+		# Condições para fazer jogador jogar os Puzzles e as viagens do conhecimento depois de determinados diálogos
 		if Global.phase1DialogIndex == 2:
-			get_tree().change_scene("res://Scenes/PuzzleCleaning/PuzzleCleaning.tscn")
+			Global.knowledgeTripIndex = 0
+			get_tree().change_scene("res://Scenes/KnowledgeTrip/knowledgeTrip.tscn")
+			
+		if Global.phase1DialogIndex == 3:
+			Global.knowledgeTripIndex = 1
+			get_tree().change_scene("res://Scenes/KnowledgeTrip/knowledgeTrip.tscn")
 			
 		if Global.phase1DialogIndex == 5:
 			get_tree().change_scene("res://Scenes/CodePuzzle/codePuzzle.tscn")

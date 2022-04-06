@@ -131,6 +131,9 @@ margin_right = -24.2
 margin_bottom = 11.0
 texture = ExtResource( 5 )
 region_rect = Rect2( 192, 96, 32, 32 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Roof" type="NinePatchRect" parent="."]
 margin_left = -49.2

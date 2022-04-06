@@ -68,4 +68,12 @@ func _physics_process(delta): #função principal do jogo. roda 60 vezes por seg
 			
 		ATTACK:
 			attack_state(delta)
+			
+	# Aumenta a velocidade para acelerar o desenvolvimento do jogo
+	if Input.is_action_pressed("speed_plus"):
+		MAX_SPEED = 2000
+		FRICTION = 100000
+	else:
+		MAX_SPEED = 100
+		FRICTION = 2000
 

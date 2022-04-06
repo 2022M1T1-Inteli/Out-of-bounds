@@ -5,11 +5,18 @@ extends Node2D
 signal phaseChange
 signal dialogChange
 
+# Preload da cutscene
+var knowledgeTripInterior1 = preload("res://Scenes/KnowledgeTrip/knowledgeTripInterior.tscn")
+
+# Variável de visibilidade para o mapa e o sistema de objetivos
+var overlayVisibility = false
+var objectiveLabel = ""
+
+var listapedra = []
+
 # Variáveis do tutorial
 var tutorialDialogPath = "res://Dialogs/Tutorial/tutorial.json"
 var tutorialFinished = false
-
-var listapedra = []
 
 # Caminho para di�logos da fase 1
 var phase1DialogsRootPath = "res://Dialogs/Phase1/"
@@ -44,7 +51,5 @@ var phases = [Phase.new("Fase 1", false, false, phase1Dialogs)]
 # Instancia do Player
 var player = Player.new("Astronauta", "", null, null)
 
-	
-	
-
-
+# KnowledgeTrip Global State
+var knowledgeTripIndex = 0

@@ -4,7 +4,9 @@ var isNear = false
 
 # Função executada quando a cena é carregada
 func _ready():
-	Objectives.get_node("NinePatchRect").visible = false
+
+	# Esconder sistema de objetivos
+	Global.overlayVisibility = false
 
 # Loop executado enquanto a cena está rodando
 func _process(delta):
@@ -14,7 +16,7 @@ func _process(delta):
 	
 	# Checagem se o Puzzle foi concluido
 	if Score.score == 40:
-		Objectives.get_node("NinePatchRect").visible = true
+		Global.overlayVisibility = true
 		Global.cleaningPuzzleFinished = true
 		
 		# Muda a cena

@@ -1,9 +1,11 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Scenes/Player/player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Player/Player.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/HurtboxHitbox/hitbox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Music and Sounds/Swipe.wav" type="AudioStream" id=4]
+[ext_resource path="res://Scenes/Map/map.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Objectives/objectives.tscn" type="PackedScene" id=6]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 4.0
@@ -656,5 +658,9 @@ shape = SubResource( 42 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+
+[node name="MapLayer" parent="." instance=ExtResource( 5 )]
+
+[node name="Objectives" parent="." instance=ExtResource( 6 )]
 
 [editable path="HitboxPivot/SwordHitbox"]

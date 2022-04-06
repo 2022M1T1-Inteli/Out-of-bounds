@@ -3,7 +3,7 @@ extends CanvasLayer
 var correctCode = "1888"
 
 func _ready():
-	Objectives.get_node("NinePatchRect").visible = false
+	
 	PauseMenu.canBeActive = false
 
 # Conectando os botões do teclado numérico com o script
@@ -31,8 +31,12 @@ func _on_Confirme_pressed():
 		$Screen.text = "" # Mensagem temporária de teste
 		isFinished = true
 		PauseMenu.canBeActive = true
-		Objectives.get_node("NinePatchRect/Label").text = "Escute a conversa do Jarvis com a assistente"
-		Objectives.get_node("NinePatchRect").visible = true
+
+		# Mostrar sistema de objetivos
+		Global.objectiveLabel = "Escute a conversa do Jarvis com a assistente"
+
+
+		# Mudar de cena
 		get_tree().change_scene("res://Scenes/MecanicRoom/mecanicRoom.tscn")
 		
 	else: 

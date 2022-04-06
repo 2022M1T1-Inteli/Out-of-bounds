@@ -6,6 +6,7 @@ func _on_Area2D_body_entered(body):
 	Global.tutorialFinished = true
 
 func _ready():
+	Global.overlayVisibility = false
 	TransitionScene.connect("animationMiddle", self, "onChangeSceneAnimationMiddle")
 	
 func onChangeSceneAnimationMiddle():

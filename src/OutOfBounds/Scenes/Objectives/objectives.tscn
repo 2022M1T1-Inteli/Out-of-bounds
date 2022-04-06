@@ -4,6 +4,7 @@
 [ext_resource path="res://Scenes/Objectives/objectives.gd" type="Script" id=2]
 
 [node name="Objectives" type="CanvasLayer"]
+pause_mode = 2
 script = ExtResource( 2 )
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]

@@ -5,8 +5,14 @@ func _ready():
 	
 	# Conectar sinal de mudança de diálogo à função
 	Global.connect("dialogChange", self, "onDialogChange")
+	
+func _process(delta):
+	$NinePatchRect/Label.text = Global.objectiveLabel
+	$NinePatchRect.visible = Global.overlayVisibility
 
 func onDialogChange():
+	Global.overlayVisibility = true
+	
 	# Loop em estado global do jogo para setar texto do Label
 	for phase in Global.phases:
 		
@@ -16,7 +22,7 @@ func onDialogChange():
 		for dialog in invertedDialogs:
 			if dialog.completed:
 				if dialog.objective:
-					$NinePatchRect/Label.text = dialog.objective
-					$NinePatchRect.visible = true
+					Global.objectiveLabel = dialog.objective
+					Global.overlayVisibility = true
 				break
 	
