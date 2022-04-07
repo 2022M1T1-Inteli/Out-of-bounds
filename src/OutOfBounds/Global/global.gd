@@ -53,3 +53,6 @@ var player = Player.new("Astronauta", "", null, null)
 
 # KnowledgeTrip Global State
 var knowledgeTripIndex = 0
+
+# City path
+var cityPath = "res://Scenes/City/city.tscn"

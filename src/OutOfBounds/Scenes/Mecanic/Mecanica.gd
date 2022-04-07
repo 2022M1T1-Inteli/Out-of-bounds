@@ -30,17 +30,16 @@ func _process(delta):
 		get_tree().change_scene("res://Scenes/PuzzleLock/puzzleLock.tscn")
 
 
-export(String) var cityScenePath
 export(Vector2) var citySpawnPosition
 
 
 # Fun��o que executa quando o Player chega perto da porta do world
 func _on_CityDoor_body_entered(_body):
 	# Trocar de cena
-	if cityScenePath and citySpawnPosition:
+	if Global.cityPath and citySpawnPosition:
 		Global.player.startPosition = citySpawnPosition
-		Global.player.scene = cityScenePath
-		get_tree().change_scene(cityScenePath)
+		Global.player.scene = Global.cityPath
+		get_tree().change_scene(Global.cityPath)
 
 
 # Fun��o executada quando o jogador chega perto da porta

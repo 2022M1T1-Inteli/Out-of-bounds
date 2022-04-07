@@ -18,15 +18,14 @@ func _ready():
 		if Global.player.position:
 			get_node("YSort/Player").global_position = Global.player.position
 
-export (String) var citySceneSpawn
 export (Vector2) var citySpawnPosition
 
 # Função que executa quando o Player chega perto da porta do world
 func _on_CityDoor_body_entered(_body):
 	
 	# Trocar de cena
-	if citySceneSpawn and citySpawnPosition:
+	if Global.cityPath and citySpawnPosition:
 		Global.player.startPosition = citySpawnPosition
-		Global.player.scene = citySceneSpawn
-		get_tree().change_scene(citySceneSpawn)
+		Global.player.scene = Global.cityPath
+		get_tree().change_scene(Global.cityPath)
 

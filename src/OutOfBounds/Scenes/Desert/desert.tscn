@@ -1137,7 +1137,6 @@ extents = Vector2( 23.5938, 4.5 )
 [node name="Desert" type="Node2D"]
 position = Vector2( 1, 0 )
 script = ExtResource( 1 )
-citySceneSpawn = "res://Scenes/City/city.tscn"
 citySpawnPosition = Vector2( 311, -253 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
