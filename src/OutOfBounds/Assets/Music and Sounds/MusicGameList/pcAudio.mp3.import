@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/pcAudio.mp3-1e36bfe1df15185dda55ff93cf6f282f.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music and Sounds/MusicGameList/pcAudio.mp3"
+dest_files=[ "res://.import/pcAudio.mp3-1e36bfe1df15185dda55ff93cf6f282f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

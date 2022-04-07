@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Assets/World/DirtTileset2.png" type="Texture" id=1]
 [ext_resource path="res://Assets/World/MoonTileset.png" type="Texture" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://Scenes/Rock/rock4.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/Rock/rock2.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Assets/Keys/enter.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Music and Sounds/MusicGameList/TutorialMusic.mp3" type="AudioStream" id=21]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -394,22 +395,22 @@ format = 1
 tile_data = PoolIntArray( 54, 0, 196611, 65589, 0, 196611, 131124, 0, 196611, 131126, 0, 196611, 262197, 0, 196611, 262198, 4, 3, 262202, 4, 196611, 262207, 4, 196611, 262209, 4, 196611, 327728, 4, 196611, 327730, 4, 196611, 327732, 4, 196611, 327734, 4, 131075, 327736, 4, 196611, 327739, 4, 196611, 327741, 4, 196611, 458751, 4, 0, 393216, 4, 1, 393217, 4, 1, 393218, 4, 1, 393219, 4, 1, 393220, 4, 1, 393221, 4, 1, 393222, 4, 1, 393223, 4, 1, 393224, 4, 1, 393225, 4, 1, 393226, 4, 1, 393227, 4, 1, 393228, 4, 1, 393229, 4, 1, 393230, 4, 1, 393231, 4, 1, 393232, 4, 1, 393233, 4, 1, 393234, 4, 1, 393235, 4, 1, 393236, 4, 1, 393237, 4, 1, 393238, 4, 1, 393239, 4, 1, 393240, 4, 1, 393241, 4, 1, 393242, 4, 1, 393243, 4, 1, 393244, 4, 1, 393245, 4, 1, 393246, 4, 1, 393247, 4, 1, 393248, 4, 1, 393249, 4, 1, 393250, 4, 1, 393251, 4, 1, 393252, 4, 1, 393253, 4, 1, 393254, 4, 1, 393255, 4, 1, 393256, 4, 1, 393257, 4, 1, 393258, 4, 1, 393259, 4, 1, 393260, 4, 5, 393261, 4, 196609, 393262, 4, 196610, 393265, 4, 196611, 393269, 4, 196611, 393270, 0, 196611, 393271, 4, 196611, 393274, 4, 196611, 393276, 4, 196611, 393278, 4, 196611, 524287, 4, 131072, 458752, 4, 131073, 458753, 4, 131073, 458754, 4, 131073, 458755, 4, 131073, 458756, 4, 131073, 458757, 4, 131073, 458758, 4, 131073, 458759, 4, 131073, 458760, 4, 131073, 458761, 4, 131073, 458762, 4, 131073, 458763, 4, 131073, 458764, 4, 131073, 458765, 4, 131073, 458766, 4, 131073, 458767, 4, 131073, 458768, 4, 131073, 458769, 4, 131073, 458770, 4, 131073, 458771, 4, 131073, 458772, 4, 131073, 458773, 4, 131073, 458774, 4, 131073, 458775, 4, 131073, 458776, 4, 131073, 458777, 4, 131073, 458778, 4, 131073, 458779, 4, 131073, 458780, 4, 131073, 458781, 4, 131073, 458782, 4, 131073, 458783, 4, 131073, 458784, 4, 131073, 458785, 4, 131073, 458786, 4, 131073, 458787, 4, 131073, 458788, 4, 131073, 458789, 4, 131073, 458790, 4, 131073, 458791, 4, 131073, 458792, 4, 131073, 458793, 4, 131073, 458794, 4, 131073, 458795, 4, 131073, 458796, 4, 131074, 458799, 4, 196608, 458800, 4, 196610, 458803, 4, 196611, 458806, 4, 196611, 458809, 4, 196611, 458813, 4, 196611, 458817, 4, 196611, 524337, 4, 196611, 524340, 0, 196608, 524341, 0, 7, 589877, 0, 131075, 655414, 0, 196611, 720949, 0, 196611 )
 
 [node name="Wasd" type="Sprite" parent="."]
-position = Vector2( 146, 46.8267 )
+position = Vector2( 146, 48 )
 scale = Vector2( 0.485248, 0.451923 )
 texture = ExtResource( 8 )
 
 [node name="E" type="Sprite" parent="."]
-position = Vector2( 360, 54.8267 )
+position = Vector2( 360, 56 )
 scale = Vector2( 0.66, 0.66 )
 texture = ExtResource( 9 )
 
 [node name="ArrowKeys" type="Sprite" parent="."]
-position = Vector2( 72, 46.8267 )
+position = Vector2( 72, 48 )
 scale = Vector2( 0.47, 0.47 )
 texture = ExtResource( 7 )
 
 [node name="LeftClick" type="Sprite" parent="."]
-position = Vector2( 538, 49.8267 )
+position = Vector2( 538, 51 )
 scale = Vector2( 0.085742, 0.0766602 )
 texture = ExtResource( 10 )
 
@@ -601,7 +602,7 @@ custom_fonts/font = SubResource( 11 )
 text = "interaja!"
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 601, 52.8267 )
+position = Vector2( 601, 54 )
 scale = Vector2( 0.0714678, 0.08 )
 texture = ExtResource( 20 )
 
@@ -622,5 +623,9 @@ custom_fonts/font = SubResource( 11 )
 text = "Libere
 o caminho!"
 align = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 21 )
+autoplay = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
