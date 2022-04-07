@@ -1147,6 +1147,9 @@ margin_right = 810.0
 margin_bottom = 752.0
 texture = ExtResource( 7 )
 stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="WaterTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 109 )
@@ -1492,10 +1495,10 @@ position = Vector2( 359.458, 185.114 )
 position = Vector2( 473.46, 185.832 )
 
 [node name="grass4" parent="YSort/YSort" instance=ExtResource( 27 )]
-position = Vector2( 303.132, 53.2522 )
+position = Vector2( 339.28, 113.163 )
 
 [node name="grass5" parent="YSort/YSort" instance=ExtResource( 28 )]
-position = Vector2( 305.098, 39.2473 )
+position = Vector2( 364.325, 131.101 )
 
 [node name="grass6" parent="YSort/YSort" instance=ExtResource( 30 )]
 position = Vector2( 445.49, 197.901 )
@@ -1512,7 +1515,7 @@ position = Vector2( 414.502, 202.978 )
 rotation = -0.00246746
 
 [node name="grass12" parent="YSort/YSort" instance=ExtResource( 27 )]
-position = Vector2( 306.061, 24.2449 )
+position = Vector2( 489.346, 139.793 )
 rotation = -0.00246746
 
 [node name="grass10" parent="YSort/YSort" instance=ExtResource( 29 )]
@@ -1866,12 +1869,12 @@ position = Vector2( 502.437, 581.762 )
 position = Vector2( 524.437, 581.708 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 412, 66 )
+position = Vector2( 413, 48 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 current = true
 limit_left = -75
-limit_top = -80
+limit_top = -100
 limit_right = 840
 limit_bottom = 750
 smoothing_enabled = true

@@ -122,7 +122,7 @@ func onDialogFinish():
 			TransitionScene.startAnimation("res://Scenes/City/city.tscn")
 			
 		if Global.phase1DialogIndex == 7:
-			TransitionScene.startAnimation("res://Scenes/HomeScreen/homeScreen.tscn")
+			TransitionScene.startAnimation("res://Scenes/MotorChangeAnimation/motorChangeAnimation.tscn")
 	
 	# Despausar o jogo e fechar a cena do diálogo
 	get_tree().paused = false
