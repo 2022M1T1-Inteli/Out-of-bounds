@@ -1,14 +1,14 @@
 extends CanvasLayer
 
 func _ready():
-	$NinePatchRect.visible = false
+	$Sprite.visible = false
 	
 	# Conectar sinal de mudança de diálogo à função
 	Global.connect("dialogChange", self, "onDialogChange")
 	
 func _process(delta):
-	$NinePatchRect/Label.text = Global.objectiveLabel
-	$NinePatchRect.visible = Global.overlayVisibility
+	$Sprite/Label.text = Global.objectiveLabel
+	$Sprite.visible = Global.overlayVisibility
 
 func onDialogChange():
 	Global.overlayVisibility = true
