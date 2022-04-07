@@ -500,61 +500,61 @@ smoothing_speed = 8.0
 
 [node name="YSort" type="YSort" parent="YSort"]
 
-[node name="grass13" parent="YSort/YSort" instance=ExtResource( 11 )]
+[node name="grama" parent="YSort/YSort" instance=ExtResource( 11 )]
 position = Vector2( 634, 167 )
 
-[node name="grass15" parent="YSort/YSort" instance=ExtResource( 11 )]
+[node name="grama2" parent="YSort/YSort" instance=ExtResource( 11 )]
 position = Vector2( 666, 144 )
 
-[node name="grass16" parent="YSort/YSort" instance=ExtResource( 11 )]
+[node name="grama3" parent="YSort/YSort" instance=ExtResource( 11 )]
 position = Vector2( 664, 111 )
 
-[node name="grass17" parent="YSort/YSort" instance=ExtResource( 11 )]
+[node name="grama4" parent="YSort/YSort" instance=ExtResource( 11 )]
 position = Vector2( 669, 94 )
 
-[node name="grass18" parent="YSort/YSort" instance=ExtResource( 11 )]
+[node name="grama5" parent="YSort/YSort" instance=ExtResource( 11 )]
 position = Vector2( 673, 167 )
 
-[node name="grass19" parent="YSort/YSort" instance=ExtResource( 11 )]
+[node name="grama6" parent="YSort/YSort" instance=ExtResource( 11 )]
 position = Vector2( 638, 126 )
 
-[node name="grass" parent="YSort/YSort" instance=ExtResource( 17 )]
+[node name="grama7" parent="YSort/YSort" instance=ExtResource( 17 )]
 position = Vector2( 652, 122 )
 
-[node name="grass2" parent="YSort/YSort" instance=ExtResource( 19 )]
+[node name="grama8" parent="YSort/YSort" instance=ExtResource( 19 )]
 position = Vector2( 657, 173 )
 
-[node name="grass3" parent="YSort/YSort" instance=ExtResource( 16 )]
+[node name="grama9" parent="YSort/YSort" instance=ExtResource( 16 )]
 position = Vector2( 654, 154 )
 
-[node name="grass4" parent="YSort/YSort" instance=ExtResource( 18 )]
+[node name="grama10" parent="YSort/YSort" instance=ExtResource( 18 )]
 position = Vector2( 667, 163 )
 
-[node name="grass5" parent="YSort/YSort" instance=ExtResource( 17 )]
+[node name="grama11" parent="YSort/YSort" instance=ExtResource( 17 )]
 position = Vector2( 656, 142 )
 
-[node name="grass6" parent="YSort/YSort" instance=ExtResource( 19 )]
+[node name="grama12" parent="YSort/YSort" instance=ExtResource( 19 )]
 position = Vector2( 664, 109 )
 
-[node name="grass7" parent="YSort/YSort" instance=ExtResource( 16 )]
+[node name="grama13" parent="YSort/YSort" instance=ExtResource( 16 )]
 position = Vector2( 650, 100 )
 
-[node name="grass8" parent="YSort/YSort" instance=ExtResource( 18 )]
+[node name="grama14" parent="YSort/YSort" instance=ExtResource( 18 )]
 position = Vector2( 666, 130 )
 
-[node name="grass9" parent="YSort/YSort" instance=ExtResource( 18 )]
+[node name="grama15" parent="YSort/YSort" instance=ExtResource( 18 )]
 position = Vector2( 685, 159 )
 
-[node name="grass10" parent="YSort/YSort" instance=ExtResource( 16 )]
+[node name="grama16" parent="YSort/YSort" instance=ExtResource( 16 )]
 position = Vector2( 640, 108 )
 
-[node name="grass11" parent="YSort/YSort" instance=ExtResource( 18 )]
+[node name="grama17" parent="YSort/YSort" instance=ExtResource( 18 )]
 position = Vector2( 684, 136 )
 
-[node name="grass12" parent="YSort/YSort" instance=ExtResource( 17 )]
+[node name="grama19" parent="YSort/YSort" instance=ExtResource( 17 )]
 position = Vector2( 691, 125 )
 
-[node name="grass14" parent="YSort/YSort" instance=ExtResource( 16 )]
+[node name="grama18" parent="YSort/YSort" instance=ExtResource( 16 )]
 position = Vector2( 684, 111 )
 
 [node name="TutorialNpc" parent="YSort" instance=ExtResource( 13 )]

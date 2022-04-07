@@ -2,7 +2,8 @@ extends Node2D
 # Função executada quando a cena é carregada
 func _ready():
 	for i in Global.listapedra:
-		get_node('YSort/YSort/%s' % [i]).queue_free()
+		if not "grama" in i:
+			get_node('YSort/YSort/%s' % [i]).queue_free()
 		
 		
 	# Esconder ou mostrar o Stuart
