@@ -34,7 +34,7 @@ _global_script_class_icons={
 
 config/name="OutOfBounds"
 run/main_scene="res://Scenes/HomeScreen/homeScreen.tscn"
-config/icon="res://Assets/UI/HeartUIFull.png"
+config/icon="res://Assets/UI/iconRound.png"
 
 [autoload]
 
