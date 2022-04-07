@@ -2,11 +2,8 @@ extends Node2D
 
 # Função executada quando a cena é carregada
 func _ready():
-	# Esconder ou mostrar o Jarvis
-	if Global.phase1DialogIndex == 6:
-		$YSort/Jarvis.visible = true
-	else:
-		$YSort/Jarvis.queue_free()
+	$YSort/Player/Camera2D.current = true
+	
 	
 	# Condições para setar a posição do Player
 	if Global.player.startPosition:
@@ -14,6 +11,11 @@ func _ready():
 	else:
 		if Global.player.position:
 			get_node("YSort/Player").global_position = Global.player.position
+			
+	if Global.oldCityAnimationStart:
+		Global.canPlayerMove = false
+		Global.overlayVisibility = false
+		$AnimationPlayer.play("oldMecanicAnimation")
 
 export (String) var desertSceneSpawn
 export (Vector2) var desertSpawnPosition
@@ -38,3 +40,9 @@ func _on_MecanicDoor_body_entered(body):
 		Global.player.startPosition = mecanicSpawnPosition
 		Global.player.scene = mecanicSceneSpawn
 		get_tree().change_scene(mecanicSceneSpawn)
+
+func onOldMecanicAnimationFinished():
+	Global.canPlayerMove = true
+	Global.oldCityAnimationStart = false
+	Global.overlayVisibility = true
+	TransitionScene.startAnimation("res://Scenes/TimeCutScene/timeCutScene.tscn")

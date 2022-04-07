@@ -17,7 +17,7 @@ func _process(delta):
 	# Checar se usuário apertou botão "espaço" e se ele pode passar para próxima cena
 	if Input.is_action_just_pressed("ui_accept") and canSkip:
 		$Key.texture = loadingImage
-		get_tree().change_scene("res://Scenes/KnowledgeTrip/knowledgeTripInterior.tscn")
+		TransitionScene.startAnimation("res://Scenes/KnowledgeTrip/knowledgeTripInterior.tscn")
 
 func onTalkBallonAnimationFinished():
 

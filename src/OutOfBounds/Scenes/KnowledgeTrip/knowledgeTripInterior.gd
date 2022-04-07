@@ -55,9 +55,9 @@ func _process(delta):
 		Global.overlayVisibility = true
 
 		if Global.knowledgeTripIndex == 0:
-			get_tree().change_scene("res://Scenes/PuzzleCleaning/PuzzleCleaning.tscn")
+			TransitionScene.startAnimation("res://Scenes/PuzzleCleaning/PuzzleCleaning.tscn")
 		else:
-			get_tree().change_scene("res://Scenes/MecanicRoom/mecanicRoom.tscn")
+			TransitionScene.startAnimation("res://Scenes/MecanicRoom/mecanicRoom.tscn")
 
 
 func _on_AnimatedSprite_animation_finished():

@@ -8,12 +8,17 @@ func _ready():
 	else:
 		$YSort/Jarvis.queue_free()
 	
-	# Condições para setar a posição do Player
-	if Global.player.startPosition:
-		get_node("YSort/Player").global_position = Global.player.startPosition
+	if !Global.newCityAnimationFinished:
+		Global.canPlayerMove = false
+		Global.overlayVisibility = false
+		$AnimationPlayer.play("newCityAnimation")
 	else:
-		if Global.player.position:
-			get_node("YSort/Player").global_position = Global.player.position
+		# Condições para setar a posição do Player
+		if Global.player.startPosition:
+			get_node("YSort/Player").global_position = Global.player.startPosition
+		else:
+			if Global.player.position:
+				get_node("YSort/Player").global_position = Global.player.position
 
 export (String) var desertSceneSpawn
 export (Vector2) var desertSpawnPosition
@@ -38,3 +43,8 @@ func _on_MecanicDoor_body_entered(body):
 		Global.player.startPosition = mecanicSpawnPosition
 		Global.player.scene = mecanicSceneSpawn
 		get_tree().change_scene(mecanicSceneSpawn)
+
+func onNewCityAnimationFinished():
+	Global.newCityAnimationFinished = true
+	Global.canPlayerMove = true
+	Global.overlayVisibility = true

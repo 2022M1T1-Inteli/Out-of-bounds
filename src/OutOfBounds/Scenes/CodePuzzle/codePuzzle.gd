@@ -109,7 +109,7 @@ func _on_Verify_pressed():
 	Global.codePuzzleFinished = true
 
 	# Mudar de cena
-	get_tree().change_scene("res://Scenes/Mecanic/Mecanica.tscn")
+	TransitionScene.startAnimation("res://Scenes/Mecanic/Mecanica.tscn")
 
 # Função executada quando o Timer acabar
 func _on_Timer_timeout():

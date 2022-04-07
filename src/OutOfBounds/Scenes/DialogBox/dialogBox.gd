@@ -108,20 +108,21 @@ func onDialogFinish():
 		# Condições para fazer jogador jogar os Puzzles e as viagens do conhecimento depois de determinados diálogos
 		if Global.phase1DialogIndex == 2:
 			Global.knowledgeTripIndex = 0
-			get_tree().change_scene("res://Scenes/KnowledgeTrip/knowledgeTrip.tscn")
+			TransitionScene.startAnimation("res://Scenes/KnowledgeTrip/knowledgeTrip.tscn")
 			
 		if Global.phase1DialogIndex == 3:
 			Global.knowledgeTripIndex = 1
-			get_tree().change_scene("res://Scenes/KnowledgeTrip/knowledgeTrip.tscn")
+			TransitionScene.startAnimation("res://Scenes/KnowledgeTrip/knowledgeTrip.tscn")
 			
 		if Global.phase1DialogIndex == 5:
-			get_tree().change_scene("res://Scenes/CodePuzzle/codePuzzle.tscn")
+			TransitionScene.startAnimation("res://Scenes/CodePuzzle/codePuzzle.tscn")
 			
 		if Global.phase1DialogIndex == 6:
-			get_tree().change_scene("res://Scenes/TimeCutScene/timeCutScene.tscn")
+			Global.oldCityAnimationStart = true
+			TransitionScene.startAnimation("res://Scenes/City/city.tscn")
 			
 		if Global.phase1DialogIndex == 7:
-			get_tree().change_scene("res://Scenes/HomeScreen/homeScreen.tscn")
+			TransitionScene.startAnimation("res://Scenes/HomeScreen/homeScreen.tscn")
 	
 	# Despausar o jogo e fechar a cena do diálogo
 	get_tree().paused = false

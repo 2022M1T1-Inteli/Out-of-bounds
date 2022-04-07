@@ -37,7 +37,7 @@ func _on_ResumeBtn_pressed():
 
 # Fun��o executada quando bot�o de voltar � pressionado
 func _on_QuitBtn_pressed():
-	if get_tree().change_scene("res://Scenes/HomeScreen/homeScreen.tscn") != OK:
+	if TransitionScene.startAnimation("res://Scenes/HomeScreen/homeScreen.tscn") != OK:
 		print("Problema mudando de cena")
 	showPauseMenu(false)
 	get_tree().paused = false

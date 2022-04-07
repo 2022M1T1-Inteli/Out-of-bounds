@@ -37,7 +37,7 @@ func _on_Confirme_pressed():
 
 
 		# Mudar de cena
-		get_tree().change_scene("res://Scenes/MecanicRoom/mecanicRoom.tscn")
+		TransitionScene.startAnimation("res://Scenes/MecanicRoom/mecanicRoom.tscn")
 		
 	else: 
 #		$Screen.text = "Senha inválida!"

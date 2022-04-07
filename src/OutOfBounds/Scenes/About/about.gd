@@ -17,5 +17,5 @@ func _ready():
 
 
 func _on_TextureButton_pressed():
-	if get_tree().change_scene("res://Scenes/HomeScreen/homeScreen.tscn") != OK:
+	if TransitionScene.startAnimation("res://Scenes/HomeScreen/homeScreen.tscn") != OK:
 		print("erro mudando de cena")

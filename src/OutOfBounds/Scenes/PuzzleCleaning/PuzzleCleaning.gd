@@ -11,13 +11,15 @@ func _ready():
 # Loop executado enquanto a cena está rodando
 func _process(delta):
 	
+	
 	# Setar o texto da Label
 	$CanvasLayer/ColorRect/Label2.text = str(Score.score) + " de 40"
 	
 	# Checagem se o Puzzle foi concluido
-	if Score.score == 40:
+	# Pular puzzle (apenas para acelerar o desenvolvimento)
+	if Score.score == 40 or Input.is_action_just_pressed("speed_plus"):
 		Global.overlayVisibility = true
 		Global.cleaningPuzzleFinished = true
 		
 		# Muda a cena
-		get_tree().change_scene("res://Scenes/Mecanic/Mecanica.tscn")
+		TransitionScene.startAnimation("res://Scenes/Mecanic/Mecanica.tscn")

@@ -62,12 +62,21 @@ func _ready(): #ativa o nodo de animações apenas quando o jogo começa
 	animationTree.active = true
 	
 func _physics_process(delta): #função principal do jogo. roda 60 vezes por segundo.
-	match state:              #executa a função correta para o momento, MOVE ou ATTACK
-		MOVE:
-			move_state(delta)
-			
-		ATTACK:
-			attack_state(delta)
+	
+	# Condição para checar se Player pode se mover
+	if Global.canPlayerMove:
+		var MAX_SPEED = 100
+		animationTree.active = true
+		
+		match state:              #executa a função correta para o momento, MOVE ou ATTACK
+			MOVE:
+				move_state(delta)
+				
+			ATTACK:
+				attack_state(delta)
+	else:
+		var MAX_SPEED = 0
+		animationTree.active = false
 			
 	# Aumenta a velocidade para acelerar o desenvolvimento do jogo
 	if Input.is_action_pressed("speed_plus"):
@@ -76,4 +85,6 @@ func _physics_process(delta): #função principal do jogo. roda 60 vezes por seg
 	else:
 		MAX_SPEED = 100
 		FRICTION = 2000
+		
+	
 

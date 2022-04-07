@@ -34,7 +34,7 @@ var phase1Dialogs = [
 	Dialog.new(phase1DialogsRootPath + "Chapter4/4firstComputerEncounter.json", false, false, "Apresente suas novas ideias para o Jarvis"),
 	Dialog.new(phase1DialogsRootPath + "Chapter5/5secondJarvisEncounter.json", false, false, "Termine a conversa com o Jarvis"),
 	Dialog.new(phase1DialogsRootPath + "Chapter5/6thirdJarvisEncounter.json", false, false, "Converse com o Jarvis novamente"),
-	Dialog.new(phase1DialogsRootPath + "Chapter5/7fourthJarvisEncounter.json", false, false, "")
+	Dialog.new(phase1DialogsRootPath + "Chapter5/7fourthJarvisEncounter.json", false, false, "FIM")
 ]
 
 # Variável de controle de progressão da fase
@@ -56,3 +56,10 @@ var knowledgeTripIndex = 0
 
 # City path
 var cityPath = "res://Scenes/City/city.tscn"
+
+# Variável para checar se animação da nova cidade já aconteceu
+var oldCityAnimationStart = false
+var newCityAnimationFinished = false
+
+# Variável de movimentação do Player
+var canPlayerMove = true

@@ -27,7 +27,7 @@ func _ready():
 func _process(delta):
 	# Checar se o jogador est� perto da porta e apertou bot�o "E"
 	if isNearDoor and Input.is_action_just_pressed("interact"):
-		get_tree().change_scene("res://Scenes/PuzzleLock/puzzleLock.tscn")
+		TransitionScene.startAnimation("res://Scenes/PuzzleLock/puzzleLock.tscn")
 
 
 export(Vector2) var citySpawnPosition
