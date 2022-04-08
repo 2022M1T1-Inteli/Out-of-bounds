@@ -116,6 +116,29 @@ Coloque código do prompt de comando se for necessário
 ```
 
 ## 🗃 Histórico de lançamentos
+* 1.1 - 08/04/2022
+  * Melhorias implementadas da última validação 
+  * Versão final do GDD
+  * Tutoriais
+  * Efeitos Sonoros e Trilha sonora
+
+* 1.0 - 01/04/2022
+  * Todos puzzles implementados 
+  * Terceira atualização da história
+  * Mecânicas, animações implementadas
+  * Progressão de história 
+  
+
+* 0.5 - 18/03/2022
+  * Segunda versão da história implementada 
+  * Melhoria em mecânicas básicas 
+  * Atualização extensa do GDD
+
+* 0.4 - 04/03/2022
+  * Sprites personalizadas 
+  * Final da sprint 2 
+  * Primeira versão da história implementada 
+  
 * 0.3 - 17/02/2022
   * Primeiro executável
   * Finalização do sprint 1
@@ -150,5 +173,8 @@ Coloque código do prompt de comando se for necessário
 Aqui estão as referências usadas no projeto.
 
 1.  <a href="https://www.youtube.com/playlist?list=PL9FzW-m48fn2SlrW0KoLT4n5egNdX-W9a"><b>Tutorial de jogo RPG no Godot</b></a>
-2.  <a href="https://www.youtube.com/playlist?list=PL9FzW-m48fn2SlrW0KoLT4n5egNdX-W9a"><b>Tutorial de jogo RPG no Godot</b></a>
+2.  <a href="https://docs.godotengine.org/en/stable/"><b>Documentação do Godot</b></a>
+3.  <a href="https://kokororeflections.itch.io/kr-cyberpunk-tileset-for-rpgs"><b>Sprites</b></a>
+4.  <a href="https://youtu.be/Oryq2oUpxnE"><b>Star Wars Animation</b></a>
+5.  <a href="https://pt.wikipedia.org/wiki/Among_Us"><b>Amoung Us</b></a>
 
