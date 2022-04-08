@@ -1,5 +1,8 @@
 extends Control
 
+func _ready():
+	Global.restartGame()
+
 # Botão de Start
 func _on_StartBtn_pressed() -> void:
 	if Global.tutorialFinished:

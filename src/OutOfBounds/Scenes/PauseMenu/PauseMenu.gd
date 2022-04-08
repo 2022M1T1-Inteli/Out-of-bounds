@@ -41,6 +41,7 @@ func _on_QuitBtn_pressed():
 		print("Problema mudando de cena")
 	showPauseMenu(false)
 	get_tree().paused = false
+	
 
 
 func setObjectiveAndMapVisibility(visibility):
