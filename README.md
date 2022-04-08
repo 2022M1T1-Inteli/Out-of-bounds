@@ -23,64 +23,43 @@
 
   Um jogo que apresenta um conteúdo personalizado e gamificado de Diversidade e Inclusão. Foi inspirado em materiais apresentados pela  <a      href="https://www.ambev.com.br/">AMBEV</a> e propõem imergir o usuário em uma história diferente que utiliza a vivência de situações no jogo que fazem analogias com as situações de racismo na Terra, que o farão refletir e aprender.
 <p align="center">
-<img src="https://github.com/2022M1T1/Projeto3/blob/main/imagens/logonew.png" alt="OUT OF BOUNDS by Rainbow Dev" border="0"></p>
+<img src="https://adalove.inteli.edu.br/newada-img/groups/040872f7-cb97-4430-b1a0-da80f9311131.png" alt="OUT OF BOUNDS by Rainbow Dev" border="0"></p>
  
 <p align="center">Imagem by <a href="google.com">Rainbow Dev</a> Under <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
 </p>
 
 <br><br>
 
+## Cenas do Jogo
+
 ## 🛠 Estrutura de pastas
 
--Raiz<br>
-|<br>
-|-->documentos<br>
-  &emsp;|-->antigos<br>
-  &emsp;|GDD.docx ou Documentação.docx<br>
-|-->executáveis<br>
-  &emsp;|-->windows<br>
-  &emsp;|-->android<br>
-  &emsp;|-->HTML<br>
-|-->imagens<br>
-|-->src<br>
-|readme.md<br>
-|license.txt<br>
+- :package: <b>Projeto 3</b>
+  - :paperclip: __[Documentos](documentos/)__
+     - Aqui estará toda a documentação do projeto, contendo toda a contextualização do projeto
+   - :computer: __[Executáveis](executaveis/)__
+     - :file_folder: Windows 
+     - :file_folder: Android
+     - :file_folder: HTML  
+   - :camera: __[Imagens](imagens/)__
+   - :floppy_disk:__[Src](src)__
+     - :iphone: <b>OutOfBounds_mobile</b>
+     - :file_folder: <b>OutOfBounds</b>
+   - :page_facing_up: [README.md](README.md)
+   - :scroll: [license.txt](license.txt)
 
-A pasta raiz contem dois arquivos que devem ser alterados:
-
-<b>README.MD</b>: Arquivo que serve como guia e explicação geral sobre seu projeto. O mesmo que você está lendo agora.
-
-<b>license.txt</b>: Arquivo de licença do projeto, para que qualquer um possa entender até que ponto podem utilizar seu projeto. Aconselhável utilizar a licença Creative Commons Attribution 4.0 International.
-
-Há também 4 pastas que seguem da seguinte forma:
-
-<b>documentos</b>: Aqui estarão todos os documentos do projeto, mas principalmente o <b>GDD (Game Design Document)/Documentação do Sistema</b>. Há uma pasta <b>antigos</b> onde estarão todas as versões antigas da documentação.
-
-<b>executáveis</b>: Aqui estarão todos os executáveis do jogo, prontos para rodar. Há no mínimo 3 pastas, uma para binários <b>Windows</b>, uma para binários <b>android</b> e uma para a <b>Web/HTML</b>
-
-<b>imagens</b>: Algumas imagens do jogo/sistema e logos prontos para serem utilizados e visualizados.
-
-<b>src</b>: Nesta pasta irá todo o código fonte do jogo/sistema, pronto para para ser baixado e modificado.
 
 ## 🛠 Instalação
 
 <b>Android:</b>
 
-Faça o Download do JOGO.apk no seu celular.
+Faça o Download do OutOfBounds.apk no seu celular.
 Execute o APK e siga as instruções de seu telefone.
-
-```sh
-Coloque código do prompt de comando se for necessário
-```
 
 <b>Windows:</b>
 
 Não há instalação! Apenas executável!
-Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro programa.
-
-```sh
-Coloque código do prompt de comando se for necessário
-```
+Encontre o OutOfBounds.exe na pasta executáveis e execute-o como qualquer outro programa.
 
 <b>HTML:</b>
 
@@ -89,15 +68,14 @@ Encontre o index.html na pasta executáveis e execute-o como uma página WEB (at
 
 ## 📈 Exemplo de uso
 
-  Treinamentos de:
-    funcionarios para terem um avanço de visão sobre Diversidade e inclusão
-
+  Nosso jogo foi planejado para que possa ser aplicado de forma versátil seja no aprimoramento das relações interpessoais em equipes ou mesmo como um jogo de entretenimento diferente para quem é apaixonado por histórias. 
+  
 ## 💻 Configuração para Desenvolvimento
 
-Para utilizar 
+Para a produção desse game, utilizamos o Godot como plataforma. Antes de clonar nosso repositório, baixe o Godot
 
 <div>
-  <a href="https://godotengine.org/">
+  <a href="https://godotengine.org/download">
 </div>
 <div style="display: inline_block"><br>
   <img align="center" alt="Dive-Inc-Godot" height="60" width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original-wordmark.svg">
@@ -107,11 +85,11 @@ Para utilizar
 
 &emsp;
 
-```sh
-make install
-npm test
-Coloque código do prompt de comando se for necessário
-```
+Após isso, baixe o repositório localmente <i>(baixe no formato .zip)</i>, ou faça um clone dele para sua máquina!
+
+<p align="center">
+ <img src="imagens/download-gif.gif" />
+</p>
 
 ## 🗃 Histórico de lançamentos
 * 1.1 - 08/04/2022
