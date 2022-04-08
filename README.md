@@ -12,11 +12,11 @@
 
   *  <a href="https://www.linkedin.com/in/lyorrei-shono-quint%C3%A3o-bab43a232/" target="_blank">Lyorrei Shono Quintão</a>
   *  <a href="https://www.linkedin.com/in/ant%C3%B4nio-ribeiro-cavalcante-7a7658203/" target="_blank">Antônio Ribeiro</a>
-  *  <a href="https://www.linkedin.com/in/lyorrei-shono-quint%C3%A3o-bab43a232/" target="_blank">Paulo Evangelista</a>
+  *  <a href=" " target="_blank">Paulo Evangelista</a>
   *  <a href="https://www.linkedin.com/in/gabecarneiro/" target="_blank">Gabriel Carneiro</a>
   * <a href="https://www.linkedin.com/in/henrique-lemos-freire-matias-738440232/" target="_blank">Henrique Lemos</a>
-  *<a href="https://www.linkedin.com/in/melyssa-rojas-221610204/" target="_blank">Melyssa Rojas </a>
-  * <a href="https://www.linkedin.com/in/lyorrei-shono-quint%C3%A3o-bab43a232/" target="_blank">Thomas Brand</a>
+  * <a href="https://www.linkedin.com/in/melyssa-rojas-221610204/" target="_blank">Melyssa Rojas </a>
+  * <a href=" " target="_blank">Thomas Brand</a>
   * <a href="https://www.linkedin.com/in/cristiane-de-andrade-coutinho-4b9684213/" target="_blank">Cristiane Andrade</a>
 
 ## Descrição
@@ -149,5 +149,6 @@ Coloque código do prompt de comando se for necessário
 
 Aqui estão as referências usadas no projeto.
 
-1. <https://www.youtube.com/playlist?list=PL9FzW-m48fn2SlrW0KoLT4n5egNdX-W9a> (Tutorial de jogo RPG no Godot)
+1.  <a href="https://www.youtube.com/playlist?list=PL9FzW-m48fn2SlrW0KoLT4n5egNdX-W9a"><b>Tutorial de jogo RPG no Godot</b></a>
+2.  <a href="https://www.youtube.com/playlist?list=PL9FzW-m48fn2SlrW0KoLT4n5egNdX-W9a"><b>Tutorial de jogo RPG no Godot</b></a>
 
