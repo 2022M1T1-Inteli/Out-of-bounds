@@ -13,7 +13,7 @@
   * Lyorrei Shono Quintão
   * Antônio Ribeiro
   * Paulo Evangelista
-  *  <a href="https://www.linkedin.com/in/gabecarneiro/" target="_blanck">Gabriel Carneiro</a>
+  *  <a href="https://www.linkedin.com/in/gabecarneiro/" target="_blank">Gabriel Carneiro</a>
   * Henrique Lemos
   * Melyssa Rojas
   * Thomas Brand
