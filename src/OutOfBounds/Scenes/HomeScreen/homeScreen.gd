@@ -5,7 +5,7 @@ func _on_StartBtn_pressed() -> void:
 	if Global.tutorialFinished:
 		TransitionScene.startAnimation("res://Scenes/SpaceShip/spaceShip.tscn")
 	else:
-		TransitionScene.startAnimation("res://Scenes/Tutorial/tutorial.tscn")
+		TransitionScene.startAnimation("res://Scenes/GenderSelect/genderSelect.tscn")
 
 	$AudioStreamPlayer2D.play()
 

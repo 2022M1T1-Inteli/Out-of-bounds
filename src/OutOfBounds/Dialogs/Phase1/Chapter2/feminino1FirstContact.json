@@ -1,0 +1,28 @@
+[
+    {
+        "Name": "Astronauta",
+        "Text": "Oi eu sou a Astronauta. Acabei de sair de um acidente que destruiu o meu transporte. Estou perdida aqui. Preciso de ajuda para consertá-la."
+    },
+    { "Name": "Ser Desconhecido", "Text": "......." },
+    {
+        "Name": "Ser Desconhecido",
+        "Text": "Olá Astronauta, bem-vinda ao planeta Brahma. Eu sou Stuart, me considere seu guia. Vou te ajudar a reconstruir sua nave. Quais peças você precisa?"
+    },
+    { "Name": "Astronauta","Text": "Muito obrigada! Deixe-me verificar..." },
+    {
+        "Name": "Astronauta",
+        "Text": "..."
+    },
+    {
+        "Name": "Astronauta",
+        "Text": "Estou precisando de uma bateria."
+    },
+    {
+        "Name": "Stuart",
+        "Text": "Sem problemas! Primeiro, siga o caminho sinalizado até a mecânica. Lá você irá encontrar o Jarvis, mas já aviso, ele é extremamente preconceituoso. Te aconselho a fazer um bom acordo com ele. Te desejo boa sorte na sue aventura!"
+    },
+    {
+        "Name": "Astronauta",
+        "Text": "Muito obrigada!"
+    }
+]
