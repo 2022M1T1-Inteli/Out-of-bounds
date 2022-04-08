@@ -20,11 +20,11 @@ __meta__ = {
 [node name="Label" type="Label" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 7.0
+margin_left = 17.0
 margin_top = 1.0
-margin_right = 197.0
-margin_bottom = 79.0
-rect_scale = Vector2( 0.6, 0.6 )
+margin_right = 271.0
+margin_bottom = 121.0
+rect_scale = Vector2( 0.5, 0.5 )
 custom_fonts/font = SubResource( 1 )
 text = "Parabéns, você finalizou a missão. Como um astronauta perdido em um planeta com alienígenas diferentes, você percebeu que algumas relações entre eles são iguais às na terra. Também ficou claro as diversas formas de como o racismo se apresenta, podendo ser de formas sutis ou agressivas. Em todos os casos lembre-se sempre: racismo é crime e deve ser denunciado. Até a próxima viajante, e: continue instigando os outros a mudar!"
 align = 1

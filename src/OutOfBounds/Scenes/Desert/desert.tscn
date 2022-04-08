@@ -1,4 +1,4 @@
-[gd_scene load_steps=136 format=2]
+[gd_scene load_steps=137 format=2]
 
 [ext_resource path="res://Scenes/Desert/desert.gd" type="Script" id=1]
 [ext_resource path="res://Assets/World/IceTileset.png" type="Texture" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://Assets/Desert/stones_5.png" type="Texture" id=20]
 [ext_resource path="res://Scenes/Npcs/Stuart/stuart.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Assets/Desert/greenery_10.png" type="Texture" id=22]
+[ext_resource path="res://Assets/World/Brahma.png" type="Texture" id=23]
 [ext_resource path="res://Assets/World/waterAnimatedTexture.tres" type="Texture" id=24]
 [ext_resource path="res://ExclusiveAssets/Textures/Cyberpunk_D.png" type="Texture" id=25]
 [ext_resource path="res://Scenes/Decorations/blueChandelier.tscn" type="PackedScene" id=26]
@@ -1713,7 +1714,7 @@ position = Vector2( 456.509, 610.875 )
 position = Vector2( 416.509, 610.974 )
 
 [node name="grass67" parent="YSort/YSort" instance=ExtResource( 30 )]
-position = Vector2( 440.519, 614.915 )
+position = Vector2( 440.531, 619.915 )
 
 [node name="grass68" parent="YSort/YSort" instance=ExtResource( 28 )]
 position = Vector2( 474.474, 596.831 )
@@ -1728,7 +1729,7 @@ position = Vector2( 388.556, 630.043 )
 position = Vector2( 507.558, 630.75 )
 
 [node name="grass71" parent="YSort/YSort" instance=ExtResource( 29 )]
-position = Vector2( 388.595, 646.043 )
+position = Vector2( 389.615, 654.041 )
 
 [node name="grass72" parent="YSort/YSort" instance=ExtResource( 30 )]
 position = Vector2( 505.6, 647.754 )
@@ -1743,13 +1744,13 @@ position = Vector2( 463.479, 598.858 )
 position = Vector2( 452.459, 590.885 )
 
 [node name="grass76" parent="YSort/YSort" instance=ExtResource( 30 )]
-position = Vector2( 373.581, 640.08 )
+position = Vector2( 370.583, 641.088 )
 
 [node name="grass77" parent="YSort/YSort" instance=ExtResource( 28 )]
-position = Vector2( 375.551, 628.075 )
+position = Vector2( 372.541, 624.083 )
 
 [node name="grass78" parent="YSort/YSort" instance=ExtResource( 28 )]
-position = Vector2( 372.603, 649.083 )
+position = Vector2( 372.615, 654.082 )
 
 [node name="grass79" parent="YSort/YSort" instance=ExtResource( 28 )]
 position = Vector2( 386.529, 619.048 )
@@ -1867,6 +1868,12 @@ position = Vector2( 502.437, 581.762 )
 
 [node name="grass117" parent="YSort/YSort" instance=ExtResource( 28 )]
 position = Vector2( 524.437, 581.708 )
+
+[node name="Brahma" type="Sprite" parent="YSort/YSort"]
+position = Vector2( 765.845, -26.2419 )
+rotation = -1.08909
+scale = Vector2( 0.00375433, 0.0030423 )
+texture = ExtResource( 23 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 413, 48 )
