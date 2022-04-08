@@ -21,9 +21,9 @@
 
 ## Descrição
 
-📜Nosso projeto consiste em uma forma divertida de ensinar diversidade e inclusão aos funcionários da <a href="https://www.ambev.com.br/">AMBEV</a>.
+  Um jogo que apresenta um conteúdo personalizado e gamificado de Diversidade e Inclusão. Foi inspirado em materiais apresentados pela  <a      href="https://www.ambev.com.br/">AMBEV</a> e propõem imergir o usuário em uma história diferente que utiliza a vivência de situações no jogo que fazem analogias com as situações de racismo na Terra, que o farão refletir e aprender.
 <p align="center">
-<img src="https://adalove.inteli.edu.br/newada-img/groups/040872f7-cb97-4430-b1a0-da80f9311131.png" alt="NOME DO JOGO AQUI" border="0"></p>
+<img src="https://github.com/2022M1T1/Projeto3/blob/main/imagens/logonew.png" alt="OUT OF BOUNDS by Rainbow Dev" border="0"></p>
  
 <p align="center">Imagem by <a href="google.com">Rainbow Dev</a> Under <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
 </p>
@@ -94,9 +94,7 @@ Encontre o index.html na pasta executáveis e execute-o como uma página WEB (at
 
 ## 💻 Configuração para Desenvolvimento
 
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
-
-Para abrir este projeto você necessita das seguintes ferramentas:
+Para utilizar 
 
 <div>
   <a href="https://godotengine.org/">
