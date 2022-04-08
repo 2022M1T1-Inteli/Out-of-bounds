@@ -10,14 +10,14 @@
 
 ## Integrantes: 
 
-  * Lyorrei Shono Quintão
-  * Antônio Ribeiro
-  * Paulo Evangelista
+  *  <a href="https://www.linkedin.com/in/lyorrei-shono-quint%C3%A3o-bab43a232/" target="_blank">Lyorrei Shono Quintão</a>
+  *  <a href="https://www.linkedin.com/in/ant%C3%B4nio-ribeiro-cavalcante-7a7658203/" target="_blank">Antônio Ribeiro</a>
+  *  <a href="https://www.linkedin.com/in/lyorrei-shono-quint%C3%A3o-bab43a232/" target="_blank">Paulo Evangelista</a>
   *  <a href="https://www.linkedin.com/in/gabecarneiro/" target="_blank">Gabriel Carneiro</a>
-  * Henrique Lemos
-  * Melyssa Rojas
-  * Thomas Brand
-  * Cristiane Andrade
+  * <a href="https://www.linkedin.com/in/henrique-lemos-freire-matias-738440232/" target="_blank">Henrique Lemos</a>
+  *<a href="https://www.linkedin.com/in/melyssa-rojas-221610204/" target="_blank">Melyssa Rojas </a>
+  * <a href="https://www.linkedin.com/in/lyorrei-shono-quint%C3%A3o-bab43a232/" target="_blank">Thomas Brand</a>
+  * <a href="https://www.linkedin.com/in/cristiane-de-andrade-coutinho-4b9684213/" target="_blank">Cristiane Andrade</a>
 
 ## Descrição
 
