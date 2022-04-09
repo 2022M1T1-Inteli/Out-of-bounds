@@ -18,9 +18,6 @@ margin_bottom = 120.0
 rect_scale = Vector2( 0.2, 0.2 )
 icon = ExtResource( 3 )
 flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Background" type="Sprite" parent="MapContainer"]
 visible = false

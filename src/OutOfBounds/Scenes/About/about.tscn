@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=2]
+[gd_scene load_steps=76 format=2]
 
 [ext_resource path="res://Scenes/About/about.gd" type="Script" id=1]
 [ext_resource path="res://Assets/TelaInicial/Space Background (5).png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Assets/TelaInicial/7663630319.png" type="Texture" id=9]
 [ext_resource path="res://Assets/TelaInicial/logonew.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Music and Sounds/MusicGameList/StartMusic.mp3" type="AudioStream" id=11]
+[ext_resource path="res://Assets/UI/group.png" type="Texture" id=12]
 
 [sub_resource type="AtlasTexture" id=202]
 atlas = ExtResource( 9 )
@@ -265,7 +266,7 @@ size = 9
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=264]
-size = 8
+size = 7
 font_data = ExtResource( 4 )
 
 [node name="Credito" type="Node2D"]
@@ -290,12 +291,12 @@ texture_normal = ExtResource( 8 )
 texture_hover = ExtResource( 6 )
 
 [node name="Inteli" type="Sprite" parent="."]
-position = Vector2( 224.875, 101.187 )
-scale = Vector2( 0.248853, 0.32555 )
+position = Vector2( 107, 156 )
+scale = Vector2( 0.296158, 0.361607 )
 texture = ExtResource( 5 )
 
 [node name="Ambev" type="Sprite" parent="."]
-position = Vector2( 117, 109 )
+position = Vector2( 37, 175 )
 scale = Vector2( 0.22973, 0.280488 )
 texture = ExtResource( 3 )
 
@@ -316,7 +317,7 @@ position = Vector2( 146, 57 )
 rotation = 0.274017
 scale = Vector2( 0.297695, 0.285036 )
 frames = SubResource( 262 )
-frame = 53
+frame = 33
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -334,17 +335,24 @@ inclusão de maneira leve e exemplificada.
 Desenvolvido pela RainbowDev para a Ambev"
 
 [node name="Label2" type="Label" parent="."]
-margin_left = -80.0
-margin_top = 158.0
-margin_right = 403.0
-margin_bottom = 210.0
+margin_left = -7.0
+margin_top = 89.0
+margin_right = 154.0
+margin_bottom = 141.0
 custom_fonts/font = SubResource( 264 )
-text = "Paulo Presa - Henrique Lemos - Lyorrei Quintão - Gabriel Carneiro
-Melyssa Rojas - Thomas Brand - Cristiane de Andrade - Antonio Ribeiro"
+text = "Paulo Presa - Henrique Lemos
+Lyorrei Quintão - Gabriel Carneiro
+Melyssa Rojas - Thomas Brand
+Cristiane de Andrade - Antonio Ribeiro"
 align = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 11 )
 autoplay = true
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 233.188, 133.5 )
+scale = Vector2( 0.0573209, 0.0584538 )
+texture = ExtResource( 12 )
 
 [connection signal="pressed" from="VoltarBtn" to="." method="_on_TextureButton_pressed"]

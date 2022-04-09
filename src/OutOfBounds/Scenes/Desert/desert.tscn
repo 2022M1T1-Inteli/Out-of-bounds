@@ -1903,6 +1903,4 @@ shape = SubResource( 104 )
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 18 )
 
-[connection signal="tree_exited" from="." to="." method="_on_Desert_tree_exited"]
-[connection signal="tree_exiting" from="." to="." method="_on_Desert_tree_exiting"]
 [connection signal="body_entered" from="CityDoor" to="." method="_on_CityDoor_body_entered"]

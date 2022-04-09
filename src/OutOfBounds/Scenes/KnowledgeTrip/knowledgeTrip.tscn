@@ -1,9 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Keys/spacebar.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Computer/computer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/KnowledgeTrip/knowledgeTrip.gd" type="Script" id=3]
 [ext_resource path="res://Assets/KnowledgeTrip/talkBallon.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Anybody-SemiBold.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 5 )
 
 [sub_resource type="Animation" id=1]
 resource_name = "BallonAppearence"
@@ -80,13 +84,11 @@ margin_right = 50.0
 margin_bottom = 6.0
 rect_scale = Vector2( 1.5, 1.5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
 align = 1
 valign = 1
 autowrap = true
 clip_text = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
 autoplay = "BallonAppearence"
