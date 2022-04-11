@@ -16,7 +16,7 @@
   *  <a href="https://www.linkedin.com/in/gabecarneiro/" target="_blank">Gabriel Carneiro</a>
   * <a href="https://www.linkedin.com/in/henrique-lemos-freire-matias-738440232/" target="_blank">Henrique Lemos</a>
   * <a href="https://www.linkedin.com/in/melyssa-rojas-221610204/" target="_blank">Melyssa Rojas </a>
-  * <a href=" " target="_blank">Thomas Brand</a>
+  * <a href="https://www.linkedin.com/in/thomas-brand-a4a21a237/" target="_blank">Thomas Brand</a>
   * <a href="https://www.linkedin.com/in/cristiane-de-andrade-coutinho-4b9684213/" target="_blank">Cristiane Andrade</a>
 
 ## Descrição
