@@ -32,6 +32,29 @@
 
 ## Cenas do Jogo
 
+### Tela inical do jogo
+<p>
+ <img src="imagens/TelaInicial.gif" />
+</p>
+
+### Escolha da linguagem 
+<p>
+ <img src="imagens/EscolhaDeGenero.png" />
+</p>
+
+### Tutorial 
+<p>
+ <img src="imagens/Tutorial.gif" />
+</p>
+
+### Ambientes
+<p>
+ <img src="imagens/Deserto.png" />
+</p>
+<p>
+ <img src="imagens/Cidade.png" />
+</p>
+
 ## 🛠 Estrutura de pastas
 
 - :package: <b>Projeto 3</b>
