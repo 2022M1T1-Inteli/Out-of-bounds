@@ -78,17 +78,20 @@ scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="ColorRect/TalkBallon"]
-margin_left = -147.0
-margin_top = -142.0
-margin_right = 50.0
-margin_bottom = 6.0
-rect_scale = Vector2( 1.5, 1.5 )
+margin_left = -172.0
+margin_top = -138.0
+margin_right = 119.0
+margin_bottom = 31.0
+rect_scale = Vector2( 1.2, 1.2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 3 )
 align = 1
 valign = 1
 autowrap = true
 clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
 autoplay = "BallonAppearence"

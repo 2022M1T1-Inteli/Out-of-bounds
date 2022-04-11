@@ -9,13 +9,13 @@ var metheorit1Texts = [
 ]
 
 var metheorit2Texts = [
-	"Também pode-se notar a discrepância de oportunidades entre brancos e pretos. Infelizmente pessoas brancas costumam ter mais oportunidades, baseado unicamente em sua cor. Por isso, Jarvis ofereceu e Astronanuta uma profissão que ele acredita que requer pouca inteligencia (faxineiro).",
-	"Muitas vezes, as pessoas são julgadas com base em padrões de beleza predeterminados pela sociedade. Racistas utilizam desses padrões para diminuir outros individuos e os desprezam por causa de sua cor ou característica diferente, assim como aconteceu com a secretaria."
+	"Também pode-se notar a discrepância de oportunidades entre brancos e pretos. Infelizmente pessoas brancas costumam ter mais oportunidades. Por isso, Jarvis te oferece uma profissão que ele acredita que requer pouca inteligência (faxineiro).",
+	"Muitas vezes, as pessoas são julgadas com base em padrões de beleza predeterminados pela sociedade. Racistas utilizam desses padrões para diminuir outros indivíduos e os desprezam por causa de sua cor ou característica diferente, assim como aconteceu com a secretária."
 ]
 
 var metheorit3Texts = [
 	"O racismo vai além de xingamentos e comparações: duvidar da inteligência ou fazer acusações com base na cor são alguns exemplos de atitudes preconceituosas. Análise as situações do seu dia a dia e sempre lembre: o racismo está também nas pequenas ações!",
-	"Pode não parecer comum, mas muitas pessoas não são contratadas exclusivamente por causa de sua aparência. Ignorar atributos intelectuais e experiências apenas por causa de diferenças físicas é uma das atitudes mais claras de racismo e que mais acontece no meio profissional."
+	"Pode não parecer comum, mas muitas pessoas não são contratadas por causa de sua aparência. Ignorar atributos intelectuais e experiências apenas por causa de diferenças físicas é uma das atitudes mais claras de racismo e que mais acontece no meio profissional."
 ]
 
 # Fun��o executada quando a cena � carregada

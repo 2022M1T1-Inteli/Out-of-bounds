@@ -12,7 +12,7 @@ var lengthBox = 0
 var currentType = null
 
 # Array com a sequência correta
-var correctCode = ["1E", "2C", "3D", "4A", "5B"]
+var correctCode = ["1E", "2C", "3A", "4D", "5B"]
 
 # Função que roda em Loop enquanto o jogo está sendo executado
 func _process(delta):

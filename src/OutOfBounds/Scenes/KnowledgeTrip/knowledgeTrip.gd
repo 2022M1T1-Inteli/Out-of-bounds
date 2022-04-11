@@ -5,7 +5,7 @@ var loadingImage = load("res://Assets/KnowledgeTrip/loading.png")
 var canSkip = false
 
 # Variável contendo os textos
-var texts = ["Olá! Sou o Bock, seu assistente nessa sua jornada! Agora é a hora da viagem do conhecimento! Aqui vamos lapidar as situações que estão acontecendo com você e aprofundá-las.", "Olá viajante, cá estou novamente. Preparade para mais uma viagem?"]
+var texts = ["Olá! Sou o Bock, seu assistente nessa sua jornada! Agora é a hora da viagem do conhecimento! Aqui vamos lapidar as situações que estão acontecendo com você e aprofundá-las.", "Olá viajante, cá estou novamente. Vamos para mais uma viagem?"]
 
 func _ready():
 

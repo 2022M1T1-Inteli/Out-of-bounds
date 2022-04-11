@@ -1,12 +1,12 @@
 [
     {
         "Name": "Astronauta",
-        "Text": "Oi eu sou e Astronauta. Acabei de sair de um acidente que destruiu o meu transporte. Estou perdide aqui. Preciso de ajuda para consertá-la."
+        "Text": "Oi eu sou e Astronauta. Acabei de sair de um acidente que destruiu o meu transporte. Estou perdide aqui. Preciso de ajuda para consertá-lo."
     },
     { "Name": "Ser Desconhecido", "Text": "......." },
     {
         "Name": "Ser Desconhecido",
-        "Text": "Olá Astronauta, bem vinde ao planeta Brahma. Eu sou Stuart, me considere seu guia. Vou te ajudar a reconstruir sua nave. Quais peças você precisa?"
+        "Text": "Olá Astronauta, bem vinde ao planeta Brahma. Eu sou Stuart, me considere seu guia. Vou te ajudar a reconstruir sua nave. Do que você precisa?"
     },
     { "Name": "Astronauta","Text": "Muito obrigade! Deixe-me verificar..." },
     {
