@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/JOURNEY Ambient Music  Ambience í ¼í¾µ Desert Peace (Journey Soundtrack  OST).mp3-06bba61e26563e15766998f7dd3cabb1.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music and Sounds/MusicGameList/JOURNEY Ambient Music  Ambience í ¼í¾µ Desert Peace (Journey Soundtrack  OST).mp3"
+dest_files=[ "res://.import/JOURNEY Ambient Music  Ambience í ¼í¾µ Desert Peace (Journey Soundtrack  OST).mp3-06bba61e26563e15766998f7dd3cabb1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

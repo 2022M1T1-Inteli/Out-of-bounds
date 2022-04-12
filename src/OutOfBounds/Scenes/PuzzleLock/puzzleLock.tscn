@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Scenes/PuzzleLock/puzzleLock.gd" type="Script" id=1]
 [ext_resource path="res://Assets/PuzzleLock/Numbers/Number1.png" type="Texture" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Assets/PuzzleLock/KeyPad.png" type="Texture" id=15]
 [ext_resource path="res://Assets/Anybody-SemiBold.ttf" type="DynamicFontData" id=16]
 [ext_resource path="res://Assets/PuzzleLock/Display.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Music and Sounds/MusicGameList/ButtonAudio.mp3" type="AudioStream" id=18]
 [ext_resource path="res://Assets/PuzzleLock/PressedNumbers/Number0Pressed.png" type="Texture" id=19]
 [ext_resource path="res://Assets/PuzzleLock/PressedNumbers/DeletePressed.png" type="Texture" id=20]
 [ext_resource path="res://Assets/PuzzleLock/PressedNumbers/Number2Pressed.png" type="Texture" id=21]
@@ -81,6 +82,9 @@ margin_bottom = 18.0
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 29 )
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="HBoxContainer2/LeftBtn/Button1"]
+stream = ExtResource( 18 )
+
 [node name="Button4" type="TextureButton" parent="HBoxContainer2/LeftBtn"]
 margin_top = 22.0
 margin_right = 19.0
@@ -101,6 +105,9 @@ margin_right = 19.0
 margin_bottom = 86.0
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 20 )
+
+[node name="AudioDelet" type="AudioStreamPlayer2D" parent="HBoxContainer2/LeftBtn/Delete"]
+stream = ExtResource( 18 )
 
 [node name="MiddleBtn" type="VBoxContainer" parent="HBoxContainer2"]
 margin_left = 23.0
@@ -171,6 +178,9 @@ margin_right = 19.0
 margin_bottom = 86.0
 texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 26 )
+
+[node name="AudioConf" type="AudioStreamPlayer2D" parent="HBoxContainer2/RightBtn/Confirme"]
+stream = ExtResource( 18 )
 
 [node name="Screen" type="Label" parent="."]
 margin_left = 60.0
