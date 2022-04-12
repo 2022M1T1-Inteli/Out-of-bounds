@@ -10,3 +10,4 @@ export_presets.cfg
 
 # Exclusive Assets ignores
 src/OutOfBounds/ExclusiveAssets
+src/OutOfBounds_mobile/ExclusiveAssets
