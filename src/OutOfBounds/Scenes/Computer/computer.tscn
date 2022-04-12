@@ -62,7 +62,7 @@ script = ExtResource( 2 )
 position = Vector2( -5.99999, -8 )
 scale = Vector2( 0.057229, 0.0566038 )
 frames = SubResource( 5 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="WallComputer2" type="NinePatchRect" parent="."]
@@ -107,6 +107,7 @@ position = Vector2( -9.25, 10.25 )
 shape = SubResource( 1 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
 stream = ExtResource( 8 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

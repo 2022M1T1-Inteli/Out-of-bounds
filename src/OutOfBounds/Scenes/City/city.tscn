@@ -2841,6 +2841,7 @@ region_rect = Rect2( 322.399, 8.08816, 64.1651, 52.8418 )
 axis_stretch_horizontal = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
 stream = ExtResource( 28 )
 autoplay = true
 

@@ -2419,6 +2419,9 @@ region_rect = Rect2( 361.313, 66.6566, 78.698, 27.3372 )
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 589, 155 )
 
+[node name="AudioStreamPlayer" parent="YSort/Player" index="6"]
+pause_mode = 2
+
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 zoom = Vector2( 1.4, 1.4 )
 limit_left = -200

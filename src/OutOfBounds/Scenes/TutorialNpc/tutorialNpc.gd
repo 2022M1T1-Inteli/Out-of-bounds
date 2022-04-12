@@ -2,6 +2,7 @@ extends "res://Classes/npc.gd"
 
 func _ready():
 	# Setar o caminho do primeiro diálogo desse NPC 
+
 	dialogPath = Global.tutorialDialogPath
 
 # Função executada quando o Player chega perto do NPC
