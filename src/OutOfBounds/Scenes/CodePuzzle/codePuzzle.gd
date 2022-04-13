@@ -89,7 +89,7 @@ func _on_Verify_pressed():
 		#Condicao caso os valores inseridos estejam na ordem correta ou não
 		if elementLabel.text == correctCode[idx-1]:
 			colorReact.color = green
-			$Win.play()
+			
 		else:
 			colorReact.color = red
 			finished = false
@@ -110,6 +110,7 @@ func _on_Verify_pressed():
 	# Setar variável mostrando que puzzle acabou
 	Global.codePuzzleFinished = true
 
+	$Win.play()
 	# Mudar de cena
 	TransitionScene.startAnimation("res://Scenes/Mecanic/Mecanica.tscn")
 
