@@ -1,4 +1,4 @@
-[gd_scene load_steps=137 format=2]
+[gd_scene load_steps=136 format=2]
 
 [ext_resource path="res://Scenes/Desert/desert.gd" type="Script" id=1]
 [ext_resource path="res://Assets/World/IceTileset.png" type="Texture" id=2]
@@ -17,7 +17,6 @@
 [ext_resource path="res://Assets/Desert/GrassDesert.png" type="Texture" id=15]
 [ext_resource path="res://Assets/Desert/stones_9.png" type="Texture" id=16]
 [ext_resource path="res://Assets/Desert/greenery_8.png" type="Texture" id=17]
-[ext_resource path="res://Assets/Music and Sounds/MusicGameList/GameMusic3.mp3" type="AudioStream" id=18]
 [ext_resource path="res://Scenes/OldSkull/oldSkull.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Assets/Desert/stones_5.png" type="Texture" id=20]
 [ext_resource path="res://Scenes/Npcs/Stuart/stuart.tscn" type="PackedScene" id=21]
@@ -1901,6 +1900,5 @@ position = Vector2( -8, -40 )
 shape = SubResource( 104 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 18 )
 
 [connection signal="body_entered" from="CityDoor" to="." method="_on_CityDoor_body_entered"]
