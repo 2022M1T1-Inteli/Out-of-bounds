@@ -11,5 +11,5 @@ dest_files=[ "res://.import/travelLightMusic.mp3-5554ad76a67f12dda1752c8ede74ae6
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

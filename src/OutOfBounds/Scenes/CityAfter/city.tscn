@@ -2889,7 +2889,7 @@ collision_mask = 0
 position = Vector2( 728.125, 59 )
 shape = SubResource( 121 )
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
 pause_mode = 2
 stream = ExtResource( 28 )
 autoplay = true
