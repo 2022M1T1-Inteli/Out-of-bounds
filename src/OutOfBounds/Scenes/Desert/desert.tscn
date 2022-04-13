@@ -1903,7 +1903,7 @@ shape = SubResource( 104 )
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
 pause_mode = 2
 stream = ExtResource( 18 )
-volume_db = 15.0
+volume_db = 23.0
 autoplay = true
 
 [connection signal="body_entered" from="CityDoor" to="." method="_on_CityDoor_body_entered"]

@@ -65,6 +65,7 @@ func onButtonPressed(content):
 		# Reiniciar o ciclo da tipagem dos caracteres dos labels
 		currentType = typeof(content)
 		
+		$AudioStreamPlayer.play()
 	# Resetar tipagem dos valores inseridos
 	content = null
 
@@ -88,10 +89,11 @@ func _on_Verify_pressed():
 		#Condicao caso os valores inseridos estejam na ordem correta ou não
 		if elementLabel.text == correctCode[idx-1]:
 			colorReact.color = green
-			
+			$Win.play()
 		else:
 			colorReact.color = red
 			finished = false
+			$Error.play()
 			
 		# Loop em todas as Labels para desabilitar os botões
 		for item in [1, 2, 3, 4, 5, "A", "B", "C", "D", "E"]:
