@@ -67,7 +67,7 @@ func onButtonPressed(content):
 		
 	# Resetar tipagem dos valores inseridos
 	content = null
-	$ColorRect/NinePatchRect/Button1/ButtonAudio.play()
+
 # Função executada quando o botão de verificar é pressionado
 func _on_Verify_pressed():
 	
@@ -110,7 +110,6 @@ func _on_Verify_pressed():
 
 	# Mudar de cena
 	TransitionScene.startAnimation("res://Scenes/Mecanic/Mecanica.tscn")
-	$ColorRect/NinePatchRect/Verify/VeryAudio.play()
 
 # Função executada quando o Timer acabar
 func _on_Timer_timeout():

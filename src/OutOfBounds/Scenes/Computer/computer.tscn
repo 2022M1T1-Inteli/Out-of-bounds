@@ -52,7 +52,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 28, 29.75 )
+extents = Vector2( 51.75, 26.75 )
 
 [node name="Computer" type="StaticBody2D"]
 collision_mask = 0
@@ -103,11 +103,10 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -9, 13.25 )
+position = Vector2( -9.25, 10.25 )
 shape = SubResource( 1 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-pause_mode = 2
 stream = ExtResource( 8 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
