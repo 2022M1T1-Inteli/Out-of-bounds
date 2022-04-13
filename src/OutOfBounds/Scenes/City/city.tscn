@@ -2257,6 +2257,9 @@ rect_pivot_offset = Vector2( 459, 192 )
 texture = ExtResource( 6 )
 expand = true
 stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TileMap2" type="TileMap" parent="."]
 position = Vector2( 2, 6 )
@@ -2427,7 +2430,7 @@ position = Vector2( 470, 339 )
 position = Vector2( 778, 114 )
 
 [node name="Decor3" parent="YSort/YSort" instance=ExtResource( 23 )]
-position = Vector2( 360, 279 )
+position = Vector2( 354, 129 )
 
 [node name="FireBarrel10" parent="YSort/YSort" instance=ExtResource( 21 )]
 position = Vector2( 271, -37 )

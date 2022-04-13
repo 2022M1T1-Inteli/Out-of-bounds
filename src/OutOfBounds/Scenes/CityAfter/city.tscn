@@ -2471,7 +2471,7 @@ position = Vector2( 470, 339 )
 position = Vector2( 778, 114 )
 
 [node name="Decor3" parent="YSort/YSort" instance=ExtResource( 23 )]
-position = Vector2( 360, 279 )
+position = Vector2( 355, 129 )
 
 [node name="FireBarrel10" parent="YSort/YSort" instance=ExtResource( 21 )]
 position = Vector2( 271, -37 )
