@@ -1,0 +1,104 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Anybody-SemiBold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/TelaInicial/Space Background (5).png" type="Texture" id=2]
+[ext_resource path="res://Assets/UI/textbox.png" type="Texture" id=3]
+[ext_resource path="res://Assets/RobotoCondensed-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/Player/Player.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/GenderSelect/genderSelect.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 21
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 15
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 160, 91 )
+scale = Vector2( 0.50625, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_top = 13.0
+margin_right = 322.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 1 )
+text = "Qual seu gênero?"
+align = 1
+
+[node name="Optionmas" type="Button" parent="."]
+margin_left = 75.0
+margin_top = 55.0
+margin_right = 927.0
+margin_bottom = 351.0
+rect_scale = Vector2( 0.2, 0.12 )
+icon = ExtResource( 3 )
+flat = true
+
+[node name="Optionfem" type="Button" parent="."]
+margin_left = 75.0
+margin_top = 89.0
+margin_right = 927.0
+margin_bottom = 385.0
+rect_scale = Vector2( 0.2, 0.12 )
+icon = ExtResource( 3 )
+flat = true
+
+[node name="Optionbin" type="Button" parent="."]
+margin_left = 75.0
+margin_top = 123.0
+margin_right = 927.0
+margin_bottom = 419.0
+rect_scale = Vector2( 0.2, 0.12 )
+icon = ExtResource( 3 )
+flat = true
+
+[node name="Labelbin" type="Label" parent="."]
+margin_top = 132.0
+margin_right = 320.0
+margin_bottom = 176.0
+custom_fonts/font = SubResource( 2 )
+text = "Não binário"
+align = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Labelmas" type="Label" parent="."]
+margin_top = 64.0
+margin_right = 320.0
+margin_bottom = 108.0
+custom_fonts/font = SubResource( 2 )
+text = "Masculino"
+align = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Labelfem" type="Label" parent="."]
+margin_top = 98.0
+margin_right = 320.0
+margin_bottom = 142.0
+custom_fonts/font = SubResource( 2 )
+text = "Feminino"
+align = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 264, 168 )
+texture = ExtResource( 5 )
+hframes = 60
+
+[connection signal="pressed" from="Optionmas" to="." method="_on_Optionmas_pressed"]
+[connection signal="pressed" from="Optionfem" to="." method="_on_Optionfem_pressed"]
+[connection signal="pressed" from="Optionbin" to="." method="_on_Optionbin_pressed"]

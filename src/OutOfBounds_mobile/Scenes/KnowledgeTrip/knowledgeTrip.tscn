@@ -1,0 +1,105 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Keys/spacebar.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Computer/computer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/KnowledgeTrip/knowledgeTrip.gd" type="Script" id=3]
+[ext_resource path="res://Assets/KnowledgeTrip/talkBallon.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Anybody-SemiBold.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 5 )
+
+[sub_resource type="Animation" id=1]
+resource_name = "BallonAppearence"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("TalkBallon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.4, 0.325 ), Vector2( 0.4, 0.325 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "onTalkBallonAnimationFinished"
+} ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("TalkBallon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ) ]
+}
+
+[node name="KnowledgeTrip" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.52588e-05
+margin_right = 320.0
+margin_bottom = 180.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Computer" parent="ColorRect" instance=ExtResource( 2 )]
+position = Vector2( 84, 129 )
+scale = Vector2( 3, 3 )
+
+[node name="TalkBallon" type="Sprite" parent="ColorRect"]
+position = Vector2( 212, 83 )
+scale = Vector2( 1e-05, 1e-05 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="ColorRect/TalkBallon"]
+margin_left = -172.0
+margin_top = -138.0
+margin_right = 119.0
+margin_bottom = 31.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+autoplay = "BallonAppearence"
+anims/BallonAppearence = SubResource( 1 )
+anims/RESET = SubResource( 2 )
+
+[node name="Key" type="Sprite" parent="."]
+visible = false
+position = Vector2( 291, 166 )
+scale = Vector2( 0.0964321, 0.0950893 )
+texture = ExtResource( 1 )

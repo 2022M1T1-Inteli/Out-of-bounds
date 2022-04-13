@@ -5,28 +5,23 @@ extends Node2D
 signal phaseChange
 signal dialogChange
 
+
+# Preload da cutscene
+var knowledgeTripInterior1 = preload("res://Scenes/KnowledgeTrip/knowledgeTripInterior.tscn")
+
+# Variável de visibilidade para o mapa e o sistema de objetivos
+var overlayVisibility = false
+var objectiveLabel = ""
+
+var listapedra = []
+
 # Variáveis do tutorial
-var tutorialDialogPath = "res://Dialogs/Tutorial/tutorial.json"
+var tutorialDialogPath = "res://Scenes/Tutorial/tutorial.tscn"
 var tutorialFinished = false
 
-# Caminho para di�logos da fase 1
-var phase1DialogsRootPath = "res://Dialogs/Phase1/"
 
 # Di�álogos da primeira fase
-var phase1Dialogs = [
-	Dialog.new(
-		phase1DialogsRootPath + "Chapter2/1firstContact.json",
-		false,
-		false,
-		"Converse com o mecânico (encontre a cidade)"
-	),
-	Dialog.new(phase1DialogsRootPath + "Chapter3/2firstJarvisEncounter.json", false, false, "Dê um jeito de entrar na sala de Jarvis e converse com ele"),
-	Dialog.new(phase1DialogsRootPath + "Chapter3/3secretaryJarvisArguing.json", false, false, "Volte à nave e interaja com o computador"),
-	Dialog.new(phase1DialogsRootPath + "Chapter4/4firstComputerEncounter.json", false, false, "Apresente suas novas ideias para o Jarvis"),
-	Dialog.new(phase1DialogsRootPath + "Chapter5/5secondJarvisEncounter.json", false, false, "Termine a conversa com o Jarvis"),
-	Dialog.new(phase1DialogsRootPath + "Chapter5/6thirdJarvisEncounter.json", false, false, "Converse com o Jarvis novamente"),
-	Dialog.new(phase1DialogsRootPath + "Chapter5/7fourthJarvisEncounter.json", false, false, "")
-]
+var phase1Dialogs = null
 
 # Variável de controle de progressão da fase
 var phase1DialogIndex = 0
@@ -37,12 +32,67 @@ var codePuzzleFinished = false
 var lockPuzzleFinished = false
 
 # Vari�vel com as fases do jogo e seus di�logos
-var phases = [Phase.new("Fase 1", false, false, phase1Dialogs)]
+var phases = null
 
 # Instancia do Player
 var player = Player.new("Astronauta", "", null, null)
 
-	
-	
+# KnowledgeTrip Global State
+var knowledgeTripIndex = 0
 
+# City path
+var cityPath = "res://Scenes/City/city.tscn"
 
+# Variável para checar se animação da nova cidade já aconteceu
+var oldCityAnimationStart = false
+var newCityAnimationFinished = false
+
+# Variável de movimentação do Player
+var canPlayerMove = true
+
+# Resetar todas as variáveis para recomeçar o jogo
+func restartGame():
+	# Variável de visibilidade para o mapa e o sistema de objetivos
+	overlayVisibility = false
+	objectiveLabel = ""
+
+	listapedra = []
+
+	# Variáveis do tutorial
+	tutorialDialogPath = null
+	tutorialFinished = false
+
+	# Di�álogos da primeira fase
+	phase1Dialogs = null
+
+	# Variável de controle de progressão da fase
+	phase1DialogIndex = 0
+
+	# Variaveis de Puzzles
+	cleaningPuzzleFinished = false
+	codePuzzleFinished = false
+	lockPuzzleFinished = false
+
+	# Vari�vel com as fases do jogo e seus di�logos
+	phases = null
+
+	# Instancia do Player
+	player = Player.new("Astronauta", "", null, null)
+
+	# KnowledgeTrip Global State
+	knowledgeTripIndex = 0
+
+	# City path
+	cityPath = "res://Scenes/City/city.tscn"
+
+	# Variável para checar se animação da nova cidade já aconteceu
+	oldCityAnimationStart = false
+	newCityAnimationFinished = false
+
+	# Variável de movimentação do Player
+	canPlayerMove = true
+	
+	# Variáveis de outras cenas globais
+	Score.score = 0
+	TransitionScene.nextScene = ""
+	TransitionScene.wasOverlayActive = false

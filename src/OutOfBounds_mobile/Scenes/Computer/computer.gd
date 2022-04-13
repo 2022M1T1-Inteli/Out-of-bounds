@@ -9,6 +9,7 @@ func _ready():
 # Função executada quando o Player chega perto do NPC
 func _on_Area2D_body_entered(body):
 	onNpcBodyEntered(body)
+	$AudioStreamPlayer2D.play()
 
 # Função executada quando o Player sai de perto do NPC
 func _on_Area2D_body_exited(body):

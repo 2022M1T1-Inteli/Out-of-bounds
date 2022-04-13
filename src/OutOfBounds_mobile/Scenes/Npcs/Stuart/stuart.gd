@@ -12,4 +12,3 @@ func _on_Area2D_body_entered(body):
 # Função executada quando o Player sai de perto do NPC
 func _on_Area2D_body_exited(body):
 	onNpcBodyExited(body)
-	

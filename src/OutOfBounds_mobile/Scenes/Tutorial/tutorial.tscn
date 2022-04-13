@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Assets/World/DirtTileset2.png" type="Texture" id=1]
 [ext_resource path="res://Assets/World/MoonTileset.png" type="Texture" id=2]
@@ -12,6 +12,11 @@
 [ext_resource path="res://Scenes/TutorialNpc/tutorialNpc.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Assets/Tutorial/ArrowRight.png" type="Texture" id=14]
 [ext_resource path="res://Assets/Anybody-SemiBold.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://Scenes/Rock/rock3.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Rock/rock1.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Rock/rock4.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/Rock/rock2.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Assets/Music and Sounds/MusicGameList/TutorialMusic.mp3" type="AudioStream" id=21]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -130,14 +135,14 @@
 4/shapes = [  ]
 4/z_index = 0
 
-[sub_resource type="DynamicFont" id=8]
-font_data = ExtResource( 15 )
-
 [sub_resource type="DynamicFont" id=9]
 font_data = ExtResource( 15 )
 
 [sub_resource type="DynamicFont" id=10]
 size = 14
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=11]
 font_data = ExtResource( 15 )
 
 [sub_resource type="DynamicFont" id=12]
@@ -150,7 +155,8 @@ font_data = ExtResource( 15 )
 extents = Vector2( 8, 86.5 )
 
 [sub_resource type="Animation" id=3]
-length = 0.001
+length = 2.0
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("E:scale")
 tracks/0/interp = 1
@@ -162,6 +168,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0.66, 0.66 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("E:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 360, 56 ), Vector2( 360, 54 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -205,7 +223,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 286, 110 ), Vector2( 289, 110 ) ]
+"values": [ Vector2( 286, 25 ), Vector2( 289, 25 ) ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -235,9 +253,6 @@ tracks/1/keys = {
 "values": [ Vector2( 286, 153 ) ]
 }
 
-[sub_resource type="DynamicFont" id=11]
-font_data = ExtResource( 15 )
-
 [node name="Tutorial" type="Node2D"]
 script = ExtResource( 12 )
 
@@ -248,6 +263,9 @@ margin_bottom = 181.0
 texture = ExtResource( 6 )
 expand = true
 stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="DirtTileset2" type="Sprite" parent="."]
 position = Vector2( 1040, 115.337 )
@@ -261,26 +279,10 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 54, 0, 196611, 65589, 0, 196611, 131124, 0, 196611, 131126, 0, 196611, 262197, 0, 196611, 262198, 4, 3, 262202, 4, 196611, 262207, 4, 196611, 262209, 4, 196611, 327728, 4, 196611, 327730, 4, 196611, 327732, 4, 196611, 327734, 4, 131075, 327736, 4, 196611, 327739, 4, 196611, 327741, 4, 196611, 458751, 4, 0, 393216, 4, 1, 393217, 4, 1, 393218, 4, 1, 393219, 4, 1, 393220, 4, 1, 393221, 4, 1, 393222, 4, 1, 393223, 4, 1, 393224, 4, 1, 393225, 4, 1, 393226, 4, 1, 393227, 4, 1, 393228, 4, 1, 393229, 4, 1, 393230, 4, 1, 393231, 4, 1, 393232, 4, 1, 393233, 4, 1, 393234, 4, 1, 393235, 4, 1, 393236, 4, 1, 393237, 4, 1, 393238, 4, 1, 393239, 4, 1, 393240, 4, 1, 393241, 4, 1, 393242, 4, 1, 393243, 4, 1, 393244, 4, 1, 393245, 4, 1, 393246, 4, 1, 393247, 4, 1, 393248, 4, 1, 393249, 4, 1, 393250, 4, 1, 393251, 4, 1, 393252, 4, 1, 393253, 4, 1, 393254, 4, 1, 393255, 4, 1, 393256, 4, 1, 393257, 4, 1, 393258, 4, 1, 393259, 4, 1, 393260, 4, 5, 393261, 4, 196609, 393262, 4, 196610, 393265, 4, 196611, 393269, 4, 196611, 393270, 0, 196611, 393271, 4, 196611, 393274, 4, 196611, 393276, 4, 196611, 393278, 4, 196611, 524287, 4, 131072, 458752, 4, 131073, 458753, 4, 131073, 458754, 4, 131073, 458755, 4, 131073, 458756, 4, 131073, 458757, 4, 131073, 458758, 4, 131073, 458759, 4, 131073, 458760, 4, 131073, 458761, 4, 131073, 458762, 4, 131073, 458763, 4, 131073, 458764, 4, 131073, 458765, 4, 131073, 458766, 4, 131073, 458767, 4, 131073, 458768, 4, 131073, 458769, 4, 131073, 458770, 4, 131073, 458771, 4, 131073, 458772, 4, 131073, 458773, 4, 131073, 458774, 4, 131073, 458775, 4, 131073, 458776, 4, 131073, 458777, 4, 131073, 458778, 4, 131073, 458779, 4, 131073, 458780, 4, 131073, 458781, 4, 131073, 458782, 4, 131073, 458783, 4, 131073, 458784, 4, 131073, 458785, 4, 131073, 458786, 4, 131073, 458787, 4, 131073, 458788, 4, 131073, 458789, 4, 131073, 458790, 4, 131073, 458791, 4, 131073, 458792, 4, 131073, 458793, 4, 131073, 458794, 4, 131073, 458795, 4, 131073, 458796, 4, 131074, 458799, 4, 196608, 458800, 4, 196610, 458803, 4, 196611, 458806, 4, 196611, 458809, 4, 196611, 458813, 4, 196611, 458817, 4, 196611, 524337, 4, 196611, 524340, 0, 196608, 524341, 0, 7, 589877, 0, 131075, 655414, 0, 196611, 720949, 0, 196611 )
 
-[node name="E2" type="Sprite" parent="."]
-position = Vector2( 564, 57 )
-scale = Vector2( 0.660108, 0.640877 )
-texture = ExtResource( 9 )
-
 [node name="E" type="Sprite" parent="."]
 position = Vector2( 360, 56 )
 scale = Vector2( 0.66, 0.66 )
 texture = ExtResource( 9 )
-
-[node name="Label" type="Label" parent="."]
-margin_left = 36.0
-margin_top = 14.0
-margin_right = 262.0
-margin_bottom = 71.0
-custom_fonts/font = SubResource( 8 )
-text = "pressione o circulo
-no canto inferior esquerdo
-para se mover"
-align = 1
 
 [node name="Label5" type="Label" parent="."]
 margin_left = 300.0
@@ -289,6 +291,9 @@ margin_right = 420.0
 margin_bottom = 89.0
 custom_fonts/font = SubResource( 9 )
 text = "para interagir"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label4" type="Label" parent="."]
 margin_left = 308.0
@@ -299,24 +304,43 @@ custom_fonts/font = SubResource( 10 )
 text = "Chegue perto e pressione"
 align = 1
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 46.0
+margin_top = 14.0
+margin_right = 171.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 11 )
+text = "Utilize o círculo
+para se mover
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label6" type="Label" parent="."]
-margin_left = 512.0
-margin_top = 74.0
-margin_right = 614.0
-margin_bottom = 91.0
+margin_left = 519.0
+margin_top = 69.0
+margin_right = 621.0
+margin_bottom = 86.0
 custom_fonts/font = SubResource( 12 )
 text = "para atacar"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label7" type="Label" parent="."]
-margin_left = 486.0
-margin_top = 2.0
-margin_right = 643.0
-margin_bottom = 39.0
+margin_left = 475.0
+margin_top = 7.0
+margin_right = 680.0
+margin_bottom = 24.0
 custom_fonts/font = SubResource( 13 )
-text = "Você também pode
-usar"
+text = "Você também pode usar "
 align = 1
 
 [node name="YSort" type="YSort" parent="."]
@@ -335,65 +359,65 @@ smoothing_speed = 8.0
 
 [node name="YSort" type="YSort" parent="YSort"]
 
-[node name="grass" parent="YSort/YSort" instance=ExtResource( 11 )]
-position = Vector2( 560, 144 )
+[node name="grama" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 634, 167 )
 
-[node name="grass2" parent="YSort/YSort" instance=ExtResource( 11 )]
-position = Vector2( 592, 144 )
+[node name="grama2" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 666, 144 )
 
-[node name="grass3" parent="YSort/YSort" instance=ExtResource( 11 )]
-position = Vector2( 608, 144 )
+[node name="grama3" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 664, 111 )
 
-[node name="grass4" parent="YSort/YSort" instance=ExtResource( 11 )]
-position = Vector2( 544, 144 )
+[node name="grama4" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 669, 94 )
 
-[node name="grass5" parent="YSort/YSort" instance=ExtResource( 11 )]
-position = Vector2( 528, 144 )
+[node name="grama5" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 673, 167 )
 
-[node name="grass6" parent="YSort/YSort" instance=ExtResource( 11 )]
-position = Vector2( 512, 144 )
+[node name="grama6" parent="YSort/YSort" instance=ExtResource( 11 )]
+position = Vector2( 638, 126 )
 
-[node name="grass7" parent="YSort/YSort" instance=ExtResource( 11 )]
-position = Vector2( 512, 160 )
+[node name="grama7" parent="YSort/YSort" instance=ExtResource( 17 )]
+position = Vector2( 652, 122 )
 
-[node name="grass8" parent="YSort/YSort" instance=ExtResource( 11 )]
-position = Vector2( 528, 160 )
+[node name="grama8" parent="YSort/YSort" instance=ExtResource( 19 )]
+position = Vector2( 657, 173 )
 
-[node name="grass9" parent="YSort/YSort" instance=ExtResource( 11 )]
-position = Vector2( 544, 160 )
+[node name="grama9" parent="YSort/YSort" instance=ExtResource( 16 )]
+position = Vector2( 654, 154 )
 
-[node name="grass10" parent="YSort/YSort" instance=ExtResource( 11 )]
-position = Vector2( 560, 160 )
+[node name="grama10" parent="YSort/YSort" instance=ExtResource( 18 )]
+position = Vector2( 667, 163 )
 
-[node name="grass11" parent="YSort/YSort" instance=ExtResource( 11 )]
-position = Vector2( 576, 160 )
+[node name="grama11" parent="YSort/YSort" instance=ExtResource( 17 )]
+position = Vector2( 656, 142 )
 
-[node name="grass12" parent="YSort/YSort" instance=ExtResource( 11 )]
-position = Vector2( 592, 160 )
+[node name="grama12" parent="YSort/YSort" instance=ExtResource( 19 )]
+position = Vector2( 664, 109 )
 
-[node name="grass13" parent="YSort/YSort" instance=ExtResource( 11 )]
-position = Vector2( 608, 160 )
+[node name="grama13" parent="YSort/YSort" instance=ExtResource( 16 )]
+position = Vector2( 650, 100 )
 
-[node name="grass14" parent="YSort/YSort" instance=ExtResource( 11 )]
-position = Vector2( 496, 160 )
+[node name="grama14" parent="YSort/YSort" instance=ExtResource( 18 )]
+position = Vector2( 666, 130 )
 
-[node name="grass15" parent="YSort/YSort" instance=ExtResource( 11 )]
-position = Vector2( 624, 160 )
+[node name="grama15" parent="YSort/YSort" instance=ExtResource( 18 )]
+position = Vector2( 685, 159 )
 
-[node name="grass16" parent="YSort/YSort" instance=ExtResource( 11 )]
-position = Vector2( 576, 144 )
+[node name="grama16" parent="YSort/YSort" instance=ExtResource( 16 )]
+position = Vector2( 640, 108 )
 
-[node name="grass17" parent="YSort/YSort" instance=ExtResource( 11 )]
-position = Vector2( 544, 128 )
+[node name="grama17" parent="YSort/YSort" instance=ExtResource( 18 )]
+position = Vector2( 684, 136 )
 
-[node name="grass18" parent="YSort/YSort" instance=ExtResource( 11 )]
-position = Vector2( 560, 128 )
+[node name="grama19" parent="YSort/YSort" instance=ExtResource( 17 )]
+position = Vector2( 691, 125 )
 
-[node name="grass19" parent="YSort/YSort" instance=ExtResource( 11 )]
-position = Vector2( 576, 128 )
+[node name="grama18" parent="YSort/YSort" instance=ExtResource( 16 )]
+position = Vector2( 684, 111 )
 
 [node name="TutorialNpc" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 357, 135 )
+position = Vector2( 358, 116 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -412,6 +436,7 @@ position = Vector2( -2, 79.5 )
 shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "RESET"
 anims/RESET = SubResource( 3 )
 anims/wasd = SubResource( 4 )
 
@@ -428,21 +453,30 @@ anims/ArrowRight = SubResource( 5 )
 anims/RESET = SubResource( 6 )
 
 [node name="Label8" type="Label" parent="."]
-margin_left = 324.0
-margin_top = 151.0
-margin_right = 447.0
-margin_bottom = 188.0
+margin_left = 323.0
+margin_top = 129.0
+margin_right = 446.0
+margin_bottom = 166.0
 custom_fonts/font = SubResource( 11 )
 text = "interaja!"
 
-[node name="Label9" type="Label" parent="."]
-margin_left = 574.0
-margin_top = 126.0
-margin_right = 716.0
-margin_bottom = 163.0
-custom_fonts/font = SubResource( 12 )
-text = "destrua
-             as plantas!"
-align = 1
+[node name="Label10" type="Label" parent="."]
+margin_left = 508.0
+margin_top = 136.0
+margin_right = 631.0
+margin_bottom = 173.0
+custom_fonts/font = SubResource( 11 )
+text = "Libere
+o caminho!"
+align = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 21 )
+autoplay = true
+
+[node name="E2" type="Sprite" parent="."]
+position = Vector2( 572, 46 )
+scale = Vector2( 0.66, 0.66 )
+texture = ExtResource( 9 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

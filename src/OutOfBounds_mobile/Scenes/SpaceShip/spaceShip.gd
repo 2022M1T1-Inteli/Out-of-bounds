@@ -8,8 +8,10 @@ func _ready():
 	
 	# Checar se o primeiro diálogo já começou
 	if Global.phase1DialogIndex == 0:
-		Objectives.get_node("NinePatchRect").visible = true
-		Objectives.get_node("NinePatchRect/Label").text = "Saia da nave e converse com o Alienigena"
+		
+		# Mostrar sistema de objetivos
+		Global.overlayVisibility = true
+		Global.objectiveLabel = "Saia da nave e converse com o Alienigena"
 
 # Função que executa quando o Player chega perto da porta do deserto
 func _on_DesertDoor_body_entered(body): 

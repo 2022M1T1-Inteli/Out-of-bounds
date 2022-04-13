@@ -1,10 +1,12 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Scenes/Player/player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Player/Player.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/HurtboxHitbox/hitbox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Music and Sounds/Swipe.wav" type="AudioStream" id=4]
-[ext_resource path="res://Scenes/MobileInputs/mobileInputs.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Map/map.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Objectives/objectives.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/MobileInputs/mobileInputs.tscn" type="PackedScene" id=7]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 4.0
@@ -601,8 +603,6 @@ position = Vector2( 0, 4 )
 collision_layer = 2
 script = ExtResource( 1 )
 
-[node name="CanvasLayer" parent="." instance=ExtResource( 5 )]
-
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -9 )
 texture = ExtResource( 2 )
@@ -660,7 +660,13 @@ shape = SubResource( 42 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 
-[connection signal="move_vector_zero" from="CanvasLayer" to="." method="_on_CanvasLayer_move_vector_zero"]
-[connection signal="use_move_vector" from="CanvasLayer" to="." method="_on_use_move_vector"]
+[node name="MapLayer" parent="." instance=ExtResource( 5 )]
+
+[node name="Objectives" parent="." instance=ExtResource( 6 )]
+
+[node name="MobileInputs" parent="." instance=ExtResource( 7 )]
+
+[connection signal="move_vector_zero" from="MobileInputs" to="." method="_on_MobileInputs_move_vector_zero"]
+[connection signal="use_move_vector" from="MobileInputs" to="." method="_on_MobileInputs_use_move_vector"]
 
 [editable path="HitboxPivot/SwordHitbox"]

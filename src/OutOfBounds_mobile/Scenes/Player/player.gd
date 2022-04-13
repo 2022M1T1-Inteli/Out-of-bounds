@@ -40,7 +40,7 @@ func move_state(delta):    #---função que executa tudo relacionado a movimento
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta) #zera o vetor velocidade
 		
 	velocity = move_and_slide(velocity) #arruma colisões bugadas com as paredes
-	if Input.is_action_just_pressed("attack"): #caso o botão de ataque esteja pressionado, define o estado como ATTACK
+	if Input.is_action_just_pressed("interact"): #caso o botão de ataque esteja pressionado, define o estado como ATTACK
 		state = ATTACK
 		
 	Global.player.position = get_tree().get_current_scene().get_node("YSort/Player").get_position()
@@ -66,9 +66,9 @@ func _physics_process(delta): #função principal do jogo. roda 60 vezes por seg
 		ATTACK:
 			attack_state(delta)
 
-func _on_use_move_vector(move_vector):
-	movimento = move_vector
-
-
-func _on_CanvasLayer_move_vector_zero():
+func _on_MobileInputs_move_vector_zero():
 	movimento = Vector2.ZERO
+
+
+func _on_MobileInputs_use_move_vector(move_vector):
+	movimento = move_vector

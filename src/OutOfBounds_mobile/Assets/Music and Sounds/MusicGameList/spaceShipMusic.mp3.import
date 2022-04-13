@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/spaceShipMusic.mp3-3be98706fd5105b4f2b7d42ba4bd4027.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music and Sounds/MusicGameList/spaceShipMusic.mp3"
+dest_files=[ "res://.import/spaceShipMusic.mp3-3be98706fd5105b4f2b7d42ba4bd4027.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

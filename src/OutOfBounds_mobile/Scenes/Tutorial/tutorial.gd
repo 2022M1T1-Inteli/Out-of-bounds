@@ -2,15 +2,9 @@ extends Node2D
 
 func _on_Area2D_body_entered(body):
 	$AnimationPlayer.play("wasd")
-	TransitionScene.startAnimation()
+	TransitionScene.startAnimation("res://Scenes/FallingCutScene/fallingCutScene.tscn")
 	Global.tutorialFinished = true
 
 func _ready():
-	TransitionScene.connect("animationMiddle", self, "onChangeSceneAnimationMiddle")
-	
-func onChangeSceneAnimationMiddle():
-	get_tree().change_scene("res://Scenes/FallingCutScene/fallingCutScene.tscn")
+	Global.overlayVisibility = false
 
-# Botão de Start
-func _on_StartBtn_pressed() -> void:
-	TransitionScene.startAnimation()

@@ -15,7 +15,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-citySceneSpawn = "res://Scenes/City/city.tscn"
 citySpawnPosition = Vector2( 750, 150 )
 
 [node name="Label" type="Label" parent="."]
@@ -25,6 +24,9 @@ custom_fonts/font = SubResource( 1 )
 text = "3 semanas depois..."
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 6.0

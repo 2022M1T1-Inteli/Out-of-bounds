@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 # Variável de caminho até arquivo JSON onde as falas se encontram
 export var dialogPath = ""
@@ -31,7 +31,7 @@ func _ready():
 func _process(_delta):
 
 	# Checar se o botão espaço foi apertado
-	if Input.is_action_just_pressed("attack"):
+	if Input.is_action_just_pressed("ui_accept"):
 		if finished:
 			
 			# Avançar para próxima fala
@@ -105,18 +105,24 @@ func onDialogFinish():
 		# Aumentar index do diálogo
 		Global.phase1DialogIndex += 1
 	
-		# Condições para fazer jogador jogar os Puzzles depois de determinados diálogos
+		# Condições para fazer jogador jogar os Puzzles e as viagens do conhecimento depois de determinados diálogos
 		if Global.phase1DialogIndex == 2:
-			get_tree().change_scene("res://Scenes/PuzzleCleaning/PuzzleCleaning.tscn")
+			Global.knowledgeTripIndex = 0
+			TransitionScene.startAnimation("res://Scenes/KnowledgeTrip/knowledgeTrip.tscn")
+			
+		if Global.phase1DialogIndex == 3:
+			Global.knowledgeTripIndex = 1
+			TransitionScene.startAnimation("res://Scenes/KnowledgeTrip/knowledgeTrip.tscn")
 			
 		if Global.phase1DialogIndex == 5:
-			get_tree().change_scene("res://Scenes/CodePuzzle/codePuzzle.tscn")
+			TransitionScene.startAnimation("res://Scenes/CodePuzzle/codePuzzle.tscn")
 			
 		if Global.phase1DialogIndex == 6:
-			get_tree().change_scene("res://Scenes/TimeCutScene/timeCutScene.tscn")
+			Global.oldCityAnimationStart = true
+			TransitionScene.startAnimation("res://Scenes/City/city.tscn")
 			
 		if Global.phase1DialogIndex == 7:
-			get_tree().change_scene("res://Scenes/HomeScreen/homeScreen.tscn")
+			TransitionScene.startAnimation("res://Scenes/MotorChangeAnimation/motorChangeAnimation.tscn")
 	
 	# Despausar o jogo e fechar a cena do diálogo
 	get_tree().paused = false

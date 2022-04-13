@@ -1,0 +1,568 @@
+[gd_scene load_steps=161 format=2]
+
+[ext_resource path="res://Assets/KnowledgeTrip/metheoritAnimation.png" type="Texture" id=1]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-136.jpg" type="Texture" id=2]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-149.jpg" type="Texture" id=3]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-137.jpg" type="Texture" id=4]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-139.jpg" type="Texture" id=5]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-141.jpg" type="Texture" id=6]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-144.jpg" type="Texture" id=7]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-145.jpg" type="Texture" id=8]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-148.jpg" type="Texture" id=9]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-146.jpg" type="Texture" id=10]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-138.jpg" type="Texture" id=11]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-140.jpg" type="Texture" id=12]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-143.jpg" type="Texture" id=13]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-147.jpg" type="Texture" id=14]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-142.jpg" type="Texture" id=15]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-150.jpg" type="Texture" id=16]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-010.jpg" type="Texture" id=17]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-051.jpg" type="Texture" id=18]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-046.jpg" type="Texture" id=19]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-056.jpg" type="Texture" id=20]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-017.jpg" type="Texture" id=21]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-057.jpg" type="Texture" id=22]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-004.jpg" type="Texture" id=23]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-050.jpg" type="Texture" id=24]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-012.jpg" type="Texture" id=25]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-013.jpg" type="Texture" id=26]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-025.jpg" type="Texture" id=27]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-026.jpg" type="Texture" id=28]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-027.jpg" type="Texture" id=29]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-015.jpg" type="Texture" id=30]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-034.jpg" type="Texture" id=31]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-011.jpg" type="Texture" id=32]
+[ext_resource path="res://Scenes/KnowledgeTrip/knowledgeTripInterior.gd" type="Script" id=33]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-018.jpg" type="Texture" id=34]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-031.jpg" type="Texture" id=35]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-036.jpg" type="Texture" id=36]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-029.jpg" type="Texture" id=37]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-035.jpg" type="Texture" id=38]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-041.jpg" type="Texture" id=39]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-042.jpg" type="Texture" id=40]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-044.jpg" type="Texture" id=41]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-003.jpg" type="Texture" id=42]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-007.jpg" type="Texture" id=43]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-023.jpg" type="Texture" id=44]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-032.jpg" type="Texture" id=45]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-021.jpg" type="Texture" id=46]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-022.jpg" type="Texture" id=47]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-038.jpg" type="Texture" id=48]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-045.jpg" type="Texture" id=49]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-047.jpg" type="Texture" id=50]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-006.jpg" type="Texture" id=51]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-030.jpg" type="Texture" id=52]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-039.jpg" type="Texture" id=53]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-020.jpg" type="Texture" id=54]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-040.jpg" type="Texture" id=55]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-024.jpg" type="Texture" id=56]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-048.jpg" type="Texture" id=57]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-001.jpg" type="Texture" id=58]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-049.jpg" type="Texture" id=59]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-005.jpg" type="Texture" id=60]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-028.jpg" type="Texture" id=61]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-009.jpg" type="Texture" id=62]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-052.jpg" type="Texture" id=63]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-053.jpg" type="Texture" id=64]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-008.jpg" type="Texture" id=65]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-016.jpg" type="Texture" id=66]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-054.jpg" type="Texture" id=67]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-055.jpg" type="Texture" id=68]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-019.jpg" type="Texture" id=69]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-033.jpg" type="Texture" id=70]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-043.jpg" type="Texture" id=71]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-002.jpg" type="Texture" id=72]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-014.jpg" type="Texture" id=73]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-037.jpg" type="Texture" id=74]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-059.jpg" type="Texture" id=75]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-058.jpg" type="Texture" id=76]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-060.jpg" type="Texture" id=77]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-061.jpg" type="Texture" id=78]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-062.jpg" type="Texture" id=79]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-063.jpg" type="Texture" id=80]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-064.jpg" type="Texture" id=81]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-065.jpg" type="Texture" id=82]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-088.jpg" type="Texture" id=83]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-129.jpg" type="Texture" id=84]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-109.jpg" type="Texture" id=85]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-083.jpg" type="Texture" id=86]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-086.jpg" type="Texture" id=87]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-105.jpg" type="Texture" id=88]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-112.jpg" type="Texture" id=89]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-106.jpg" type="Texture" id=90]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-066.jpg" type="Texture" id=91]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-076.jpg" type="Texture" id=92]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-128.jpg" type="Texture" id=93]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-082.jpg" type="Texture" id=94]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-094.jpg" type="Texture" id=95]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-110.jpg" type="Texture" id=96]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-111.jpg" type="Texture" id=97]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-096.jpg" type="Texture" id=98]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-090.jpg" type="Texture" id=99]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-101.jpg" type="Texture" id=100]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-114.jpg" type="Texture" id=101]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-121.jpg" type="Texture" id=102]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-089.jpg" type="Texture" id=103]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-099.jpg" type="Texture" id=104]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-100.jpg" type="Texture" id=105]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-103.jpg" type="Texture" id=106]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-108.jpg" type="Texture" id=107]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-113.jpg" type="Texture" id=108]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-078.jpg" type="Texture" id=109]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-077.jpg" type="Texture" id=110]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-075.jpg" type="Texture" id=111]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-091.jpg" type="Texture" id=112]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-093.jpg" type="Texture" id=113]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-107.jpg" type="Texture" id=114]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-117.jpg" type="Texture" id=115]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-119.jpg" type="Texture" id=116]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-071.jpg" type="Texture" id=117]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-122.jpg" type="Texture" id=118]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-115.jpg" type="Texture" id=119]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-123.jpg" type="Texture" id=120]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-073.jpg" type="Texture" id=121]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-124.jpg" type="Texture" id=122]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-074.jpg" type="Texture" id=123]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-067.jpg" type="Texture" id=124]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-126.jpg" type="Texture" id=125]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-068.jpg" type="Texture" id=126]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-072.jpg" type="Texture" id=127]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-080.jpg" type="Texture" id=128]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-104.jpg" type="Texture" id=129]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-116.jpg" type="Texture" id=130]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-081.jpg" type="Texture" id=131]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-085.jpg" type="Texture" id=132]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-095.jpg" type="Texture" id=133]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-118.jpg" type="Texture" id=134]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-097.jpg" type="Texture" id=135]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-102.jpg" type="Texture" id=136]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-069.jpg" type="Texture" id=137]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-092.jpg" type="Texture" id=138]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-098.jpg" type="Texture" id=139]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-120.jpg" type="Texture" id=140]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-084.jpg" type="Texture" id=141]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-125.jpg" type="Texture" id=142]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-079.jpg" type="Texture" id=143]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-127.jpg" type="Texture" id=144]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-087.jpg" type="Texture" id=145]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-070.jpg" type="Texture" id=146]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-135.jpg" type="Texture" id=147]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-133.jpg" type="Texture" id=148]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-132.jpg" type="Texture" id=149]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-130.jpg" type="Texture" id=150]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-131.jpg" type="Texture" id=151]
+[ext_resource path="res://Assets/KnowledgeTrip/spaceshipAnimation/ezgif-frame-134.jpg" type="Texture" id=152]
+[ext_resource path="res://Assets/KnowledgeTrip/metheoritAnimation2.png" type="Texture" id=153]
+[ext_resource path="res://Assets/DialogBox/10dialogBoxes.png" type="Texture" id=154]
+[ext_resource path="res://Assets/Keys/spacebar.png" type="Texture" id=155]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 58 ), ExtResource( 72 ), ExtResource( 42 ), ExtResource( 23 ), ExtResource( 60 ), ExtResource( 51 ), ExtResource( 43 ), ExtResource( 65 ), ExtResource( 62 ), ExtResource( 17 ), ExtResource( 32 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 73 ), ExtResource( 30 ), ExtResource( 66 ), ExtResource( 21 ), ExtResource( 34 ), ExtResource( 69 ), ExtResource( 54 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 44 ), ExtResource( 56 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 61 ), ExtResource( 37 ), ExtResource( 52 ), ExtResource( 35 ), ExtResource( 45 ), ExtResource( 70 ), ExtResource( 31 ), ExtResource( 38 ), ExtResource( 36 ), ExtResource( 74 ), ExtResource( 48 ), ExtResource( 53 ), ExtResource( 55 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 71 ), ExtResource( 41 ), ExtResource( 49 ), ExtResource( 19 ), ExtResource( 50 ), ExtResource( 57 ), ExtResource( 59 ), ExtResource( 24 ), ExtResource( 18 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 20 ), ExtResource( 22 ), ExtResource( 76 ), ExtResource( 75 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 91 ), ExtResource( 124 ), ExtResource( 126 ), ExtResource( 137 ), ExtResource( 146 ), ExtResource( 117 ), ExtResource( 127 ), ExtResource( 121 ), ExtResource( 123 ), ExtResource( 111 ), ExtResource( 92 ), ExtResource( 110 ), ExtResource( 109 ), ExtResource( 143 ), ExtResource( 128 ), ExtResource( 131 ), ExtResource( 94 ), ExtResource( 86 ), ExtResource( 141 ), ExtResource( 132 ), ExtResource( 87 ), ExtResource( 145 ), ExtResource( 83 ), ExtResource( 103 ), ExtResource( 99 ), ExtResource( 112 ), ExtResource( 138 ), ExtResource( 113 ), ExtResource( 95 ), ExtResource( 133 ), ExtResource( 98 ), ExtResource( 135 ), ExtResource( 139 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 100 ), ExtResource( 136 ), ExtResource( 106 ), ExtResource( 129 ), ExtResource( 88 ), ExtResource( 90 ), ExtResource( 114 ), ExtResource( 107 ), ExtResource( 85 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 89 ), ExtResource( 108 ), ExtResource( 101 ), ExtResource( 119 ), ExtResource( 130 ), ExtResource( 115 ), ExtResource( 134 ), ExtResource( 116 ), ExtResource( 140 ), ExtResource( 102 ), ExtResource( 118 ), ExtResource( 120 ), ExtResource( 122 ), ExtResource( 142 ), ExtResource( 125 ), ExtResource( 144 ), ExtResource( 93 ), ExtResource( 84 ), ExtResource( 150 ), ExtResource( 151 ), ExtResource( 149 ), ExtResource( 148 ), ExtResource( 152 ), ExtResource( 147 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 15 ), ExtResource( 13 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 14 ), ExtResource( 9 ), ExtResource( 3 ), ExtResource( 16 ) ],
+"loop": false,
+"name": "Default",
+"speed": 15.0
+} ]
+
+[sub_resource type="Animation" id=4]
+resource_name = "Metheorit2Animation"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Metheorit2:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 153 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Metheorit2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 218, 26 ), Vector2( 181, 25 ), Vector2( 152, 42 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Metheorit2:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.025, 0.021 ), Vector2( 0.05, 0.05 ) ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "onMetheorit2AnimationFinish"
+} ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Metheorit3Animation"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Metheorit3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 215, 151 ), Vector2( 150, 133 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Metheorit3:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.025, 0.021 ), Vector2( 0.05, 0.05 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Metheorit3:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 153 ) ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "onMetheorit3AnimationFinish"
+} ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "MetheoritAnimation"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Metheorit1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 36, 32 ), Vector2( 66, 53 ), Vector2( 79, 63 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Metheorit1:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.025, 0.021 ), Vector2( 0.05, 0.05 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Metheorit1:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 153 ) ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "onMetheorit1AnimationFinish"
+} ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Metheorit1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 36, 32 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Metheorit1:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.05, 0.05 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Metheorit1:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Metheorit2:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Metheorit2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 218, 26 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Metheorit2:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.025, 0.021 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Metheorit3:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 215, 151 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Metheorit3:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.025, 0.021 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Metheorit3:texture")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 1 ) ]
+}
+
+[node name="KnowledgeTripInterior" type="Node2D"]
+script = ExtResource( 33 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 161, 92 )
+scale = Vector2( 0.18, 0.18 )
+frames = SubResource( 1 )
+animation = "Default"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Metheorit2Animation = SubResource( 4 )
+anims/Metheorit3Animation = SubResource( 5 )
+anims/MetheoritAnimation = SubResource( 2 )
+anims/RESET = SubResource( 3 )
+
+[node name="Metheorit1" type="Sprite" parent="."]
+visible = false
+modulate = Color( 0.764706, 0.764706, 0.764706, 1 )
+position = Vector2( 36, 32 )
+rotation = 0.942478
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 1 )
+
+[node name="Metheorit1Rect" type="NinePatchRect" parent="."]
+visible = false
+margin_left = 17.0
+margin_top = 79.0
+margin_right = 117.0
+margin_bottom = 152.0
+texture = ExtResource( 154 )
+region_rect = Rect2( 0.521156, 561.07, 318.176, 77.8012 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Metheorit1Rect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 4.0
+margin_right = 220.0
+margin_bottom = 151.0
+rect_scale = Vector2( 0.3, 0.3 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Metheorit2" type="Sprite" parent="."]
+visible = false
+modulate = Color( 0.572549, 0.572549, 0.572549, 1 )
+position = Vector2( 218, 26 )
+rotation = -0.785398
+scale = Vector2( 0.025, 0.021 )
+texture = ExtResource( 1 )
+
+[node name="Metheorit2Rect" type="NinePatchRect" parent="."]
+visible = false
+margin_left = 162.0
+margin_top = 19.0
+margin_right = 264.0
+margin_bottom = 85.0
+texture = ExtResource( 154 )
+region_rect = Rect2( 0.521156, 561.07, 318.176, 77.8012 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Metheorit2Rect"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 329.0
+margin_bottom = 205.0
+rect_scale = Vector2( 0.3, 0.3 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Metheorit3" type="Sprite" parent="."]
+visible = false
+modulate = Color( 0.678431, 0.678431, 0.678431, 1 )
+position = Vector2( 215, 151 )
+rotation = -0.588176
+scale = Vector2( 0.025, 0.021 )
+texture = ExtResource( 1 )
+
+[node name="Metheorit3Rect" type="NinePatchRect" parent="."]
+visible = false
+margin_left = 158.0
+margin_top = 103.0
+margin_right = 262.0
+margin_bottom = 170.0
+texture = ExtResource( 154 )
+region_rect = Rect2( 0.521156, 561.07, 318.176, 77.8012 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Metheorit3Rect"]
+margin_left = 2.0
+margin_top = 3.0
+margin_right = 335.0
+margin_bottom = 206.0
+rect_scale = Vector2( 0.3, 0.3 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Key" type="Sprite" parent="."]
+visible = false
+position = Vector2( 291, 166 )
+scale = Vector2( 0.0964321, 0.0950893 )
+texture = ExtResource( 155 )
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
