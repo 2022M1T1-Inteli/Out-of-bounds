@@ -12,7 +12,7 @@
 [ext_resource path="res://Assets/UI/saiba-mais-button-hover.png" type="Texture" id=10]
 [ext_resource path="res://Assets/UI/sair-button.png" type="Texture" id=11]
 [ext_resource path="res://Assets/TelaInicial/766363039.png" type="Texture" id=13]
-[ext_resource path="res://Assets/Music and Sounds/MusicGameList/ButtonAudio.mp3" type="AudioStream" id=14]
+[ext_resource path="res://Assets/Music and Sounds/ButtonAudio.mp3" type="AudioStream" id=14]
 
 [sub_resource type="Animation" id=202]
 length = 0.001
@@ -950,7 +950,7 @@ __meta__ = {
 position = Vector2( 161, 198 )
 scale = Vector2( 1.17208, 1.15806 )
 frames = SubResource( 201 )
-frame = 83
+frame = 148
 playing = true
 
 [node name="Logo2" type="Sprite" parent="."]
