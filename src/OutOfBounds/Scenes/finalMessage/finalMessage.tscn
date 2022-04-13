@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Anybody-SemiBold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scenes/finalMessage/finalMessage.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Keys/spacebar.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Music and Sounds/thanksMusic.mp3" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 19
@@ -59,5 +60,10 @@ visible = false
 position = Vector2( 290, 166 )
 scale = Vector2( 0.0964321, 0.0950893 )
 texture = ExtResource( 3 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 4 )
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

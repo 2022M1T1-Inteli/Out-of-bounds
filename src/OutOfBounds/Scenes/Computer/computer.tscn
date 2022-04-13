@@ -7,7 +7,7 @@
 [ext_resource path="res://Assets/Computer/computer3.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Computer/computer4.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Computer/computer2.png" type="Texture" id=7]
-[ext_resource path="res://Assets/Music and Sounds/MusicGameList/pcAudio.mp3" type="AudioStream" id=8]
+[ext_resource path="res://Assets/Music and Sounds/pcAudio.mp3" type="AudioStream" id=8]
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
@@ -52,7 +52,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 51.75, 26.75 )
+extents = Vector2( 36.25, 14.75 )
 
 [node name="Computer" type="StaticBody2D"]
 collision_mask = 0
@@ -62,7 +62,7 @@ script = ExtResource( 2 )
 position = Vector2( -5.99999, -8 )
 scale = Vector2( 0.057229, 0.0566038 )
 frames = SubResource( 5 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="WallComputer2" type="NinePatchRect" parent="."]
@@ -82,6 +82,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 5 )
 shape = SubResource( 2 )
 
 [node name="Key" type="Sprite" parent="."]
@@ -96,7 +97,7 @@ anims/KeyAnimation = SubResource( 3 )
 anims/RESET = SubResource( 4 )
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 9, -1 )
+position = Vector2( 11, 2 )
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true

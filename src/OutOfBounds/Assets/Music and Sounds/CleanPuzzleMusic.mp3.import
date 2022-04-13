@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/CleanPuzzleMusic.mp3-5e1d3f194d72b566e5d791fd63772f48.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music and Sounds/CleanPuzzleMusic.mp3"
+dest_files=[ "res://.import/CleanPuzzleMusic.mp3-5e1d3f194d72b566e5d791fd63772f48.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

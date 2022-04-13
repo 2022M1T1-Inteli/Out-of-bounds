@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/changeBetteryMusic.mp3-4ad11d75b98229cd0eddfc6c22464ec2.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music and Sounds/changeBetteryMusic.mp3"
+dest_files=[ "res://.import/changeBetteryMusic.mp3-4ad11d75b98229cd0eddfc6c22464ec2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

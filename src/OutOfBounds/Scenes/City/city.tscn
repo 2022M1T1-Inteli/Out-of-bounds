@@ -26,7 +26,7 @@
 [ext_resource path="res://ExclusiveAssets/Textures/Cyberpunk_B.png" type="Texture" id=24]
 [ext_resource path="res://ExclusiveAssets/Textures/Cyberpunk_C.png" type="Texture" id=25]
 [ext_resource path="res://Scenes/City/city.gd" type="Script" id=26]
-[ext_resource path="res://Assets/Music and Sounds/MusicGameList/GameMusic4.mp3" type="AudioStream" id=28]
+[ext_resource path="res://Assets/Music and Sounds/CityMusic.mp3" type="AudioStream" id=27]
 
 [sub_resource type="TileSet" id=115]
 0/name = "non-rm-a2-square.png 0"
@@ -2843,8 +2843,8 @@ texture = ExtResource( 24 )
 region_rect = Rect2( 322.399, 8.08816, 64.1651, 52.8418 )
 axis_stretch_horizontal = 1
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 28 )
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 27 )
 autoplay = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
