@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=2]
+[gd_scene load_steps=76 format=2]
 
 [ext_resource path="res://Scenes/About/about.gd" type="Script" id=1]
 [ext_resource path="res://Assets/TelaInicial/Space Background (5).png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Assets/About/voltar-button-normal.png" type="Texture" id=8]
 [ext_resource path="res://Assets/TelaInicial/7663630319.png" type="Texture" id=9]
 [ext_resource path="res://Assets/TelaInicial/logonew.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Music and Sounds/StartMusic.mp3" type="AudioStream" id=11]
 [ext_resource path="res://Assets/UI/group.png" type="Texture" id=12]
 
 [sub_resource type="AtlasTexture" id=202]
@@ -316,7 +317,7 @@ position = Vector2( 146, 57 )
 rotation = 0.274017
 scale = Vector2( 0.297695, 0.285036 )
 frames = SubResource( 262 )
-frame = 15
+frame = 35
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -346,6 +347,7 @@ Cristiane de Andrade - Antonio Ribeiro"
 align = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
 autoplay = true
 
 [node name="Sprite2" type="Sprite" parent="."]
