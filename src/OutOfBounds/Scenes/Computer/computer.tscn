@@ -7,7 +7,7 @@
 [ext_resource path="res://Assets/Computer/computer3.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Computer/computer4.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Computer/computer2.png" type="Texture" id=7]
-[ext_resource path="res://Assets/Music and Sounds/MusicGameList/pcAudio.mp3" type="AudioStream" id=8]
+[ext_resource path="res://Assets/Music and Sounds/pcAudio.mp3" type="AudioStream" id=8]
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
