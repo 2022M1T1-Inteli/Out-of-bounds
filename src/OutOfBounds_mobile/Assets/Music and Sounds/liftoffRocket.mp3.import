@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/liftoffRocket.mp3-ec56861d3c231f5c09d52669ea408419.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music and Sounds/liftoffRocket.mp3"
+dest_files=[ "res://.import/liftoffRocket.mp3-ec56861d3c231f5c09d52669ea408419.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

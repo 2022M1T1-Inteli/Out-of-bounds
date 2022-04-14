@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Scenes/PuzzleLock/puzzleLock.gd" type="Script" id=1]
 [ext_resource path="res://Assets/PuzzleLock/Numbers/Number1.png" type="Texture" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Assets/PuzzleLock/KeyPad.png" type="Texture" id=15]
 [ext_resource path="res://Assets/Anybody-SemiBold.ttf" type="DynamicFontData" id=16]
 [ext_resource path="res://Assets/PuzzleLock/Display.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Music and Sounds/ButtonAudio.mp3" type="AudioStream" id=18]
 [ext_resource path="res://Assets/PuzzleLock/PressedNumbers/Number0Pressed.png" type="Texture" id=19]
 [ext_resource path="res://Assets/PuzzleLock/PressedNumbers/DeletePressed.png" type="Texture" id=20]
 [ext_resource path="res://Assets/PuzzleLock/PressedNumbers/Number2Pressed.png" type="Texture" id=21]
@@ -231,6 +232,9 @@ clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="PressedButton" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
 
 [connection signal="pressed" from="HBoxContainer2/LeftBtn/Button1" to="." method="onButtonPressed" binds= [ "1" ]]
 [connection signal="pressed" from="HBoxContainer2/LeftBtn/Button4" to="." method="onButtonPressed" binds= [ "4" ]]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=271 format=2]
+[gd_scene load_steps=272 format=2]
 
 [ext_resource path="res://Assets/SpaceShip/spaceShip.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Planet/planet.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/FinalCutscene/finalCutscene.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Fx/11_fire_spritesheet.png" type="Texture" id=4]
 [ext_resource path="res://Assets/TelaInicial/Space Background (5).png" type="Texture" id=5]
+[ext_resource path="res://Assets/Music and Sounds/liftoffRocket.mp3" type="AudioStream" id=6]
 
 [sub_resource type="AtlasTexture" id=406]
 atlas = ExtResource( 4 )
@@ -1131,6 +1132,20 @@ tracks/4/keys = {
 "method": "onAnimationFinished"
 } ]
 }
+tracks/5/type = "audio"
+tracks/5/path = NodePath("LiftoffSound")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 6 )
+} ],
+"times": PoolRealArray( 0.3 )
+}
 
 [sub_resource type="Animation" id=475]
 length = 0.001
@@ -1204,7 +1219,7 @@ position = Vector2( 18, 27 )
 rotation = 3.14159
 scale = Vector2( 1.05767, 0.72339 )
 frames = SubResource( 473 )
-frame = 36
+frame = 23
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="SpaceShip"]
@@ -1213,7 +1228,7 @@ position = Vector2( -13, 26 )
 rotation = 3.14159
 scale = Vector2( 1.05767, 0.72339 )
 frames = SubResource( 473 )
-frame = 18
+frame = 5
 playing = true
 
 [node name="SpaceShip" type="Sprite" parent="SpaceShip"]
@@ -1225,10 +1240,13 @@ texture = ExtResource( 1 )
 position = Vector2( 161, 232 )
 scale = Vector2( 1.2, 1.21833 )
 frames = SubResource( 467 )
-frame = 45
+frame = 170
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "FinalAnimation"
 anims/FinalAnimation = SubResource( 474 )
 anims/RESET = SubResource( 475 )
+
+[node name="LiftoffSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )

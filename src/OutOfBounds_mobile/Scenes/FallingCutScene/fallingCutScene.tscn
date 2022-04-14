@@ -417,7 +417,7 @@ position = Vector2( 356.667, 166.667 )
 rotation = -0.959931
 scale = Vector2( 1.74358, 1.55339 )
 frames = SubResource( 467 )
-frame = 46
+frame = 17
 playing = true
 
 [node name="AnimatedSprite" type="Sprite" parent="."]
@@ -437,7 +437,7 @@ wait_time = 10.0
 one_shot = true
 autostart = true
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
