@@ -176,4 +176,5 @@ Aqui estão as referências usadas no projeto.
 3.  <a href="https://kokororeflections.itch.io/kr-cyberpunk-tileset-for-rpgs"><b>Sprites</b></a>
 4.  <a href="https://youtu.be/Oryq2oUpxnE"><b>Star Wars Animation</b></a>
 5.  <a href="https://pt.wikipedia.org/wiki/Among_Us"><b>Amoung Us</b></a>
+6.  <a href="https://mixkit.co/"><b>Efeitos e Trilha Sonora</b></a>
 
