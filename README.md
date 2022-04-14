@@ -30,7 +30,20 @@
 
 <br><br>
 
-### Trailer do jogo
+## Link para jogar o jogo
+<p>
+ OutOfBounds no Itch.io: <a href="https://rainbow-dev.itch.io/outofbounds">Clique aqui para jogar!</a>
+</p>
+<br>
+<p>
+ OutOfBoundsMobile no Itch.io: <a href="https://rainbow-dev.itch.io/outofbounds-mobile">Clique aqui para jogar!</a>
+</p>
+
+<br><br>
+
+<br><br>
+
+## Trailer do jogo
 <p>
  Trailer: <a href="https://drive.google.com/file/d/1SuxPNuixgLVU_bAaYcDycL41tUkAHiPl/view?usp=sharing">Clique aqui para assistir!</a>
 </p>
