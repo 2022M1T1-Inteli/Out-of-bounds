@@ -30,12 +30,14 @@
 
 <br><br>
 
-## Cenas do Jogo
-
 ### Trailer do jogo
 <p>
- Trailer: <a src="https://drive.google.com/file/d/1SuxPNuixgLVU_bAaYcDycL41tUkAHiPl/view?usp=sharing">Clique aqui para assistir!</a>
+ Trailer: <a href="https://drive.google.com/file/d/1SuxPNuixgLVU_bAaYcDycL41tUkAHiPl/view?usp=sharing">Clique aqui para assistir!</a>
 </p>
+
+<br><br>
+
+## Cenas do Jogo
 
 ### Tela inicial do jogo
 <p>
