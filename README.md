@@ -32,7 +32,12 @@
 
 ## Cenas do Jogo
 
-### Tela inical do jogo
+### Trailer do jogo
+<p>
+ Trailer: <a src="https://drive.google.com/file/d/1SuxPNuixgLVU_bAaYcDycL41tUkAHiPl/view?usp=sharing">Clique aqui para assistir!</a>
+</p>
+
+### Tela inicial do jogo
 <p>
  <img src="imagens/TelaInicial.gif" />
 </p>
@@ -175,6 +180,8 @@ Aqui estão as referências usadas no projeto.
 2.  <a href="https://docs.godotengine.org/en/stable/"><b>Documentação do Godot</b></a>
 3.  <a href="https://kokororeflections.itch.io/kr-cyberpunk-tileset-for-rpgs"><b>Sprites</b></a>
 4.  <a href="https://youtu.be/Oryq2oUpxnE"><b>Star Wars Animation</b></a>
-5.  <a href="https://pt.wikipedia.org/wiki/Among_Us"><b>Amoung Us</b></a>
+5.  <a href="https://pt.wikipedia.org/wiki/Among_Us"><b>Among Us</b></a>
 6.  <a href="https://mixkit.co/"><b>Efeitos e Trilha Sonora</b></a>
+6.  <a href="https://www.youtube.com/watch?v=Oryq2oUpxnE&t=1s&ab_channel=FREESTOCKFOOTAGE%3ACATTER%27ZEYE"><b>Animação de viagem no espaço</b></a>
+6.  <a href="https://www.youtube.com/watch?v=knRAM6AHcKI&t=4s&ab_channel=MusicforVideoLibrary"><b>Música do Trailer</b></a>
 
