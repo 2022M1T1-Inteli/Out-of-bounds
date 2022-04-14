@@ -17,7 +17,7 @@ func _process(delta):
 	
 	# Checagem se o Puzzle foi concluido
 	# Pular puzzle (apenas para acelerar o desenvolvimento)
-	if Score.score == 40 or Input.is_action_just_pressed("speed_plus"):
+	if Score.score == 40:
 		Global.overlayVisibility = true
 		Global.cleaningPuzzleFinished = true
 		
