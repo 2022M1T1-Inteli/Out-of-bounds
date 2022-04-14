@@ -20,6 +20,7 @@ func onButtonPressed(buttonIdentifier):
 			else:
 				# Caso o usuário tenha digitado o valor errado o led se torna vermelho
 				get_node("HBoxContainer/DefaultLed" + str(index+1)).texture = load("res://Assets/PuzzleLock/RedLed.png")
+		$PressedButton.play()
 		
 # Função que execulta quando o botão de Confirmar é acionado
 func _on_Confirme_pressed():
@@ -47,6 +48,8 @@ func _on_Confirme_pressed():
 	if isFinished == false: 
 		$Timer.start(2)
 	
+	$PressedButton.play()
+	
 # Função de deletar 
 func _on_Delete_pressed():
 	var text = $Screen.get_text() # atribui o valor digitado em um variável text
@@ -55,13 +58,5 @@ func _on_Delete_pressed():
 	
 	# muda a cor do let para cinza
 	get_node("HBoxContainer/DefaultLed" + str(text.length() + 1)).texture = load("res://Assets/PuzzleLock/DefaultLed.png")
-
-# Esta função executa após o Timer acabar 
-#func _on_Timer_timeout():
-#	$Screen.set_text("") # Limpa o valor da tela
-#
-#	# Muda a cor de todos os leds para cinza
-#	get_node("HBoxContainer/DefaultLed1").texture = load("res://Assets/PuzzleLock/DefaultLed.png")
-#	get_node("HBoxContainer/DefaultLed2").texture = load("res://Assets/PuzzleLock/DefaultLed.png")
-#	get_node("HBoxContainer/DefaultLed3").texture = load("res://Assets/PuzzleLock/DefaultLed.png")
-#	get_node("HBoxContainer/DefaultLed4").texture = load("res://Assets/PuzzleLock/DefaultLed.png")
+	
+	$PressedButton.play()

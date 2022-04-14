@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
+[ext_resource path="res://Assets/Music and Sounds/mecanicaMusic.mp3" type="AudioStream" id=1]
 [ext_resource path="res://ExclusiveAssets/Textures/non-rm-a4-square.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Jarvis/Jarvis.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Assistant/assistant.tscn" type="PackedScene" id=4]
@@ -280,5 +281,10 @@ collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls"]
 polygon = PoolVector2Array( -1, -55, 5, 8, 236, 8, 237, 124, 220, 124, 220, 139, 204, 141, 204, 157, 188, 156, 189, 173, 51, 173, 51, 155, 35, 156, 37, 140, 21, 140, 21, 123, 5, 123, 4, 15, -8, 183, 256, 180, 256, -53 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 1 )
+autoplay = true
 
 [connection signal="body_entered" from="YSort/MecanicDoor/MecanicDoor" to="." method="_on_MecanicDoor_body_entered"]

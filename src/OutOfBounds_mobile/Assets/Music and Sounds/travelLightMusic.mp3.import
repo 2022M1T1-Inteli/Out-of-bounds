@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/travelLightMusic.mp3-5554ad76a67f12dda1752c8ede74ae6a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music and Sounds/travelLightMusic.mp3"
+dest_files=[ "res://.import/travelLightMusic.mp3-5554ad76a67f12dda1752c8ede74ae6a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

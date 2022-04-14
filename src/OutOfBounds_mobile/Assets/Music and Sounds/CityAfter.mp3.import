@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/CityAfter.mp3-0fcf2392c590325c6c219a5230918034.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music and Sounds/CityAfter.mp3"
+dest_files=[ "res://.import/CityAfter.mp3-0fcf2392c590325c6c219a5230918034.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

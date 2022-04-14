@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/DesertAmbienceMusic.mp3-24964a4325cf9f5b55b832efd5a7ad4f.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music and Sounds/DesertAmbienceMusic.mp3"
+dest_files=[ "res://.import/DesertAmbienceMusic.mp3-24964a4325cf9f5b55b832efd5a7ad4f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

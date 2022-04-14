@@ -65,6 +65,7 @@ func onButtonPressed(content):
 		# Reiniciar o ciclo da tipagem dos caracteres dos labels
 		currentType = typeof(content)
 		
+		$ButtonPressed.play() #Efeito sonoro de botão tecla sendo pressionada 
 	# Resetar tipagem dos valores inseridos
 	content = null
 
@@ -92,7 +93,7 @@ func _on_Verify_pressed():
 		else:
 			colorReact.color = red
 			finished = false
-			
+			$Error.play()
 		# Loop em todas as Labels para desabilitar os botões
 		for item in [1, 2, 3, 4, 5, "A", "B", "C", "D", "E"]:
 			get_node("ColorRect/NinePatchRect/Button" + str(item)).disabled = true
@@ -108,6 +109,7 @@ func _on_Verify_pressed():
 	# Setar variável mostrando que puzzle acabou
 	Global.codePuzzleFinished = true
 
+	$Win.play() 
 	# Mudar de cena
 	TransitionScene.startAnimation("res://Scenes/Mecanic/Mecanica.tscn")
 

@@ -10,7 +10,7 @@
 [ext_resource path="res://Assets/About/voltar-button-normal.png" type="Texture" id=8]
 [ext_resource path="res://Assets/TelaInicial/7663630319.png" type="Texture" id=9]
 [ext_resource path="res://Assets/TelaInicial/logonew.png" type="Texture" id=10]
-[ext_resource path="res://Assets/Music and Sounds/MusicGameList/StartMusic.mp3" type="AudioStream" id=11]
+[ext_resource path="res://Assets/Music and Sounds/StartMusic.mp3" type="AudioStream" id=11]
 [ext_resource path="res://Assets/UI/group.png" type="Texture" id=12]
 
 [sub_resource type="AtlasTexture" id=202]
@@ -317,7 +317,7 @@ position = Vector2( 146, 57 )
 rotation = 0.274017
 scale = Vector2( 0.297695, 0.285036 )
 frames = SubResource( 262 )
-frame = 33
+frame = 46
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -346,7 +346,7 @@ Melyssa Rojas - Thomas Brand
 Cristiane de Andrade - Antonio Ribeiro"
 align = 1
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
 autoplay = true
 
