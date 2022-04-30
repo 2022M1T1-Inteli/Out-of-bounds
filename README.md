@@ -19,6 +19,13 @@
   * <a href="https://www.linkedin.com/in/thomas-brand-a4a21a237/" target="_blank">Thomas Brand</a>
   * <a href="https://www.linkedin.com/in/cristiane-de-andrade-coutinho-4b9684213/" target="_blank">Cristiane Andrade</a>
 
+## Professores Orientadores: 
+<a href="http://lattes.cnpq.br/2716416791407528" target="_blank" rel="noopener noreferrer"> Flavio Marques Azevedo </a>, 
+<a href="http://lattes.cnpq.br/9324969584977927" target="_blank" rel="noopener noreferrer"> Laíza Ribeiro </a>, 
+<a href="http://lattes.cnpq.br/2951162577564329" target="_blank" rel="noopener noreferrer"> Pedro Teberga</a>, 
+<a href="http://lattes.cnpq.br/2327073767433655" target="_blank" rel="noopener noreferrer"> Ricardo Missori </a>,
+<a href="http://lattes.cnpq.br/3254174044411983" target="_blank" rel="noopener noreferrer"> Victor Bruno Alexander Rosetti de Quiroz </a>
+
 ## Descrição
 
   Um jogo que apresenta um conteúdo personalizado e gamificado de Diversidade e Inclusão. Foi inspirado em materiais apresentados pela  <a      href="https://www.ambev.com.br/">AMBEV</a> e propõem imergir o usuário em uma história diferente que utiliza a vivência de situações no jogo que fazem analogias com as situações de racismo na Terra, que o farão refletir e aprender.
