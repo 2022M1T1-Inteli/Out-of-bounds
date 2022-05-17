@@ -41,12 +41,9 @@
 <p>
  OutOfBounds no Itch.io: <a href="https://rainbow-dev.itch.io/outofbounds">Clique aqui para jogar!</a>
 </p>
-<br>
 <p>
  OutOfBoundsMobile no Itch.io: <a href="https://rainbow-dev.itch.io/outofbounds-mobile">Clique aqui para jogar!</a>
 </p>
-
-<br><br>
 
 <br><br>
 
@@ -84,37 +81,33 @@
 
 ## 🛠 Estrutura de pastas
 
-- :package: <b>Projeto 3</b>
-  - :paperclip: __[Documentos](documentos/)__
-     - Aqui estará toda a documentação do projeto, contendo toda a contextualização do projeto
-   - :computer: __[Executáveis](executaveis/)__
-     - :file_folder: Windows 
-     - :file_folder: Android
-     - :file_folder: HTML  
-   - :camera: __[Imagens](imagens/)__
-   - :floppy_disk:__[Src](src)__
-     - :iphone: <b>OutOfBounds_mobile</b>
-     - :file_folder: <b>OutOfBounds</b>
-   - :page_facing_up: [README.md](README.md)
-   - :scroll: [license.txt](license.txt)
-
+📦<b>Projeto 3</b><br>
+📎[Documentos](documentos/)<br>
+&emsp;&emsp;Aqui estará toda a documentação do projeto, contendo toda a contextualização do projeto<br>
+💻[Executáveis](executaveis/)<br>
+&emsp;&emsp;📁|-->Windows<br>
+&emsp;&emsp;📁|-->HTML<br>
+📷[Imagens](imagens/)<br>
+💾[Src](src)<br>
+📄[README.md](README.md)<br>
+📜[license.txt](license.txt)
 
 ## 🛠 Instalação
 
-<b>Android:</b>
-
-Faça o Download do OutOfBounds.apk no seu celular.
-Execute o APK e siga as instruções de seu telefone.
-
 <b>Windows:</b>
 
-Não há instalação! Apenas executável!
-Encontre o OutOfBounds.exe na pasta executáveis e execute-o como qualquer outro programa.
+Não há instalação, apenas executável. Baixe os arquivos disponíveis em https://github.com/2022M1T1/Projeto3/tree/main/executaveis/Windows e execute "Sprint 4.exe" como qualquer outro programa.
 
 <b>HTML:</b>
 
-Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
+Não há instalação! Baixe os arquivos disponíveis em https://github.com/2022M1T1/Projeto3/tree/main/executaveis/HTML e execute-o como uma página da web (através de algum navegador).
+
+```sh
+Dependendo de suas configurações de firewall, talvez seja necessário
+instaurar um web service como xampp ou wampp para que o jogo rode lo-
+calmente.
+```
+
 
 ## 📈 Exemplo de uso
 
@@ -206,4 +199,3 @@ Aqui estão as referências usadas no projeto.
 6.  <a href="https://mixkit.co/"><b>Efeitos e Trilha Sonora</b></a>
 6.  <a href="https://www.youtube.com/watch?v=Oryq2oUpxnE&t=1s&ab_channel=FREESTOCKFOOTAGE%3ACATTER%27ZEYE"><b>Animação de viagem no espaço</b></a>
 6.  <a href="https://www.youtube.com/watch?v=knRAM6AHcKI&t=4s&ab_channel=MusicforVideoLibrary"><b>Música do Trailer</b></a>
-
