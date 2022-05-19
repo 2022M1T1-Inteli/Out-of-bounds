@@ -81,16 +81,18 @@
 
 ## 🛠 Estrutura de pastas
 
-📦<b>Projeto 3</b><br>
-📎[Documentos](documentos/)<br>
-&emsp;&emsp;Aqui estará toda a documentação do projeto, contendo toda a contextualização do projeto<br>
-💻[Executáveis](executaveis/)<br>
-&emsp;&emsp;📁|-->Windows<br>
-&emsp;&emsp;📁|-->HTML<br>
-📷[Imagens](imagens/)<br>
-💾[Src](src)<br>
-📄[README.md](README.md)<br>
-📜[license.txt](license.txt)
+<b>Projeto 3</b><br>
+[Documentos](documentos/)<br>
+&emsp;Out Of Bounds - GDD Final.pdf<br>
+[Executáveis](executaveis/)<br>
+&emsp;&emsp;|-->Windows<br>
+&emsp;&emsp;|-->HTML<br>
+[Imagens](imagens/)<br>
+[Src](src)<br>
+&emsp;OutOfBounds<br>
+&emsp;OutOfBounds_mobile<br>
+[README.md](README.md)<br>
+[license.txt](license.txt)
 
 ## 🛠 Instalação
 
