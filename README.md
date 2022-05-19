@@ -83,14 +83,14 @@
 
 <b>Projeto 3</b><br>
 [Documentos](documentos/)<br>
-&emsp;Out Of Bounds - GDD Final.pdf<br>
+&emsp;|-->Out Of Bounds - GDD Final.pdf<br>
 [Executáveis](executaveis/)<br>
 &emsp;&emsp;|-->Windows<br>
 &emsp;&emsp;|-->HTML<br>
 [Imagens](imagens/)<br>
 [Src](src)<br>
-&emsp;OutOfBounds<br>
-&emsp;OutOfBounds_mobile<br>
+&emsp;|-->OutOfBounds<br>
+&emsp;|-->OutOfBounds_mobile<br>
 [README.md](README.md)<br>
 [license.txt](license.txt)
 
